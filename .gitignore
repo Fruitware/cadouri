@@ -1,7 +1,6 @@
 # Cache, temp and personal files
 
 !.htaccess
-*.log
 npm-debug.log.*
 .sass-cache/
 
@@ -70,10 +69,6 @@ npm-debug.log.*
 /vendor/*
 /docs/phpdoc-sf/
 /composer.lock
-/tests/Selenium/errorShots/
-!/tests/Selenium/errorShots/.gitkeep
-/tests/Selenium/errorDumps/
-!/tests/Selenium/errorDumps/.gitkeep
 *.hot-update.js
 *.hot-update.json
 
@@ -97,12 +92,8 @@ themes/*/cache/*
 # Config
 
 config/settings.inc.php
-config/settings.old.php
 !config/xml/*
 config/themes/*
-tests/Selenium/settings.js
-themes/*/config/settings_*.json
-app/config/parameters.old.yml
 app/config/config.php
 
 # Themes, modules and overrides
@@ -110,8 +101,7 @@ app/config/config.php
 #modules/*
 #override/*
 #themes/*/
-!themes/cadouri
-!themes/classic
+!themes/cadouri_md
 !themes/_core
 !themes/_libraries
 
@@ -225,24 +215,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-### SublimeText ###
-# cache files for sublime text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
-
-# workspace files are user-specific
-*.sublime-workspace
-
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-# *.sublime-project
-
-# sftp configuration file
-sftp-config.json
-
-
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 
@@ -253,39 +225,13 @@ sftp-config.json
 *.ipr
 *.iws
 
-## Plugin-specific files:
-
-# IntelliJ
-/out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-
-### NetBeans ###
-nbproject/private/
-nbbuild/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-.nb-gradle/
-
-### Eclipse ###
-.externalToolBuilders/
 
 ### Release creation ###
 tools/build/releases/*
 !tools/build/releases/.gitkeep
 /app/bootstrap.php.cache
 /app/cache/dev/
-/themes/cadouri/assets/cache/*
+/themes/cadouri_md/assets/cache/*
 /override/controllers/front/*.bak
 /themes/classic/assets/cache/*
 
