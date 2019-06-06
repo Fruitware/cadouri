@@ -262,6 +262,6 @@ img/
 upload/
 
 ### Theme unignore ###
-!/themes/cadouri_md/config/theme.yml
-!/themes/*
-!/themes/cadouri_md/_dev/*
+/app/Resources/translations/en-US/
+/app/Resources/translations/ro-RO/
+/app/Resources/translations/ru-RU/
