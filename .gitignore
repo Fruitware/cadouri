@@ -63,3 +63,4 @@ admin-dev/import/
 download/
 /img/*
 upload/
+/app/Resources/translations/*-*/
