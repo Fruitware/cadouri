@@ -27,7 +27,7 @@ $large-space: 1.875rem;
 $extra-large-space: 2.5rem;
 $warning: #FF9A52;
 $warning-hover: #FDE7BB;
-$alert-warning-bg: rgba(255,154,82,0.3);
+$alert-warning-bg: rgba(255, 154, 82, 0.3);
 $alert-warning-border: $warning;
 $alert-warning-text: $gray-darker;
 $btn-warning-bg: $warning;
@@ -65,7 +65,6 @@ $md: 760px;
 $lg: 990px;
 $xl: 1440px;
 
-
 $black_0b0b0b: #0b0b0b;
 $black_111: #111111;
 $darkgray_a9b1c0: #a9b1c0;
@@ -94,5 +93,64 @@ $text-color-tertiary: #a9b1c0 !default;
 $rtl-left: left !default;
 $rtl-right: right !default;
 
-
 $font-size-primary: 18px;
+
+// Footer
+// ========================================================================
+
+$footer-bg: #fff !default;
+$footer-color: $text-color-tertiary !default;
+
+$footer-heading-font-family: 'Nickainley Normal' !default;
+$footer-heading-font-size: rem(18px) !default;
+$footer-heading-font-weight: 600 !default;
+$footer-heading-color: $text-color-secondary !default;
+$footer-heading-padding: 0 !default;
+
+$footer-link-color: $text-color-tertiary !default;
+$footer-link-hover-color: $theme-color-primary !default;
+$footer-font-size: rem(14px) !default;
+
+$footer-content-padding: 15px !default;
+$footer-content-margin: 0 !default;
+$footer-list-padding: 10px 0 !default;
+$footer-margin: 20px !default;
+
+/////// footer top
+$footer-top-outside-border: 0 !default;
+$footer-top-outside-bg: #f3f3f3 !default;
+$footer-top-bg: transparent !default;
+$footer-top-padding: rem(60px) 0 rem(30px) !default;
+$footer-top-color: #666 !default;
+$footer-top-content-padding: rem(70px) 0 0px !default;
+$footer-top-content-margin: 0 !default;
+$footer-top-color-hover: $theme-color-primary !default;
+$footer-top-border: transparent !default;
+
+/////// footer center
+$footer-center-outside-bg: #fff !default;
+$footer-center-bg: transparent !default;
+$footer-center-content-padding: 0 !default;
+$footer-center-content-margin: 0 !default;
+$footer-center-color: $text-color-tertiary !default;
+$footer-center-color-hover: $theme-color-primary !default;
+
+/////// footer bottom
+$footer-bottom-outside-bg: transparent !default;
+$footer-bottom-bg: transparent !default;
+$footer-bottom-padding: rem(30px) 0 rem(20px) !default;
+$footer-bottom-content-padding: 0 !default;
+$footer-bottom-content-margin: 0 !default;
+$footer-bottom-color: $footer-link-color !default;
+$footer-bottom-color-hover: $footer-link-hover-color !default;
+
+// Powered By / Copyright
+// ========================================================================
+$power-outside-bg: #fff !default;
+$power-bg: transparent !default;
+$power-color: $text-color-primary !default;
+$power-link-color: #333743 !default;
+$power-link-hover-color: $theme-color-primary !default;
+$power-padding: 0 !default;
+$power-font-family: 'Basil Regular' !default;
+$power-border-color: #ebebeb !default;
