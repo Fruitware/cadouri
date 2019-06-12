@@ -69,3 +69,4 @@ upload/
 /var/logs/
 /vendor/
 /var/bootstrap.php.cache
+/themes/cadouri/_dev/node_modules/
