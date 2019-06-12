@@ -64,3 +64,8 @@ download/
 /img/*
 upload/
 /app/Resources/translations/*-*/
+/config/themes/
+/var/cache/
+/var/logs/
+/vendor/
+/var/bootstrap.php.cache
