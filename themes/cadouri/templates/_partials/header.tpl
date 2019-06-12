@@ -23,68 +23,79 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='header_banner'}
-  <div class="header-banner">
-    {hook h='displayBanner'}
-  </div>
+    <div class="header-banner">
+        {hook h='displayBanner'}
+    </div>
 {/block}
 
-{block name='header_nav'}
-  <nav class="header-nav">
-    <div class="container">
-      <div class="row">
-        <div class="hidden-sm-down">
-          <div class="col-md-5 col-xs-12">
-            {hook h='displayNav1'}
-          </div>
-          <div class="col-md-7 right-nav">
-              {hook h='displayNav2'}
-          </div>
-        </div>
-        <div class="hidden-md-up text-sm-center mobile">
-          <div class="float-xs-left" id="menu-icon">
-            <i class="material-icons d-inline">&#xE5D2;</i>
-          </div>
-          <div class="float-xs-right" id="_mobile_cart"></div>
-          <div class="float-xs-right" id="_mobile_user_info"></div>
-          <div class="top-logo" id="_mobile_logo"></div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
+<div class="cadouri_header container">
+    <div class="cadouri_header_left_container" id="_desktop_logo">
+        {if $page.page_name == 'index'}
+            <h1>
+                <a href="{$urls.base_url}">
+                    <img class="img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+                </a>
+            </h1>
+        {else}
+            <a href="{$urls.base_url}">
+                <img class="img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+            </a>
+        {/if}
     </div>
-  </nav>
-{/block}
+    <div class="cadouri_header_middle_container">
+        {block name='header_nav'}
+            <nav class="header-nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="hidden-sm-down cadouri_flex_row c-fl-full cadouri_header_middle_container_block border-bottom">
+                            <div class="cadouri_flex_row">{hook h='displayNav2'}</div>
+                            <div class="social-block-inline">
+                                <a href="https://www.facebook.com/CadouriMdDelivery" target="_blank"><i class="icon-facebook"></i>&nbsp;</a>
+                                <a href="https://plus.google.com/b/114994901007250595971" target="_blank"><i class="icon-gplus"></i>&nbsp;</a>
+                                <a href="https://www.instagram.com/cadouri_md/" target="_blank"><i class="icon-instagram"></i>&nbsp;</a>
+                                <a href="#" target="_blank"><i class="icon-telegram"></i>&nbsp;</a>
+                                <a href="viber://chat?number=+37379646609" target="_blank"><i class="icon-viber"></i>&nbsp;</a>
+                            </div>
+                            <div class="contact-phone-block float-xs-right"><i class="icon-phone"></i> +373 79 64 66 09</div>
+                        </div>
+                        <div class="hidden-md-up text-sm-center mobile">
+                            <div class="float-xs-left" id="menu-icon">
+                                <i class="material-icons d-inline">&#xE5D2;</i>
+                            </div>
+                            <div class="float-xs-right" id="_mobile_cart"></div>
+                            <div class="float-xs-right" id="_mobile_user_info"></div>
+                            <div class="top-logo" id="_mobile_logo"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        {/block}
 
-{block name='header_top'}
-  <div class="header-top">
-    <div class="container">
-       <div class="row">
-        <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
-            {if $page.page_name == 'index'}
-              <h1>
-                <a href="{$urls.base_url}">
-                  <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                </a>
-              </h1>
-            {else}
-                <a href="{$urls.base_url}">
-                  <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                </a>
-            {/if}
-        </div>
-        <div class="col-md-10 col-sm-12 position-static">
-          {hook h='displayTop'}
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-        <div class="js-top-menu-bottom">
-          <div id="_mobile_currency_selector"></div>
-          <div id="_mobile_language_selector"></div>
-          <div id="_mobile_contact_link"></div>
-        </div>
-      </div>
+        {block name='header_top'}
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-sm-12 position-static">
+                            {hook h='displayTop'}
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display: none">
+                        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+                        <div class="js-top-menu-bottom">
+                            <div id="_mobile_currency_selector"></div>
+                            <div id="_mobile_language_selector"></div>
+                            <div id="_mobile_contact_link"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {hook h='displayNavFullWidth'}
+        {/block}
     </div>
-  </div>
-  {hook h='displayNavFullWidth'}
-{/block}
+    <div class="cadouri_header_right_container">
+        {hook h='displayNav1'}
+    </div>
+</div>
+</div>

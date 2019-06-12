@@ -1,95 +1,323 @@
 @font-face {
-  font-family: 'Noto Sans';
-  src: url(~notosans-fontface/fonts/NotoSans-Regular.eot);
-  src: local('Noto Sans Regular'),
-  local('NotoSans-Regular'),
-  url(~notosans-fontface/fonts/NotoSans-Regular.eot) format('embedded-opentype'),
-  url(~notosans-fontface/fonts/NotoSans-Regular.woff2) format('woff2'),
-  url(~notosans-fontface/fonts/NotoSans-Regular.woff) format('woff'),
-  url(~notosans-fontface/fonts/NotoSans-Regular.ttf) format('truetype'),
-  url(~notosans-fontface/fonts/NotoSans-Regular.svg) format('svg');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Nickainley Normal';
+    src: url(/themes/cadouri/assets/fonts/nickainley-normal.otf);
+}
+@font-face {
+    font-family: 'Basil Regular';
+    src: url(/themes/cadouri/assets/fonts/basil-regular.ttf);
 }
 
 @font-face {
-  font-family: 'Noto Sans';
-  src: url(~notosans-fontface/fonts/NotoSans-Bold.eot);
-  src: local('Noto Sans Bold'),
-  local('NotoSans-Bold'),
-  url(~notosans-fontface/fonts/NotoSans-Bold.eot) format('embedded-opentype'),
-  url(~notosans-fontface/fonts/NotoSans-Bold.woff2) format('woff2'),
-  url(~notosans-fontface/fonts/NotoSans-Bold.woff) format('woff'),
-  url(~notosans-fontface/fonts/NotoSans-Bold.ttf) format('truetype'),
-  url(~notosans-fontface/fonts/NotoSans-Bold.svg) format('svg');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'fontello';
+    src: url('/themes/cadouri/assets/fonts/fontello.eot');
+    src: url('/themes/cadouri/assets/fonts/fontello.eot#iefix') format('embedded-opentype'),
+    url('/themes/cadouri/assets/fonts/fontello.woff2') format('woff2'),
+    url('/themes/cadouri/assets/fonts/fontello.woff') format('woff'),
+    url('/themes/cadouri/assets/fonts/fontello.ttf') format('truetype'),
+    url('/themes/cadouri/assets/fonts/fontello.svg#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  src: url(~notosans-fontface/fonts/NotoSans-Italic.eot);
-  src: local('Noto Sans Italic'),
-  local('NotoSans-Italic'),
-  url(~notosans-fontface/fonts/NotoSans-Italic.eot) format('embedded-opentype'),
-  url(~notosans-fontface/fonts/NotoSans-Italic.woff2) format('woff2'),
-  url(~notosans-fontface/fonts/NotoSans-Italic.woff) format('woff'),
-  url(~notosans-fontface/fonts/NotoSans-Italic.ttf) format('truetype'),
-  url(~notosans-fontface/fonts/NotoSans-Italic.svg) format('svg');
-  font-weight: 400;
-  font-style: italic;
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  src: url(~notosans-fontface/fonts/NotoSans-BoldItalic.eot);
-  src: local('Noto Sans BoldItalic'),
-  local('NotoSans-BoldItalic'),
-  url(~notosans-fontface/fonts/NotoSans-BoldItalic.eot) format('embedded-opentype'),
-  url(~notosans-fontface/fonts/NotoSans-BoldItalic.woff2) format('woff2'),
-  url(~notosans-fontface/fonts/NotoSans-BoldItalic.woff) format('woff'),
-  url(~notosans-fontface/fonts/NotoSans-BoldItalic.ttf) format('truetype'),
-  url(~notosans-fontface/fonts/NotoSans-BoldItalic.svg) format('svg');
-  font-weight: 700;
-  font-style: italic;
+.icon-geo:before {
+    content: '\e802';
 }
 
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(~material-design-icons/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(~material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-       url(~material-design-icons/iconfont/MaterialIcons-Regular.woff) format('woff'),
-       url(~material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+/* '' */
+.icon-search:before {
+    content: '\e803';
 }
 
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+/* '' */
+.icon-print:before {
+    content: '\e804';
 }
+
+/* '' */
+.icon-warning:before {
+    content: '\e805';
+}
+
+/* '' */
+.icon-attention:before {
+    content: '\e806';
+}
+
+/* '' */
+.icon-block:before {
+    content: '\e807';
+}
+
+/* '' */
+.icon-edit:before {
+    content: '\e808';
+}
+
+/* '' */
+.icon-pin:before {
+    content: '\e809';
+}
+
+/* '' */
+.icon-plus-circled:before {
+    content: '\e80a';
+}
+
+/* '' */
+.icon-calendar:before {
+    content: '\e80b';
+}
+
+/* '' */
+.icon-receipt:before {
+    content: '\e80c';
+}
+
+/* '' */
+.icon-tag:before {
+    content: '\e80d';
+}
+
+/* '' */
+.icon-return:before {
+    content: '\e80e';
+}
+
+/* '' */
+.icon-exclamation:before {
+    content: '\e80f';
+}
+
+/* '' */
+.icon-menu:before {
+    content: '\e810';
+}
+
+/* '' */
+.icon-viber:before {
+    content: '\e81b';
+}
+
+/* '' */
+.icon-arrowleft:before {
+    content: '\ea01';
+}
+
+/* '' */
+.icon-arrowright:before {
+    content: '\ea02';
+}
+
+/* '' */
+.icon-times:before, .icon-close:before {
+    content: '\ea03';
+}
+
+/* '' */
+.icon-eye:before {
+    content: '\ea04';
+}
+
+/* '' */
+.icon-hand-point:before {
+    content: '\ea08';
+}
+
+/* '' */
+.icon-heart-solid:before {
+    content: '\ea09';
+}
+
+/* '' */
+.icon-heart:before {
+    content: '\ea0a';
+}
+
+/* '' */
+.icon-mail:before {
+    content: '\ea0c';
+}
+
+/* '' */
+.icon-message:before {
+    content: '\ea10';
+}
+
+/* '' */
+.icon-ok:before {
+    content: '\ea11';
+}
+
+/* '' */
+.icon-phone:before {
+    content: '\ea15';
+}
+
+/* '' */
+.icon-quote:before {
+    content: '\ea16';
+}
+
+/* '' */
+.icon-search-plus:before {
+    content: '\ea18';
+}
+
+/* '' */
+.icon-shopping-basket:before {
+    content: '\ea1a';
+}
+
+/* '' */
+.icon-filter:before, .icon-shortarrowleft:before {
+    content: '\ea1b';
+}
+
+/* '' */
+.icon-shortarrowright:before {
+    content: '\ea1c';
+}
+
+/* '' */
+.icon-star-solid:before {
+    content: '\ea1d';
+}
+
+/* '' */
+.icon-star:before {
+    content: '\ea1e';
+}
+
+/* '' */
+.icon-eraser:before, .icon-trash-alt:before {
+    content: '\ea20';
+}
+
+/* '' */
+.icon-update:before {
+    content: '\ea21';
+}
+
+/* '' */
+.icon-user:before {
+    content: '\ea22';
+}
+
+/* '' */
+.icon-schevron-down:before {
+    content: '\f004';
+}
+
+/* '' */
+.icon-schevron-up:before {
+    content: '\f005';
+}
+
+/* '' */
+.icon-twitter:before {
+    content: '\f099';
+}
+
+/* '' */
+.icon-facebook:before {
+    content: '\f09a';
+}
+
+/* '' */
+.icon-pinterest:before, .icon-pinterest-circled:before {
+    content: '\f0d2';
+}
+
+/* '' */
+.icon-gplus:before, .icon-google-plus:before {
+    content: '\f0d5';
+    margin-left: -2.2px;
+}
+
+/* '' */
+.icon-linkedin:before {
+    content: '\f0e1';
+}
+
+/* '' */
+.icon-youtube-play:before {
+    content: '\f16a';
+}
+
+/* '' */
+.icon-instagram:before {
+    content: '\f16d';
+}
+
+/* '' */
+.icon-vk:before {
+    content: '\f189';
+}
+
+/* '' */
+.icon-left-circled:before {
+    content: '\f190';
+}
+
+/* '' */
+.icon-pdf:before {
+    content: '\f1c1';
+}
+
+/* '' */
+.icon-telegram:before {
+    content: '\f1d8';
+    margin-left: -1.5px;
+}
+
+/* '' */
+.icon-cart-plus:before {
+    content: '\f217';
+}
+
+/* '' */
+.icon-odnoklassniki:before {
+    content: '\f263';
+}
+
+/* '' */
+.icon-user-circle:before {
+    content: '\f2be';
+}
+
+/* '' */
