@@ -264,3 +264,4 @@ upload/
 ### Theme unignore ###
 !/themes/cadouri_md/config/theme.yml
 !/themes/*
+!/themes/cadouri_md/_dev/*
