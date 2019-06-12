@@ -7,6 +7,7 @@ $brand-secondary: #f39d72;
 $brand-success: #4cbb6c;
 $brand-warning: #ff9a52;
 $brand-danger: #ff4c4c;
+$brand-info: #ff4c4c;
 $label-color: $gray-darker;
 $btn-primary-color: #fff;
 $btn-primary-bg: $brand-primary;
@@ -54,3 +55,44 @@ $display4-weight: 400;
 $text-muted: $gray;
 $NotoSansPath: "~notosans-fontface/fonts";
 $NotoSansVersion: "1.0.1";
+
+/**
+ * Cadouri vars
+ */
+
+$sm: 560px;
+$md: 760px;
+$lg: 990px;
+$xl: 1440px;
+
+
+$black_0b0b0b: #0b0b0b;
+$black_111: #111111;
+$darkgray_a9b1c0: #a9b1c0;
+$darkslategray_333: #333333;
+$darkslategray_404040: #404040;
+$darkslategray_4a4a4a: #4a4a4a;
+$gray_797C85: #797c85;
+$lightcoral_D07676: #d07676;
+$lightgray_CCC: #cccccc;
+$lightgray_ccc: #cccccc;
+$lightsteelblue_b7C1D4: #b7c1d4;
+$rosybrown: #be7374;
+$white_FFF: #ffffff;
+$white_fff: #ffffff;
+$whitesmoke_EEE: #eeeeee;
+$whitesmoke_f2f2f2: #f2f2f2;
+
+$theme-color-primary: #be7374 !default;
+$theme-color-secondary: #b9c2d3 !default;
+$theme-color-tertiary: #fed2cc !default;
+
+$text-color-primary: #000000 !default;
+$text-color-secondary: #000000 !default;
+$text-color-tertiary: #a9b1c0 !default;
+
+$rtl-left: left !default;
+$rtl-right: right !default;
+
+
+$font-size-primary: 18px;
