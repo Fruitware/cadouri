@@ -57,7 +57,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
 
         $this->entity_manager = $entity_manager;
 
-        $this->version = '2.3.0';
+        $this->version = '2.3.1';
         $this->author = 'PrestaShop';
         $this->error = false;
         $this->valid = false;
@@ -1264,7 +1264,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
             if (Db::getInstance()->execute($sql)) {
                 return json_encode(true);
             }
-            return json_encode($this->l('Newsletter subscription: Unable to delete customer using email.'));
+            return json_encode($this->trans('Newsletter subscription: no email to delete, this customer has not registered.', array(), 'Modules.Emailsubscription.Admin'));
         }
     }
     public function hookActionExportGDPRData($customer)
@@ -1274,7 +1274,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
             if ($res = Db::getInstance()->ExecuteS($sql)) {
                 return json_encode($res);
             }
-            return json_encode($this->l('Newsletter subscription: Unable to export customer using email.'));
+            return json_encode($this->trans('Newsletter subscription: no email to export, this customer has not registered.', array(), 'Modules.Emailsubscription.Admin'));
        }
    }
 }
