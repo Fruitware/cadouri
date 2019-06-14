@@ -49,6 +49,7 @@ admin-dev/autoupgrade/
 !/cache/tcpdf/index.php
 /log/*
 themes/*/cache/
+themes/node_modules/
 /var/cache/
 /var/logs/
 app/config/parameters.php
