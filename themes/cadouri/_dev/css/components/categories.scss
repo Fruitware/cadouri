@@ -260,21 +260,6 @@
         font-weight: 400;
         letter-spacing: .5px;
         text-transform: initial !important;
-
-        &:after {
-          content: '...................';
-          font-family: monospace;
-          position: absolute;
-          left: 0;
-          top: 58px;
-          line-height: 0;
-          font-size: 18px;
-          width: 100%;
-          height: 10px;
-          white-space: nowrap;
-          color: #b7C1D4;
-          overflow: hidden;
-        }
       }
     }
   }

@@ -60,7 +60,7 @@
                         </div>
                         <div class="hidden-md-up text-sm-center mobile">
                             <div class="float-xs-left" id="menu-icon">
-                                <i class="material-icons d-inline">&#xE5D2;</i>
+                                <i class="icon icon-menu d-inline"></i>
                             </div>
                             <div class="float-xs-right" id="_mobile_cart"></div>
                             <div class="float-xs-right" id="_mobile_user_info"></div>

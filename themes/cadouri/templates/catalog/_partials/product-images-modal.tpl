@@ -49,8 +49,8 @@
           {/block}
           {if $imagesCount > 5}
             <div class="arrows js-modal-arrows">
-              <i class="material-icons arrow-up js-modal-arrow-up">&#xE5C7;</i>
-              <i class="material-icons arrow-down js-modal-arrow-down">&#xE5C5;</i>
+              <i class="icon icon-schevron-up arrow-up js-modal-arrow-up"></i>
+              <i class="icon icon-schevron-down arrow-down js-modal-arrow-down"></i>
             </div>
           {/if}
         </aside>

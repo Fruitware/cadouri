@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 19:24:05
+/* Smarty version 3.1.33, created on 2019-06-14 23:03:16
   from 'C:\Programs\XAMPP\htdocs\themes\cadouri\templates\catalog\_partials\active_filters.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d03ca25ee7ae3_38886792',
+  'unifunc' => 'content_5d03fd849396d0_54447721',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3fe2f17419d2ae88cf0b49bd1680d80603032fff' => 
     array (
       0 => 'C:\\Programs\\XAMPP\\htdocs\\themes\\cadouri\\templates\\catalog\\_partials\\active_filters.tpl',
-      1 => 1560443402,
+      1 => 1560539466,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d03ca25ee7ae3_38886792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d03fd849396d0_54447721 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <section id="js-active-search-filters" class="<?php if (count($_smarty_tpl->tpl_vars['activeFilters']->value)) {?>active_filters<?php } else { ?>hide<?php }?>">
   <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10870305195d03ca25ee3ff6_70622395', 'active_filters_title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8062718445d03fd84933dc4_97710758', 'active_filters_title');
 ?>
 
 
@@ -38,7 +38,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['filter']->value) {
 ?>
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12911113155d03ca25ee5ef3_38143287', 'active_filters_item');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15719310975d03fd84936f23_28839909', 'active_filters_item');
 ?>
 
       <?php
@@ -50,12 +50,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </section>
 <?php }
 /* {block 'active_filters_title'} */
-class Block_10870305195d03ca25ee3ff6_70622395 extends Smarty_Internal_Block
+class Block_8062718445d03fd84933dc4_97710758 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'active_filters_title' => 
   array (
-    0 => 'Block_10870305195d03ca25ee3ff6_70622395',
+    0 => 'Block_8062718445d03fd84933dc4_97710758',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -68,12 +68,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'active_filters_title'} */
 /* {block 'active_filters_item'} */
-class Block_12911113155d03ca25ee5ef3_38143287 extends Smarty_Internal_Block
+class Block_15719310975d03fd84936f23_28839909 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'active_filters_item' => 
   array (
-    0 => 'Block_12911113155d03ca25ee5ef3_38143287',
+    0 => 'Block_15719310975d03fd84936f23_28839909',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -85,7 +85,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['filter']->value['label'], ENT_QUOTES, 'UTF-8');?>
 
             <a class="js-search-link" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['filter']->value['nextEncodedFacetsURL'], ENT_QUOTES, 'UTF-8');?>
-"><i class="material-icons close">&#xE5CD;</i></a>
+"><i class="icon icon-close close"></i></a>
           </li>
         <?php
 }

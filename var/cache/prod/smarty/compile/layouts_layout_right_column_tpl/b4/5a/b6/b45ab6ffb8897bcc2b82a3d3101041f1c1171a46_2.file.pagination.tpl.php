@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 19:24:07
+/* Smarty version 3.1.33, created on 2019-06-14 23:03:18
   from 'C:\Programs\XAMPP\htdocs\themes\cadouri\templates\_partials\pagination.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d03ca27c40932_41772665',
+  'unifunc' => 'content_5d03fd86c0d128_59689339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b45ab6ffb8897bcc2b82a3d3101041f1c1171a46' => 
     array (
       0 => 'C:\\Programs\\XAMPP\\htdocs\\themes\\cadouri\\templates\\_partials\\pagination.tpl',
-      1 => 1560443402,
+      1 => 1560538138,
       2 => 'file',
     ),
   ),
@@ -20,21 +20,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d03ca27c40932_41772665 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d03fd86c0d128_59689339 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <nav class="pagination">
   <div class="col-md-4">
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_171715605d03ca27c37627_16707163', 'pagination_summary');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12198062275d03fd86c01d56_78552674', 'pagination_summary');
 ?>
 
   </div>
 
   <div class="col-md-6 offset-md-2 pr-0">
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21062534195d03ca27c392e7_17178792', 'pagination_page_list');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3322232195d03fd86c04069_07897912', 'pagination_page_list');
 ?>
 
   </div>
@@ -42,12 +42,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21062534195d03ca27
 </nav>
 <?php }
 /* {block 'pagination_summary'} */
-class Block_171715605d03ca27c37627_16707163 extends Smarty_Internal_Block
+class Block_12198062275d03fd86c01d56_78552674 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'pagination_summary' => 
   array (
-    0 => 'Block_171715605d03ca27c37627_16707163',
+    0 => 'Block_12198062275d03fd86c01d56_78552674',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -60,12 +60,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'pagination_summary'} */
 /* {block 'pagination_page_list'} */
-class Block_21062534195d03ca27c392e7_17178792 extends Smarty_Internal_Block
+class Block_3322232195d03fd86c04069_07897912 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'pagination_page_list' => 
   array (
-    0 => 'Block_21062534195d03ca27c392e7_17178792',
+    0 => 'Block_3322232195d03fd86c04069_07897912',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -93,11 +93,11 @@ echo htmlspecialchars(call_user_func_array($_smarty_tpl->registered_plugins[ 'mo
 "
                 >
                   <?php if ($_smarty_tpl->tpl_vars['page']->value['type'] === 'previous') {?>
-                    <i class="material-icons">&#xE314;</i><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Previous','d'=>'Shop.Theme.Actions'),$_smarty_tpl ) );?>
+                    <i class="icon icon-shortarrowleft"></i><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Previous','d'=>'Shop.Theme.Actions'),$_smarty_tpl ) );?>
 
                   <?php } elseif ($_smarty_tpl->tpl_vars['page']->value['type'] === 'next') {?>
                     <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Next','d'=>'Shop.Theme.Actions'),$_smarty_tpl ) );?>
-<i class="material-icons">&#xE315;</i>
+<i class="icon icon-arrowleft"></i>
                   <?php } else { ?>
                     <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['page']->value['page'], ENT_QUOTES, 'UTF-8');?>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 19:24:42
+/* Smarty version 3.1.33, created on 2019-06-14 23:21:10
   from 'C:\Programs\XAMPP\htdocs\themes\cadouri\templates\_partials\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d03ca4aeb6ea6_58764155',
+  'unifunc' => 'content_5d0401b6dfe450_22498799',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96290472d10186c8142738cc1a3bd50f0ac97aa7' => 
     array (
       0 => 'C:\\Programs\\XAMPP\\htdocs\\themes\\cadouri\\templates\\_partials\\header.tpl',
-      1 => 1560443402,
+      1 => 1560539999,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d03ca4aeb6ea6_58764155 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0401b6dfe450_22498799 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2910855755d03ca4aeb23e8_82498496', 'header_banner');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17227062205d0401b6df6103_36626331', 'header_banner');
 ?>
 
 
@@ -49,12 +49,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2910855755d03ca4ae
     </div>
     <div class="cadouri_header_middle_container">
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10120430685d03ca4aeb50d1_83912527', 'header_nav');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19802173815d0401b6dfbcb6_65732981', 'header_nav');
 ?>
 
 
         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17088155405d03ca4aeb5ae8_18865666', 'header_top');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21407242365d0401b6dfcd30_06288274', 'header_top');
 ?>
 
     </div>
@@ -66,12 +66,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17088155405d03ca4a
 </div>
 <?php }
 /* {block 'header_banner'} */
-class Block_2910855755d03ca4aeb23e8_82498496 extends Smarty_Internal_Block
+class Block_17227062205d0401b6df6103_36626331 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_banner' => 
   array (
-    0 => 'Block_2910855755d03ca4aeb23e8_82498496',
+    0 => 'Block_17227062205d0401b6df6103_36626331',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -86,12 +86,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header_banner'} */
 /* {block 'header_nav'} */
-class Block_10120430685d03ca4aeb50d1_83912527 extends Smarty_Internal_Block
+class Block_19802173815d0401b6dfbcb6_65732981 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_nav' => 
   array (
-    0 => 'Block_10120430685d03ca4aeb50d1_83912527',
+    0 => 'Block_19802173815d0401b6dfbcb6_65732981',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -114,7 +114,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         </div>
                         <div class="hidden-md-up text-sm-center mobile">
                             <div class="float-xs-left" id="menu-icon">
-                                <i class="material-icons d-inline">&#xE5D2;</i>
+                                <i class="icon icon-menu d-inline"></i>
                             </div>
                             <div class="float-xs-right" id="_mobile_cart"></div>
                             <div class="float-xs-right" id="_mobile_user_info"></div>
@@ -129,12 +129,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header_nav'} */
 /* {block 'header_top'} */
-class Block_17088155405d03ca4aeb5ae8_18865666 extends Smarty_Internal_Block
+class Block_21407242365d0401b6dfcd30_06288274 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_top' => 
   array (
-    0 => 'Block_17088155405d03ca4aeb5ae8_18865666',
+    0 => 'Block_21407242365d0401b6dfcd30_06288274',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

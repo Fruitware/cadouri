@@ -1,7 +1,7 @@
 <div class="toolbar-icons">
 	<div class="wrapper">
 		<a class="btn btn-primary  pointer" id="page-header-desc-configuration-add_module" href="#" title="" data-toggle="modal" data-placement="bottom" data-original-title="Installer un module" data-target="#module-modal-import">
-			<i class="material-icons">cloud_upload</i>
+			<i class="icon icon-update"></i>
 			{l s='Install a module'}
 		</a>
 

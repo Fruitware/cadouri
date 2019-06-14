@@ -32,7 +32,7 @@
               {foreach from=$cart.vouchers.added item=voucher}
                 <li class="cart-summary-line">
                   <span class="label">{$voucher.name}</span>
-                  <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><i class="material-icons">&#xE872;</i></a>
+                  <a href="{$voucher.delete_url}" data-link-action="remove-voucher"><i class="icon icon-trash-alt"></i></a>
                   <div class="float-xs-right">
                     {$voucher.reduction_formatted}
                   </div>
@@ -60,7 +60,7 @@
 
           {block name='cart_voucher_notifications'}
             <div class="alert alert-danger js-error" role="alert">
-              <i class="material-icons">&#xE001;</i><span class="ml-1 js-error-text"></span>
+              <i class="icon icon-exclamation"></i><span class="ml-1 js-error-text"></span>
             </div>
           {/block}
         </div>

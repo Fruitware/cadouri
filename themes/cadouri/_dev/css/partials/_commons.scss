@@ -291,12 +291,14 @@ input, textarea {
         }
         .touchspin-up {
             &:after {
-                content: "\E5CE";
+                font-family: 'fontello' !important;
+                content: "\f005";
             }
         }
         .touchspin-down {
             &:after {
-                content: "\E5CF";
+                font-family: 'fontello' !important;
+                content: "\f004";
             }
         }
         i {
@@ -356,7 +358,7 @@ input, textarea {
             border: 2px $gray-darker solid;
             .checkbox-checked {
                 display: none;
-                margin: -0.25rem -0.125rem;
+                margin: -0.3rem -0.3rem;
                 font-size: 1.1rem;
                 color: $gray-darker;
             }

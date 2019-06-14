@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 19:24:07
+/* Smarty version 3.1.33, created on 2019-06-14 23:03:18
   from 'C:\Programs\XAMPP\htdocs\themes\cadouri\templates\catalog\_partials\sort-orders.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d03ca275b3813_28869071',
+  'unifunc' => 'content_5d03fd860a03b7_70832487',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbe3b3d891bb9ea816c6913373d7b76076835c28' => 
     array (
       0 => 'C:\\Programs\\XAMPP\\htdocs\\themes\\cadouri\\templates\\catalog\\_partials\\sort-orders.tpl',
-      1 => 1560443401,
+      1 => 1560538283,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d03ca275b3813_28869071 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d03fd860a03b7_70832487 (Smarty_Internal_Template $_smarty_tpl) {
 ?><span class="col-sm-3 col-md-3 hidden-sm-down sort-by"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Sort by:','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
 </span>
 <div class="<?php if (!empty($_smarty_tpl->tpl_vars['listing']->value['rendered_facets'])) {?>col-sm-9 col-xs-8<?php } else { ?>col-sm-12 col-xs-12<?php }?> col-md-9 products-sort-order dropdown">
@@ -35,7 +35,7 @@ echo htmlspecialchars($_smarty_tpl->tpl_vars['listing']->value['sort_selected'],
 } else {
 echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Select','d'=>'Shop.Theme.Actions'),$_smarty_tpl ) );
 }?>
-    <i class="material-icons float-xs-right">&#xE5C5;</i>
+    <i class="icon icon-schevron-down float-xs-right"></i>
   </button>
   <div class="dropdown-menu">
     <?php
