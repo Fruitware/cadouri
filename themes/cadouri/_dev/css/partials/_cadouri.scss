@@ -558,12 +558,39 @@
 /**
  * Header
  */
+ @media (max-width: 767px) {
+    .header-banner {display: none}
+    .cadouri_header {
+        .cadouri_header_left_container,.cadouri_header_right_container {
+            display: none;
+        }
+        .cadouri_header_middle_container {
+            width: 100%;
+        }
+        #menu-icon {
+            position: relative;
+            top: 20px;
+            padding: 5px;
+            border-radius: 3px;
+            background-color: #333;
+            color: #fff;
+        }
+        #_mobile_logo {
+            img {
+                position: relative;
+                left: 30vw;
+            }
+        }
+    }
+}
 .cadouri_header {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     height: 136px;
     align-items: center;
+    padding: 0;
+
     .cadouri_header_left_container {
         h1, a {
             height: 100%;
@@ -630,7 +657,7 @@
         }
 
         .cadouri_header_middle_container_block {
-            padding: 15px 0;
+            //padding: 15px 0;
         }
 
         .contact-phone-block {

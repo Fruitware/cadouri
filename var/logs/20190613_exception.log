@@ -1,6 +1,0 @@
-*ERROR* 	v1.7.5.2	2019/06/13 - 18:40:27: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) at line 127 in file classes/db/DbPDO.php
-*ERROR* 	v1.7.5.2	2019/06/13 - 18:40:28: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) at line 127 in file classes/db/DbPDO.php
-*ERROR* 	v1.7.5.2	2019/06/13 - 18:41:31: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) at line 127 in file classes/db/DbPDO.php
-*ERROR* 	v1.7.5.2	2019/06/13 - 18:41:31: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) at line 127 in file classes/db/DbPDO.php
-*ERROR* 	v1.7.5.2	2019/06/13 - 18:41:51: Shop not found at line 419 in file classes/shop/Shop.php
-*ERROR* 	v1.7.5.2	2019/06/13 - 18:41:52: Shop not found at line 419 in file classes/shop/Shop.php
