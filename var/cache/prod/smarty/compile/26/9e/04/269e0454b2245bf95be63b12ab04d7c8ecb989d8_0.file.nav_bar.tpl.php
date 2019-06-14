@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 16:04:44
+/* Smarty version 3.1.33, created on 2019-06-14 22:40:59
   from 'C:\Programs\XAMPP\htdocs\admin038sx7bbg\themes\new-theme\template\components\layout\nav_bar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d039b6c227f28_52746313',
+  'unifunc' => 'content_5d03f84bec0371_50441295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '269e0454b2245bf95be63b12ab04d7c8ecb989d8' => 
     array (
       0 => 'C:\\Programs\\XAMPP\\htdocs\\admin038sx7bbg\\themes\\new-theme\\template\\components\\layout\\nav_bar.tpl',
-      1 => 1560443338,
+      1 => 1560539964,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d039b6c227f28_52746313 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d03f84bec0371_50441295 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar d-none d-md-block">
   <span class="menu-collapse">
-    <i class="material-icons">chevron_left</i>
-    <i class="material-icons">chevron_left</i>
+    <i class="icon icon-shortarrowleft"></i>
+    <i class="icon icon-shortarrowleft"></i>
   </span>
 
   <ul class="main-menu">

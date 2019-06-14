@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 19:24:05
+/* Smarty version 3.1.33, created on 2019-06-14 23:03:16
   from 'C:\Programs\XAMPP\htdocs\themes\cadouri\templates\catalog\_partials\facets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d03ca25bec517_89808128',
+  'unifunc' => 'content_5d03fd845013c5_41505824',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '76a4aeeb9f118e7ef258de35ed46bf5eb4264098' => 
     array (
       0 => 'C:\\Programs\\XAMPP\\htdocs\\themes\\cadouri\\templates\\catalog\\_partials\\facets.tpl',
-      1 => 1560443402,
+      1 => 1560539245,
       2 => 'file',
     ),
   ),
@@ -20,19 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d03ca25bec517_89808128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d03fd845013c5_41505824 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
   <div id="search_filters">
 
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3291325125d03ca25bc6993_42283722', 'facets_title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19795945885d03fd844d1912_53968150', 'facets_title');
 ?>
 
 
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9719495675d03ca25bc9ba6_38189445', 'facets_clearall_button');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19118631755d03fd844d6e53_84031551', 'facets_clearall_button');
 ?>
 
 
@@ -65,8 +65,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </p>
             <span class="float-xs-right">
               <span class="navbar-toggler collapse-icons">
-                <i class="material-icons add">&#xE313;</i>
-                <i class="material-icons remove">&#xE316;</i>
+                <i class="icon icon-schevron-down add"></i>
+                <i class="icon icon-schevron-up remove"></i>
               </span>
             </span>
           </div>
@@ -74,14 +74,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           <?php if ($_smarty_tpl->tpl_vars['facet']->value['widgetType'] !== 'dropdown') {?>
 
             <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3682459875d03ca25bdcc35_85841002', 'facet_item_other');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16310503465d03fd844edf16_83458899', 'facet_item_other');
 ?>
 
 
           <?php } else { ?>
 
             <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_529871305d03ca25be5b62_23418019', 'facet_item_dropdown');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14907912615d03fd844f9059_17903837', 'facet_item_dropdown');
 ?>
 
 
@@ -95,12 +95,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   </div>
 <?php }
 /* {block 'facets_title'} */
-class Block_3291325125d03ca25bc6993_42283722 extends Smarty_Internal_Block
+class Block_19795945885d03fd844d1912_53968150 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'facets_title' => 
   array (
-    0 => 'Block_3291325125d03ca25bc6993_42283722',
+    0 => 'Block_19795945885d03fd844d1912_53968150',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -113,12 +113,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'facets_title'} */
 /* {block 'facets_clearall_button'} */
-class Block_9719495675d03ca25bc9ba6_38189445 extends Smarty_Internal_Block
+class Block_19118631755d03fd844d6e53_84031551 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'facets_clearall_button' => 
   array (
-    0 => 'Block_9719495675d03ca25bc9ba6_38189445',
+    0 => 'Block_19118631755d03fd844d6e53_84031551',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -127,7 +127,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
       <div id="_desktop_search_filters_clear_all" class="hidden-sm-down clear-all-wrapper">
         <button data-search-url="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['clear_all_link']->value, ENT_QUOTES, 'UTF-8');?>
 " class="btn btn-tertiary js-search-filters-clear-all">
-          <i class="material-icons">&#xE14C;</i>
+          <i class="icon icon-close"></i>
           <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Clear all','d'=>'Shop.Theme.Actions'),$_smarty_tpl ) );?>
 
         </button>
@@ -137,12 +137,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'facets_clearall_button'} */
 /* {block 'facet_item_other'} */
-class Block_3682459875d03ca25bdcc35_85841002 extends Smarty_Internal_Block
+class Block_16310503465d03fd844edf16_83458899 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'facet_item_other' => 
   array (
-    0 => 'Block_3682459875d03ca25bdcc35_85841002',
+    0 => 'Block_16310503465d03fd844edf16_83458899',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -178,7 +178,7 @@ _<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['filter_key']->value, ENT_QU
                                 <span class="color texture" style="background-image:url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['filter']->value['properties']['texture'], ENT_QUOTES, 'UTF-8');?>
 )"></span>
                               <?php } else { ?>
-                              <span <?php if (!$_smarty_tpl->tpl_vars['js_enabled']->value) {?> class="ps-shown-by-js" <?php }?>><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
+                              <span <?php if (!$_smarty_tpl->tpl_vars['js_enabled']->value) {?> class="ps-shown-by-js" <?php }?>><i class="icon icon-ok rtl-no-flip checkbox-checked"></i></span>
                             <?php }?>
                           </span>
                         <?php } else { ?>
@@ -224,12 +224,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block 'facet_item_other'} */
 /* {block 'facet_item_dropdown'} */
-class Block_529871305d03ca25be5b62_23418019 extends Smarty_Internal_Block
+class Block_14907912615d03fd844f9059_17903837 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'facet_item_dropdown' => 
   array (
-    0 => 'Block_529871305d03ca25be5b62_23418019',
+    0 => 'Block_14907912615d03fd844f9059_17903837',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -265,7 +265,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                         <?php }?>
                       </span>
-                      <i class="material-icons float-xs-right">&#xE5C5;</i>
+                      <i class="icon icon-schevron-down float-xs-right"></i>
                     </a>
                     <div class="dropdown-menu">
                       <?php

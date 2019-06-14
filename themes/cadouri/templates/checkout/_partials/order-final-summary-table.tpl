@@ -32,7 +32,7 @@
     {else}
        {l s='%products_count% items in your cart' sprintf=['%products_count%' => $products_count] d='Shop.Theme.Checkout'}
     {/if}
-  	<a href="{url entity=cart params=['action' => 'show']}"><span class="step-edit"><i class="material-icons edit">mode_edit</i> {l s='edit' d='Shop.Theme.Actions'}</span></a>
+  	<a href="{url entity=cart params=['action' => 'show']}"><span class="step-edit"><i class="icon icon-edit edit"></i> {l s='edit' d='Shop.Theme.Actions'}</span></a>
   </h3>
 </div>
 {/block}

@@ -32,8 +32,8 @@
         <span class="h3">{$linkBlock.title}</span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
-            <i class="material-icons add">&#xE313;</i>
-            <i class="material-icons remove">&#xE316;</i>
+            <i class="icon-plus-circled add"></i>
+            <i class="icon icon-close remove"></i>
           </span>
         </span>
       </div>

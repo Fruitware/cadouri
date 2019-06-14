@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-14 19:24:43
+/* Smarty version 3.1.33, created on 2019-06-14 23:21:11
   from 'module:pslanguageselectorpslangu' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d03ca4b174a30_44447180',
+  'unifunc' => 'content_5d0401b70de336_32241472',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d03ca4b174a30_44447180 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0401b70de336_32241472 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="_desktop_language_selector">
     <div class="language-selector-wrapper">
         <span id="language-selector-label" class="hidden-md-up"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Language:','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
