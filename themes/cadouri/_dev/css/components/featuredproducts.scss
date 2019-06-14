@@ -20,7 +20,9 @@
     height: 318px;
     width: 257px;
     background: white;
-    @include box-shadow;
+    /* @include box-shadow; */
+    cursor: pointer;
+    
     &:hover, &:focus {
       .highlighted-informations {
         bottom: 5.5rem;
@@ -33,11 +35,11 @@
       }
       .product-description::after{
         content: "";
-        border-top: $gray 1px solid;
+        border-top: #ffada2 2px dashed;
         position: absolute;
-        width: 80%;
+        width: 33.333333333%;
         top: 0;
-        left: 10%;
+        left: 33.333333333%;
         opacity: .25;
       }
     }
@@ -74,7 +76,7 @@
     text-align: center;
     width: 257px;
     height: 3.125rem;
-    box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2); */
     transition: bottom .3s;
     .quick-view {
       color: $gray;

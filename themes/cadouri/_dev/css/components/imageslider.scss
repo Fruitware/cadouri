@@ -5,7 +5,7 @@
     z-index: auto;
   }
   .carousel-inner {
-    height: 340px;
+    height: 275px;
     @media (max-width: 767px) {
       height: auto;
     }
@@ -52,7 +52,9 @@
         content: "";
       }
       i {
-        font-size: 3.125rem;
+        position: relative;
+        top: -25px;
+        font-size: 2rem;
         color: white;
       }
       &:hover {
