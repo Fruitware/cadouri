@@ -49,6 +49,9 @@ admin-dev/autoupgrade/
 !/cache/tcpdf/index.php
 /log/*
 themes/*/cache/
+/var/cache/
+/var/logs/
+app/config/parameters.php
 
 # Site content
 # The following folders contain product images, virtual products, CSV's, etc.
