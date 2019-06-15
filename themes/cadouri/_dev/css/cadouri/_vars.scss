@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'Nickainley Normal';
+    src: url(/themes/cadouri/assets/fonts/nickainley-normal.otf);
+}
+@font-face {
+    font-family: 'Basil Regular';
+    src: url(/themes/cadouri/assets/fonts/basil-regular.ttf);
+}
+
+@import "/themes/cadouri/assets/fonts/fontello/css/fontello.css";
+$antiquewhite_f8e7d1: #f8e7d1;
+$black_000: #000000;
+$black_111: #111111;
+$black_232323: #232323;
+$black_292b32: #292b32;
+$darkgray_999: #999999;
+$darkgray_a9b1c0: #a9b1c0;
+$darkgray_acaaa6: #acaaa6;
+$darkslategray_333: #333333;
+$darkslategray_414141: #414141;
+$gainsboro_ddd: #dddddd;
+$gainsboro_dfe1e6: #dfe1e6;
+$gold_fc0: #ffcc00;
+$gray_777: #777777;
+$gray_888: #888888;
+$lightcoral_d07676: #d07676;
+$lightgray_ccc: #cccccc;
+$lightsteelblue_b7c1d4: #b7c1d4;
+$mistyrose_f8d4ce: #f8d4ce;
+$mistyrose_fed2cc: #fed2cc;
+$rosybrown_be7374: #be7374;
+$silver_b8becb: #b8becb;
+$silver_bbb: #bbbbbb;
+$silver_c5c5c5: #c5c5c5;
+$white_fafafa: #fafafa;
+$white_fff: #ffffff;
+$whitesmoke_ebebeb: #ebebeb;
+$whitesmoke_eee: #eeeeee;
+
+$font-family-primary: 'Basil Regular';
+$font-family-secondary: 'Nickainley Normal';
+$font-icon-secondary: 'fontello';
+
+// Mega Menu Module
+// ========================================================================
+$megamenu-outside-bg: transparent !default;
+$megamenu-bg: #333 !default;
+$megamenu-color: #000000 !default;
+$megamenu-font-family: $font-family-primary !default;
+$megamenu-link-color: #000000 !default;
+$megamenu-link-hover-color: $theme-color-primary !default;
+$megamenu-link-font-size: 18px !default;
+$megamenu-font-weight: 700 !default;
+
+$megamenu-parent-padding: 2px 15px !default;
+$megamenu-parent-text-transform: uppercase !default;
+
+$megamenu-sub-bg-color: #fff !default;
+$megamenu-sub-font-family: $font-family-primary !default;
+$megamenu-sub-text-color: $text-color-tertiary !default;
+$megamenu-sub-link-color: $text-color-tertiary !default;
+$megamenu-sub-link-hover-color: $theme-color-primary !default;
+$megamenu-sub-font-size: 18px !default;
+
+$megamenu-heading-font-family: $font-family-primary !default;
+$megamenu-heading-font-size: 20px !default;
+$megamenu-heading-color: $text-color-secondary !default;
+
+// product label
+$product-label-border-color: #000 !default;
+$product-label-color: #fff !default;
+$product-label-font-size: 14px !default;
+$product-label-font-family: $font-family-primary !default;
+$product-label-font-weight: 500 !default;
+
+$product-label-new-bg: $theme-color-secondary !default;
+$product-label-new-border-color: $theme-color-secondary !default;
+
+$product-label-sale-bg: $theme-color-primary !default;
+$product-label-sale-border-color: $theme-color-primary !default;
+$product-label-sale-text-color: #fff !default;
+
+//---------- Product Elements
+
+$product-price-color: $text-color-tertiary !default;
+$product-reduced-price: $text-color-tertiary !default;
+
+$product-price-font-family: $font-family-primary !default;
+$product-price-font-size: 16px !default;
+$product-price-font-weight: 600 !default;
+
+$product-new-price-color: $text-color-tertiary !default;
+$product-new-price-bg-color: red !default;
+$product-new-price-font-size: 16px !default;
+$product-new-price-weight: 600 !default;
+
+$product-special-price-bg-color: red !default;
+$product-special-price-color: #fff !default;
+$product-special-price-size: $product-price-font-size !default;
+
+$product-old-price-color: $text-color-tertiary !default;
+$product-old-price-bg-color: #56595e !default;
+$product-old-price-size: 16px !default;
+$product-old-price-font-weight: 600 !default;
+
+// Product Block
+// ========================================================================
+$product-size: $font-size-base !default;
+$product-bg-color: #fff !default;
+$product-margin: 35px;
+$product-border-color: 1px solid #eee !default;
+$product-content-bg: transparent !default;
+$product-content-padding: 30px !default;
+$product-container-border: 1px solid #eee !default;
+$product-container-bg: #fff !default;
+
+$product-link-color: #000 !default;
+$product-link-hover-color: $theme-color-primary !default;
+$product-name-color: #000 !default;
+$product-name-hover-color: $theme-color-primary !default;
+$product-name-line-height: 18px !default;
+$product-name-font-family: $font-family-primary !default;
+$product-name-font-size: 18px !default;
+$product-name-font-weight: 600 !default;
+$product-name-text-decoration: none;
+$product-padding: 0 !default;
+
+// Box Modules
+// ========================================================================
+$block-module-margin-bottom: $grid-gutter-width-base !default;
+$block-module-padding: rem(10px) 0 !default;
+$block-module-border-color: 0 !default;
+
+$block-module-heading-border: 0 !default;
+$block-module-heading-transform: uppercase !default;
+$block-module-heading-line-height: rem(24px) !default;
+$block-module-heading-font-family: $font-family-primary !default;
+$block-module-heading-bg: transparent !default;
+$block-module-heading-padding: rem(12px) rem(0) !default;
+$block-module-heading-font-size: rem(18px) !default;
+$block-module-heading-font-weight: 700 !default;
+$block-module-heading-color: $text-color-secondary !default;
+
+/*blockprimary*/
+$default-bg-color: #fff !default;
+$default-border-color: #e1e1e1 !default;
+$default-text-color: #000 !default;
+$default-text-link-color: #000 !default;
+$default-text-link-color-hover: $brand-success !default;
+$default-heading-text-color: #fff !default;
+$default-heading-bg-color: #333 !default;
+$default-heading-border-color: #333 !default;
+
+/*blockprimary*/
+$primary-bg-color: #fff !default;
+$primary-border-color: lighten($brand-primary, 30%) !default;
+$primary-text-color: #000 !default;
+$primary-text-link-color: #000 !default;
+$primary-text-link-color-hover: $brand-success !default;
+$primary-heading-text-color: #fff !default;
+$primary-heading-bg-color: $brand-primary !default;
+$primary-heading-border-color: $brand-primary !default;
+
+/*block success*/
+$success-bg-color: #fff !default;
+$success-border-color: lighten($brand-success, 30%) !default;
+$success-text-color: #000 !default;
+$success-text-link-color: #000 !default;
+$success-text-link-color-hover: $brand-success !default;
+$success-heading-text-color: #fff !default;
+$success-heading-bg-color: $brand-success !default;
+$success-heading-border-color: $brand-success !default;
+
+/*block info*/
+$info-bg-color: #fff !default;
+$info-border-color: lighten($brand-info, 30%) !default;
+$info-text-color: #000 !default;
+$info-text-link-color: #000 !default;
+$info-text-link-color-hover: $brand-success !default;
+$info-heading-text-color: #fff !default;
+$info-heading-bg-color: $brand-info !default;
+$info-heading-border-color: $brand-info !default;
+
+/*block warning*/
+$warning-bg-color: #fff !default;
+$warning-border-color: lighten($brand-warning, 30%) !default;
+$warning-text-color: #000 !default;
+$warning-text-link-color: #000 !default;
+$warning-text-link-color-hover: $brand-success !default;
+$warning-heading-text-color: #fff !default;
+$warning-heading-bg-color: $brand-warning !default;
+$warning-heading-border-color: $brand-warning !default;
+
+/*block danger*/
+$danger-bg-color: #fff !default;
+$danger-border-color: lighten($brand-danger, 30%) !default;
+$danger-text-color: #000 !default;
+$danger-text-link-color: #000 !default;
+$danger-text-link-color-hover: $brand-danger !default;
+$danger-heading-text-color: #fff !default;
+$danger-heading-bg-color: $brand-danger !default;
+$danger-heading-border-color: $brand-danger !default;
+
+/*block highlighted*/
+$highlighted-bg-color: #fff !default;
+$highlighted-border-color: lighten($theme-color-primary, 30%) !default;
+$highlighted-text-color: #909cad !default;
+$highlighted-text-link-color: #909cad !default;
+$highlighted-text-link-color-hover: $theme-color-primary !default;
+$highlighted-heading-text-color: #fff !default;
+$highlighted-heading-bg-color: $theme-color-primary !default;
+$highlighted-heading-border-color: $theme-color-primary !default;
+
+// Mega Menu Module
+// ========================================================================
+$megamenu-outside-bg: transparent !default;
+$megamenu-bg: #333 !default;
+$megamenu-color: #000000 !default;
+$megamenu-font-family: $font-family-primary !default;
+$megamenu-link-color: #000000 !default;
+$megamenu-link-hover-color: $theme-color-primary !default;
+$megamenu-link-font-size: 18px !default;
+$megamenu-font-weight: 700 !default;
+
+$megamenu-parent-padding: 2px 15px !default;
+$megamenu-parent-text-transform: uppercase !default;
+
+$megamenu-sub-bg-color: #fff !default;
+$megamenu-sub-font-family: $font-family-primary !default;
+$megamenu-sub-text-color: $text-color-tertiary !default;
+$megamenu-sub-link-color: $text-color-tertiary !default;
+$megamenu-sub-link-hover-color: $theme-color-primary !default;
+$megamenu-sub-font-size: 18px !default;
+
+$megamenu-heading-font-family: $font-family-primary !default;
+$megamenu-heading-font-size: 20px !default;
+$megamenu-heading-color: $text-color-secondary !default;
+
+// Vertical Menu Module
+// ========================================================================
+$vertical-outside-bg: #fff !default;
+$vertical-bg: #fff !default;
+$vertical-font-family: $font-family-primary !default;
+
+$vertical-font-size: rem(16px) !default;
+$vertical-color: $text-color-primary !default;
+$vertical-font-weight: 600 !default;
+$vertical-line-height: rem(20px) !default;
+$vertical-link-padding: rem(22px) 0 !default;
+$vertical-link-color: $theme-color-primary !default;
+$vertical-link-font-size: rem(20px) !default;
+$vertical-link-hover-color: $theme-color-primary !default;
+$vertical-description-font-family: $font-family-primary !default;
+$vertical-description-font-size: rem(16px) !default;
+$vertical-description-font-style: normal !default;
+$vertical-description-color: $text-color-tertiary !default;
+$vertical-description-font-weight: 400 !default;
+$vertical-caret-border: #f5f5f5 !default;
+
+$vertical-sub-padding: 20px 0 !default;
+$vertical-sub-width: 215px !default;
+$vertical-sub-color: $text-color-tertiary !default;
+$vertical-sub-font-size: rem(18px) !default;
+$vertical-sub-link-color: $text-color-tertiary !default;
+$vertical-sub-font-family: $font-family-primary !default;
+$vertical-sub-link-font-size: $vertical-sub-font-size !default;
+$vertical-sub-bg: #fff !default;
+$vertical-sub-link-hover-color: $theme-color-primary !default;
+$vertical-sub-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35) !default;
+
+$vertical-heading-color: $text-color-secondary !default;
+$vertical-heading-font-size: rem(20px) !default;
+$vertical-heading-font-family: $font-family-primary !default;
+
+
+/*
+ * LAYOUT VARIABLES
+ */
+
+// Header
+// ========================================================================
+$header-bg:  							#ffffff !default;
+$header-bg1: 							rgba(0,0,0,.9) !default;
+$header-margin:  				    	0 !default;
+$header-padding:  				    0 !default;
+
+
+$header-logo-margin:  				0 !default;
+$header-logo-width:  				rem(275px) !default;
+$header-logo-height:  				rem(100px) !default;
+
+
+// Topbar
+// ========================================================================
+$topbar-bg: 									#222222 !default;
+$topbar-color: 								#999999 !default;
+$topbar-font-size: 						13px !default;
+$topbar-font-family:					$font-family-primary !default;
+$topbar-font-weight:          400 !default;
+$topbar-link-color: 					#999999 !default;
+$topbar-link-hover-color: 		$theme-color-primary !default;
+
+$topbar-bg1: 									#f5f5f5 !default;
+$topbar-bg2: 									#222222 !default;
+
+$topbar-padding: 							0 !default;
+$topbar-border:               1px solid #444 !default;
+
+
+// Main menu
+
+$mainnav-inner-bg:						#131313 !default;
+
+
+
+
+// Footer
+// ========================================================================
+
+$footer-bg: 									#fff !default;
+$footer-color: 								$text-color-tertiary !default;
+
+
+$footer-heading-font-family: 	   $font-family-secondary !default;
+$footer-heading-font-size: 		rem(18px)  !default;
+$footer-heading-font-weight: 	   600 !default;
+$footer-heading-color: 				$text-color-secondary !default;
+$footer-heading-padding:         0 !default;
+
+$footer-link-color: 					   $text-color-tertiary !default;
+$footer-link-hover-color: 		      $theme-color-primary !default;
+$footer-font-size:   	 				rem(14px) !default;
+
+$footer-content-padding:      15px !default;
+$footer-content-margin:       0 !default;
+$footer-list-padding:         10px 0 !default;
+$footer-margin:               20px !default;
+
+/////// footer top
+$footer-top-outside-border:		   0 !default;
+$footer-top-outside-bg :			   #f3f3f3 !default;
+$footer-top-bg: 			 				transparent !default;
+$footer-top-padding: 			 		rem(60px) 0 rem(30px)!default;
+$footer-top-color:						#666 !default;
+$footer-top-content-padding:	      rem(70px) 0 0px !default;
+$footer-top-content-margin:		   0 !default;
+$footer-top-color-hover:			   $theme-color-primary !default;
+$footer-top-border:						transparent !default;
+
+/////// footer center
+$footer-center-outside-bg :				#fff !default;
+$footer-center-bg: 			 					transparent !default;
+$footer-center-content-padding:		   0!default;
+$footer-center-content-margin:		    0 !default;
+$footer-center-color:						$text-color-tertiary !default;
+$footer-center-color-hover:				$theme-color-primary !default;
+
+/////// footer bottom
+$footer-bottom-outside-bg :				transparent !default;
+$footer-bottom-bg:							transparent !default;
+$footer-bottom-padding: 			 		rem(30px) 0 rem(20px)!default;
+$footer-bottom-content-padding:			0!default;
+$footer-bottom-content-margin:			0 !default;
+$footer-bottom-color:						$footer-link-color !default;
+$footer-bottom-color-hover:				$footer-link-hover-color !default;
+
+// Powered By / Copyright
+// ========================================================================
+$power-outside-bg:       			#fff !default;
+$power-bg: 								transparent!default;
+$power-color:                    $text-color-primary !default;
+$power-link-color:               #333743 !default;
+$power-link-hover-color:         $theme-color-primary !default;
+$power-padding:                  0 !default;
+$power-font-family  : 				$font-family-primary !default;
+$power-border-color:					#ebebeb !default;

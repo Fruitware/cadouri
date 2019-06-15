@@ -1,5 +1,5 @@
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,7 +18,7 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -50,20 +50,30 @@ import './components/block-cart';
 
 // "inherit" EventEmitter
 for (var i in EventEmitter.prototype) {
-  prestashop[i] = EventEmitter.prototype[i];
+    prestashop[i] = EventEmitter.prototype[i];
 }
 
 $(document).ready(() => {
-  let dropDownEl = $('.js-dropdown');
-  const form = new Form();
-  let topMenuEl = $('.js-top-menu ul[data-depth="0"]');
-  let dropDown = new DropDown(dropDownEl);
-  let topMenu = new TopMenu(topMenuEl);
-  let productMinitature = new ProductMinitature();
-  let productSelect  = new ProductSelect();
-  dropDown.init();
-  form.init();
-  topMenu.init();
-  productMinitature.init();
-  productSelect.init();
+    let dropDownEl = $('.js-dropdown');
+    const form = new Form();
+    let topMenuEl = $('.js-top-menu ul[data-depth="0"]');
+    let dropDown = new DropDown(dropDownEl);
+    let topMenu = new TopMenu(topMenuEl);
+    let productMinitature = new ProductMinitature();
+    let productSelect = new ProductSelect();
+    dropDown.init();
+    dropDown.init();
+    form.init();
+    topMenu.init();
+    productMinitature.init();
+    productSelect.init();
+    $("#products").bind("DOMSubtreeModified", function () {
+        productMinitature.init();
+    });
 });
+
+
+/**
+ * Fruitware custom script
+ */
+import './custom';

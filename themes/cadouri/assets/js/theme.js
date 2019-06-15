@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 26);
+/******/ 	return __webpack_require__(__webpack_require__.s = 27);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -169,7 +169,7 @@ module.exports = exports['default'];
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -188,7 +188,7 @@ module.exports = exports['default'];
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -218,35 +218,26 @@ var ProductMinitature = (function () {
     value: function init() {
       (0, _jquery2['default'])('.js-product-miniature').each(function (index, element) {
         var FLAG_MARGIN = 10;
-        var discountElems = (0, _jquery2['default'])(element).find('.discount-product');
-        var onSaleElems = (0, _jquery2['default'])(element).find('.on-sale');
-        var newElems = (0, _jquery2['default'])(element).find('.new');
-
-        if (discountElems.length) {
-          newElems.css('top', discountElems.height() * 2 + FLAG_MARGIN);
-          discountElems.css('top', -(0, _jquery2['default'])(element).find('.thumbnail-container').height() + (0, _jquery2['default'])(element).find('.product-description').height() + FLAG_MARGIN);
-
-          if ((0, _jquery2['default'])(element).find('.pack').length) {
-            (0, _jquery2['default'])(element).find('.pack').css('top', discountElems.height() * 2 + FLAG_MARGIN);
-          }
+        var $percent = (0, _jquery2['default'])(element).find('.discount-percentage');
+        var $onsale = (0, _jquery2['default'])(element).find('.on-sale');
+        var $new = (0, _jquery2['default'])(element).find('.new');
+        if ($percent.length) {
+          $new.css('top', $percent.height() * 2 + FLAG_MARGIN);
+          $percent.css('top', -(0, _jquery2['default'])(element).find('.thumbnail-container').height() + (0, _jquery2['default'])(element).find('.product-description').height() + FLAG_MARGIN);
         }
-
-        if (onSaleElems.length) {
-          discountElems.css('top', parseFloat(discountElems.css('top')) + onSaleElems.height() + FLAG_MARGIN);
-          newElems.css('top', discountElems.height() * 2 + onSaleElems.height() + FLAG_MARGIN * 2);
+        if ($onsale.length) {
+          $percent.css('top', parseFloat($percent.css('top')) + $onsale.height() + FLAG_MARGIN);
+          $new.css('top', $percent.height() * 2 + $onsale.height() + FLAG_MARGIN * 2);
         }
-
         if ((0, _jquery2['default'])(element).find('.color').length > 5) {
           (function () {
             var count = 0;
-
             (0, _jquery2['default'])(element).find('.color').each(function (index, element) {
               if (index > 4) {
                 (0, _jquery2['default'])(element).hide();
                 count++;
               }
             });
-
             (0, _jquery2['default'])(element).find('.js-count').append('+' + count);
           })();
         }
@@ -822,7 +813,7 @@ break;}}if(iStart !== startValue.length || iEnd !== endValue.length){if(Velocity
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -841,7 +832,7 @@ break;}}if(iStart !== startValue.length || iEnd !== endValue.length){if(Velocity
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -849,23 +840,23 @@ break;}}if(iStart !== startValue.length || iEnd !== endValue.length){if(Velocity
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-__webpack_require__(25);
+__webpack_require__(26);
+
+__webpack_require__(21);
+
+__webpack_require__(23);
 
 __webpack_require__(20);
 
-__webpack_require__(22);
-
 __webpack_require__(19);
-
-__webpack_require__(18);
 
 __webpack_require__(8);
 
-__webpack_require__(13);
-
-__webpack_require__(16);
+__webpack_require__(14);
 
 __webpack_require__(17);
+
+__webpack_require__(18);
 
 __webpack_require__(7);
 
@@ -893,34 +884,45 @@ var _prestashop = __webpack_require__(1);
 
 var _prestashop2 = _interopRequireDefault(_prestashop);
 
-var _events = __webpack_require__(21);
+var _events = __webpack_require__(22);
 
 var _events2 = _interopRequireDefault(_events);
 
-__webpack_require__(14);
-
 __webpack_require__(15);
+
+__webpack_require__(16);
 
 __webpack_require__(9);
 
 // "inherit" EventEmitter
+
+/**
+ * Fruitware custom script
+ */
+
+__webpack_require__(13);
+
 for (var i in _events2['default'].prototype) {
-  _prestashop2['default'][i] = _events2['default'].prototype[i];
+    _prestashop2['default'][i] = _events2['default'].prototype[i];
 }
 
 $(document).ready(function () {
-  var dropDownEl = $('.js-dropdown');
-  var form = new _componentsForm2['default']();
-  var topMenuEl = $('.js-top-menu ul[data-depth="0"]');
-  var dropDown = new _componentsDropDown2['default'](dropDownEl);
-  var topMenu = new _componentsTopMenu2['default'](topMenuEl);
-  var productMinitature = new _componentsProductMiniature2['default']();
-  var productSelect = new _componentsProductSelect2['default']();
-  dropDown.init();
-  form.init();
-  topMenu.init();
-  productMinitature.init();
-  productSelect.init();
+    var dropDownEl = $('.js-dropdown');
+    var form = new _componentsForm2['default']();
+    var topMenuEl = $('.js-top-menu ul[data-depth="0"]');
+    var dropDown = new _componentsDropDown2['default'](dropDownEl);
+    var topMenu = new _componentsTopMenu2['default'](topMenuEl);
+    var productMinitature = new _componentsProductMiniature2['default']();
+    var productSelect = new _componentsProductSelect2['default']();
+    dropDown.init();
+    dropDown.init();
+    form.init();
+    topMenu.init();
+    productMinitature.init();
+    productSelect.init();
+    $("#products").bind("DOMSubtreeModified", function () {
+        productMinitature.init();
+    });
 });
 
 /***/ }),
@@ -951,9 +953,6 @@ _prestashop2['default'].cart = _prestashop2['default'].cart || {};
 _prestashop2['default'].cart.active_inputs = null;
 
 var spinnerSelector = 'input[name="product-quantity-spin"]';
-var hasError = false;
-var isUpdateOperation = false;
-var errorMsg = '';
 
 /**
  * Attach Bootstrap TouchSpin event handlers
@@ -970,8 +969,6 @@ function createSpin() {
       max: 1000000
     });
   });
-
-  CheckUpdateQuantityOperations.switchErrorStat();
 }
 
 (0, _jquery2['default'])(document).ready(function () {
@@ -980,10 +977,6 @@ function createSpin() {
 
   _prestashop2['default'].on('updateCart', function () {
     (0, _jquery2['default'])('.quickview').modal('hide');
-  });
-
-  _prestashop2['default'].on('updatedCart', function () {
-    createSpin();
   });
 
   createSpin();
@@ -1003,9 +996,9 @@ function createSpin() {
 
     if ($input.is(':focus')) {
       return null;
+    } else {
+      return $input;
     }
-
-    return $input;
   }
 
   function camelize(subject) {
@@ -1072,7 +1065,6 @@ function createSpin() {
     event.preventDefault();
 
     var $target = (0, _jquery2['default'])(event.currentTarget);
-    var dataset = event.currentTarget.dataset;
 
     var cartAction = parseCartAction($target, event.namespace);
     var requestData = {
@@ -1094,13 +1086,12 @@ function createSpin() {
         promises.push(jqXHR);
       }
     }).then(function (resp) {
-      CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
       var $quantityInput = getTouchSpinInput($target);
       $quantityInput.val(resp.quantity);
 
       // Refresh cart preview
       _prestashop2['default'].emit('updateCart', {
-        reason: dataset
+        reason: $target.dataset
       });
     }).fail(function (resp) {
       _prestashop2['default'].emit('handleError', {
@@ -1113,8 +1104,8 @@ function createSpin() {
 
   $body.on('click', '[data-link-action="delete-from-cart"], [data-link-action="remove-voucher"]', handleCartAction);
 
-  $body.on('touchspin.on.startdownspin', spinnerSelector, handleCartAction);
-  $body.on('touchspin.on.startupspin', spinnerSelector, handleCartAction);
+  (0, _jquery2['default'])(spinnerSelector).on('touchspin.on.startdownspin', handleCartAction);
+  (0, _jquery2['default'])(spinnerSelector).on('touchspin.on.startupspin', handleCartAction);
 
   function sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, requestData, $target) {
     abortPreviousRequests();
@@ -1128,14 +1119,13 @@ function createSpin() {
         promises.push(jqXHR);
       }
     }).then(function (resp) {
-      CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
       $target.val(resp.quantity);
 
       var dataset;
-      if ($target && $target.dataset) {
+      if ($target) {
         dataset = $target.dataset;
       } else {
-        dataset = resp;
+        dataset = null;
       }
 
       // Refresh cart preview
@@ -1169,28 +1159,29 @@ function createSpin() {
     var targetValue = $target.val();
     if (targetValue != parseInt(targetValue) || targetValue < 0 || isNaN(targetValue)) {
       $target.val(baseValue);
+
       return;
     }
 
     // There should be a new product quantity in cart
     var qty = targetValue - baseValue;
-    if (qty === 0) {
+    if (qty == 0) {
       return;
     }
 
-    $target.attr('value', targetValue);
-    sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, getRequestData(qty), $target);
+    var requestData = getRequestData(qty);
+
+    sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, requestData, $target);
   }
 
-  $body.on('focusout keyup', productLineInCartSelector, function (event) {
-    if (event.type === 'keyup') {
-      if (event.keyCode === 13) {
-        updateProductQuantityInCart(event);
-      }
-      return false;
-    }
-
+  $body.on('focusout', productLineInCartSelector, function (event) {
     updateProductQuantityInCart(event);
+  });
+
+  $body.on('keyup', productLineInCartSelector, function (event) {
+    if (event.keyCode == 13) {
+      updateProductQuantityInCart(event);
+    }
   });
 
   $body.on('click', '.js-discount .code', function (event) {
@@ -1204,51 +1195,6 @@ function createSpin() {
     return false;
   });
 });
-
-var CheckUpdateQuantityOperations = {
-  'switchErrorStat': function switchErrorStat() {
-    /**
-     * if errorMsg is not empty or if notifications are shown, we have error to display
-     * if hasError is true, quantity was not updated : we don't disable checkout button
-     */
-    var $checkoutBtn = (0, _jquery2['default'])('.checkout a');
-    if ((0, _jquery2['default'])("#notifications article.alert-danger").length || '' !== errorMsg && !hasError) {
-      $checkoutBtn.addClass('disabled');
-    }
-
-    if ('' !== errorMsg) {
-      var strError = ' <article class="alert alert-danger" role="alert" data-alert="danger"><ul><li>' + errorMsg + '</li></ul></article>';
-      (0, _jquery2['default'])('#notifications .container').html(strError);
-      errorMsg = '';
-      isUpdateOperation = false;
-      if (hasError) {
-        // if hasError is true, quantity was not updated : allow checkout
-        $checkoutBtn.removeClass('disabled');
-      }
-    } else if (!hasError && isUpdateOperation) {
-      hasError = false;
-      isUpdateOperation = false;
-      (0, _jquery2['default'])('#notifications .container').html('');
-      $checkoutBtn.removeClass('disabled');
-    }
-  },
-  'checkUpdateOpertation': function checkUpdateOpertation(resp) {
-    /**
-     * resp.hasError can be not defined but resp.errors not empty: quantity is updated but order cannot be placed
-     * when resp.hasError=true, quantity is not updated
-     */
-    hasError = resp.hasOwnProperty('hasError');
-    var errors = resp.errors || "";
-    // 1.7.2.x returns errors as string, 1.7.3.x returns array
-    if (errors instanceof Array) {
-      errorMsg = errors.join(" ");
-    } else {
-      errorMsg = errors;
-    }
-
-    isUpdateOperation = true;
-  }
-};
 
 /***/ }),
 /* 8 */
@@ -1491,7 +1437,7 @@ module.exports = exports['default'];
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -1510,7 +1456,7 @@ module.exports = exports['default'];
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -1548,7 +1494,7 @@ var ProductSelect = (function () {
       var $thumbnails = (0, _jquery2['default'])('.js-modal-product-images');
       var $onsale = (0, _jquery2['default'])('.on-sale');
 
-      (0, _jquery2['default'])('body').on('click', '.js-modal-thumb', function (event) {
+      (0, _jquery2['default'])('.js-modal-thumb').on('click', function (event) {
         if ((0, _jquery2['default'])('.js-modal-thumb').hasClass('selected')) {
           (0, _jquery2['default'])('.js-modal-thumb').removeClass('selected');
         }
@@ -1556,12 +1502,7 @@ var ProductSelect = (function () {
         (0, _jquery2['default'])('.js-modal-product-cover').attr('src', (0, _jquery2['default'])(event.target).data('image-large-src'));
         (0, _jquery2['default'])('.js-modal-product-cover').attr('title', (0, _jquery2['default'])(event.target).attr('title'));
         (0, _jquery2['default'])('.js-modal-product-cover').attr('alt', (0, _jquery2['default'])(event.target).attr('alt'));
-      }).on('click', 'aside#thumbnails', function (event) {
-        if (event.target.id == 'thumbnails') {
-          (0, _jquery2['default'])('#product-modal').modal('hide');
-        }
       });
-
       if ($onsale.length && (0, _jquery2['default'])('#product').length) {
         (0, _jquery2['default'])('.new').css('top', $onsale.height() + FLAG_MARGIN);
       }
@@ -1610,7 +1551,7 @@ module.exports = exports['default'];
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -1629,7 +1570,7 @@ module.exports = exports['default'];
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -1684,7 +1625,7 @@ var TopMenu = (function (_DropDown) {
           elmId = (0, _jquery2['default'])(e.currentTarget).attr('id');
         }
         if (elmId && (0, _jquery2['default'])(e.target).data('depth') === 0) {
-          (0, _jquery2['default'])('#' + elmId + ' .js-sub-menu').css({
+          (0, _jquery2['default'])('#' + elmId + ' .js-sub-menu').show().css({
             top: (0, _jquery2['default'])('#' + elmId).height() + (0, _jquery2['default'])('#' + elmId).position().top
           });
         }
@@ -1693,10 +1634,11 @@ var TopMenu = (function (_DropDown) {
         (0, _jquery2['default'])('#mobile_top_menu_wrapper').toggle();
         self.toggleMobileMenu();
       });
-      (0, _jquery2['default'])('.js-top-menu .category').mouseleave(function () {
+      (0, _jquery2['default'])('.js-top-menu').mouseleave(function () {
         if (_this.el.parent().hasClass('mobile')) {
           return;
         }
+        (0, _jquery2['default'])('#' + elmId + ' .js-sub-menu').hide();
       });
       this.el.on('click', function (e) {
         if (_this.el.parent().hasClass('mobile')) {
@@ -1713,11 +1655,14 @@ var TopMenu = (function (_DropDown) {
   }, {
     key: 'toggleMobileMenu',
     value: function toggleMobileMenu() {
-      (0, _jquery2['default'])('#header').toggleClass('is-open');
       if ((0, _jquery2['default'])('#mobile_top_menu_wrapper').is(":visible")) {
-        (0, _jquery2['default'])('#notifications, #wrapper, #footer').hide();
+        (0, _jquery2['default'])('#notifications').hide();
+        (0, _jquery2['default'])('#wrapper').hide();
+        (0, _jquery2['default'])('#footer').hide();
       } else {
-        (0, _jquery2['default'])('#notifications, #wrapper, #footer').show();
+        (0, _jquery2['default'])('#notifications').show();
+        (0, _jquery2['default'])('#wrapper').show();
+        (0, _jquery2['default'])('#footer').show();
       }
     }
   }]);
@@ -1730,6 +1675,432 @@ module.exports = exports['default'];
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * Cadouri.md theme-specific scripts
+ * Copyright 2019 Fruitware
+ */
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.js
+ */
+
+//wowjs
+
+
+!(function (a, b) {
+    if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (b),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ("undefined" != typeof exports) b(module, exports);else {
+        var c = { exports: {} };
+        b(c, c.exports), a.WOW = c.exports;
+    }
+})(undefined, function (a, b) {
+    "use strict";
+
+    function c(a, b) {
+        if (!(a instanceof b)) throw new TypeError("Cannot call a class as a function");
+    }
+
+    function d(a, b) {
+        return b.indexOf(a) >= 0;
+    }
+
+    function e(a, b) {
+        for (var c in b) if (null == a[c]) {
+            var d = b[c];
+            a[c] = d;
+        }
+        return a;
+    }
+
+    function f(a) {
+        return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(a)
+        );
+    }
+
+    function g(a) {
+        var b = arguments.length <= 1 || void 0 === arguments[1] ? !1 : arguments[1],
+            c = arguments.length <= 2 || void 0 === arguments[2] ? !1 : arguments[2],
+            d = arguments.length <= 3 || void 0 === arguments[3] ? null : arguments[3],
+            e = void 0;
+        return null != document.createEvent ? (e = document.createEvent("CustomEvent"), e.initCustomEvent(a, b, c, d)) : null != document.createEventObject ? (e = document.createEventObject(), e.eventType = a) : e.eventName = a, e;
+    }
+
+    function h(a, b) {
+        null != a.dispatchEvent ? a.dispatchEvent(b) : b in (null != a) ? a[b]() : "on" + b in (null != a) && a["on" + b]();
+    }
+
+    function i(a, b, c) {
+        null != a.addEventListener ? a.addEventListener(b, c, !1) : null != a.attachEvent ? a.attachEvent("on" + b, c) : a[b] = c;
+    }
+
+    function j(a, b, c) {
+        null != a.removeEventListener ? a.removeEventListener(b, c, !1) : null != a.detachEvent ? a.detachEvent("on" + b, c) : delete a[b];
+    }
+
+    function k() {
+        return "innerHeight" in window ? window.innerHeight : document.documentElement.clientHeight;
+    }
+
+    Object.defineProperty(b, "__esModule", { value: !0 });
+    var l,
+        m,
+        n = (function () {
+        function a(a, b) {
+            for (var c = 0; c < b.length; c++) {
+                var d = b[c];
+                d.enumerable = d.enumerable || !1, d.configurable = !0, "value" in d && (d.writable = !0), Object.defineProperty(a, d.key, d);
+            }
+        }
+
+        return function (b, c, d) {
+            return c && a(b.prototype, c), d && a(b, d), b;
+        };
+    })(),
+        o = window.WeakMap || window.MozWeakMap || (function () {
+        function a() {
+            c(this, a), this.keys = [], this.values = [];
+        }
+
+        return n(a, [{
+            key: "get", value: function value(a) {
+                for (var b = 0; b < this.keys.length; b++) {
+                    var c = this.keys[b];
+                    if (c === a) return this.values[b];
+                }
+            }
+        }, {
+            key: "set", value: function value(a, b) {
+                for (var c = 0; c < this.keys.length; c++) {
+                    var d = this.keys[c];
+                    if (d === a) return this.values[c] = b, this;
+                }
+                return this.keys.push(a), this.values.push(b), this;
+            }
+        }]), a;
+    })(),
+        p = window.MutationObserver || window.WebkitMutationObserver || window.MozMutationObserver || (m = l = (function () {
+        function a() {
+            c(this, a), "undefined" != typeof console && null !== console && (console.warn("MutationObserver is not supported by your browser."), console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content."));
+        }
+
+        return n(a, [{
+            key: "observe", value: function value() {}
+        }]), a;
+    })(), l.notSupported = !0, m),
+        q = window.getComputedStyle || function (a) {
+        var b = /(\-([a-z]){1})/g;
+        return {
+            getPropertyValue: function getPropertyValue(c) {
+                "float" === c && (c = "styleFloat"), b.test(c) && c.replace(b, function (a, b) {
+                    return b.toUpperCase();
+                });
+                var d = a.currentStyle;
+                return (null != d ? d[c] : void 0) || null;
+            }
+        };
+    },
+        r = (function () {
+        function a() {
+            var b = arguments.length <= 0 || void 0 === arguments[0] ? {} : arguments[0];
+            c(this, a), this.defaults = {
+                boxClass: "wow",
+                animateClass: "animated",
+                offset: 0,
+                mobile: !0,
+                live: !0,
+                callback: null,
+                scrollContainer: null,
+                resetAnimation: !0
+            }, this.animate = (function () {
+                return "requestAnimationFrame" in window ? function (a) {
+                    return window.requestAnimationFrame(a);
+                } : function (a) {
+                    return a();
+                };
+            })(), this.vendors = ["moz", "webkit"], this.start = this.start.bind(this), this.resetAnimation = this.resetAnimation.bind(this), this.scrollHandler = this.scrollHandler.bind(this), this.scrollCallback = this.scrollCallback.bind(this), this.scrolled = !0, this.config = e(b, this.defaults), null != b.scrollContainer && (this.config.scrollContainer = document.querySelector(b.scrollContainer)), this.animationNameCache = new o(), this.wowEvent = g(this.config.boxClass);
+        }
+
+        return n(a, [{
+            key: "init", value: function value() {
+                this.element = window.document.documentElement, d(document.readyState, ["interactive", "complete"]) ? this.start() : i(document, "DOMContentLoaded", this.start), this.finished = [];
+            }
+        }, {
+            key: "start", value: function value() {
+                var a = this;
+                if ((this.stopped = !1, this.boxes = [].slice.call(this.element.querySelectorAll("." + this.config.boxClass)), this.all = this.boxes.slice(0), this.boxes.length)) if (this.disabled()) this.resetStyle();else for (var b = 0; b < this.boxes.length; b++) {
+                    var c = this.boxes[b];
+                    this.applyStyle(c, !0);
+                }
+                if ((this.disabled() || (i(this.config.scrollContainer || window, "scroll", this.scrollHandler), i(window, "resize", this.scrollHandler), this.interval = setInterval(this.scrollCallback, 50)), this.config.live)) {
+                    var d = new p(function (b) {
+                        for (var c = 0; c < b.length; c++) for (var d = b[c], e = 0; e < d.addedNodes.length; e++) {
+                            var f = d.addedNodes[e];
+                            a.doSync(f);
+                        }
+                    });
+                    d.observe(document.body, { childList: !0, subtree: !0 });
+                }
+            }
+        }, {
+            key: "stop", value: function value() {
+                this.stopped = !0, j(this.config.scrollContainer || window, "scroll", this.scrollHandler), j(window, "resize", this.scrollHandler), null != this.interval && clearInterval(this.interval);
+            }
+        }, {
+            key: "sync", value: function value() {
+                p.notSupported && this.doSync(this.element);
+            }
+        }, {
+            key: "doSync", value: function value(a) {
+                if (("undefined" != typeof a && null !== a || (a = this.element), 1 === a.nodeType)) {
+                    a = a.parentNode || a;
+                    for (var b = a.querySelectorAll("." + this.config.boxClass), c = 0; c < b.length; c++) {
+                        var e = b[c];
+                        d(e, this.all) || (this.boxes.push(e), this.all.push(e), this.stopped || this.disabled() ? this.resetStyle() : this.applyStyle(e, !0), this.scrolled = !0);
+                    }
+                }
+            }
+        }, {
+            key: "show", value: function value(a) {
+                return this.applyStyle(a), a.className = a.className + " " + this.config.animateClass, null != this.config.callback && this.config.callback(a), h(a, this.wowEvent), this.config.resetAnimation && (i(a, "animationend", this.resetAnimation), i(a, "oanimationend", this.resetAnimation), i(a, "webkitAnimationEnd", this.resetAnimation), i(a, "MSAnimationEnd", this.resetAnimation)), a;
+            }
+        }, {
+            key: "applyStyle", value: function value(a, b) {
+                var c = this,
+                    d = a.getAttribute("data-wow-duration"),
+                    e = a.getAttribute("data-wow-delay"),
+                    f = a.getAttribute("data-wow-iteration");
+                return this.animate(function () {
+                    return c.customStyle(a, b, d, e, f);
+                });
+            }
+        }, {
+            key: "resetStyle", value: function value() {
+                for (var a = 0; a < this.boxes.length; a++) {
+                    var b = this.boxes[a];
+                    b.style.visibility = "visible";
+                }
+            }
+        }, {
+            key: "resetAnimation", value: function value(a) {
+                if (a.type.toLowerCase().indexOf("animationend") >= 0) {
+                    var b = a.target || a.srcElement;
+                    b.className = b.className.replace(this.config.animateClass, "").trim();
+                }
+            }
+        }, {
+            key: "customStyle", value: function value(a, b, c, d, e) {
+                return b && this.cacheAnimationName(a), a.style.visibility = b ? "hidden" : "visible", c && this.vendorSet(a.style, { animationDuration: c }), d && this.vendorSet(a.style, { animationDelay: d }), e && this.vendorSet(a.style, { animationIterationCount: e }), this.vendorSet(a.style, { animationName: b ? "none" : this.cachedAnimationName(a) }), a;
+            }
+        }, {
+            key: "vendorSet", value: function value(a, b) {
+                for (var c in b) if (b.hasOwnProperty(c)) {
+                    var d = b[c];
+                    a["" + c] = d;
+                    for (var e = 0; e < this.vendors.length; e++) {
+                        var f = this.vendors[e];
+                        a["" + f + c.charAt(0).toUpperCase() + c.substr(1)] = d;
+                    }
+                }
+            }
+        }, {
+            key: "vendorCSS", value: function value(a, b) {
+                for (var c = q(a), d = c.getPropertyCSSValue(b), e = 0; e < this.vendors.length; e++) {
+                    var f = this.vendors[e];
+                    d = d || c.getPropertyCSSValue("-" + f + "-" + b);
+                }
+                return d;
+            }
+        }, {
+            key: "animationName", value: function value(a) {
+                var b = void 0;
+                try {
+                    b = this.vendorCSS(a, "animation-name").cssText;
+                } catch (c) {
+                    b = q(a).getPropertyValue("animation-name");
+                }
+                return "none" === b ? "" : b;
+            }
+        }, {
+            key: "cacheAnimationName", value: function value(a) {
+                return this.animationNameCache.set(a, this.animationName(a));
+            }
+        }, {
+            key: "cachedAnimationName", value: function value(a) {
+                return this.animationNameCache.get(a);
+            }
+        }, {
+            key: "scrollHandler", value: function value() {
+                this.scrolled = !0;
+            }
+        }, {
+            key: "scrollCallback", value: function value() {
+                if (this.scrolled) {
+                    this.scrolled = !1;
+                    for (var a = [], b = 0; b < this.boxes.length; b++) {
+                        var c = this.boxes[b];
+                        if (c) {
+                            if (this.isVisible(c)) {
+                                this.show(c);
+                                continue;
+                            }
+                            a.push(c);
+                        }
+                    }
+                    this.boxes = a, this.boxes.length || this.config.live || this.stop();
+                }
+            }
+        }, {
+            key: "offsetTop", value: function value(a) {
+                for (; void 0 === a.offsetTop;) a = a.parentNode;
+                for (var b = a.offsetTop; a.offsetParent;) a = a.offsetParent, b += a.offsetTop;
+                return b;
+            }
+        }, {
+            key: "isVisible", value: function value(a) {
+                var b = a.getAttribute("data-wow-offset") || this.config.offset,
+                    c = this.config.scrollContainer && this.config.scrollContainer.scrollTop || window.pageYOffset,
+                    d = c + Math.min(this.element.clientHeight, k()) - b,
+                    e = this.offsetTop(a),
+                    f = e + a.clientHeight;
+                return d >= e && f >= c;
+            }
+        }, {
+            key: "disabled", value: function value() {
+                return !this.config.mobile && f(navigator.userAgent);
+            }
+        }]), a;
+    })();
+    b["default"] = r, a.exports = b["default"];
+});
+
+//fix padding-right when open popup
+var responsiveflag = false;
+$(document).ready(function () {
+    //responsiveResize();
+    floatHeader();
+    if (typeof $.fn.magnificPopup != 'undefined') {
+        $('.magnific_item').magnificPopup({
+            type: 'image',
+            mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+            zoom: {
+                enabled: true, // By default it's false, so don't forget to enable it
+
+                duration: 300, // duration of the effect, in milliseconds
+                easing: 'ease-in-out', // CSS transition easing function
+
+                // The "opener" function should return the element from which popup will be zoomed in
+                // and to which popup will be scaled down
+                // By defailt it looks for an image tag:
+                opener: function opener(openerElement) {
+                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                    // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                    return openerElement.is('a') ? openerElement : openerElement.find('a');
+                }
+            },
+            fixedContentPos: false
+        });
+    }
+
+    // Offcanvas
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('.row-offcanvas').toggleClass('menuOffcanvasActive');
+    });
+    $(".ps-mobile-megamenu").on("click", "i.click-canavs-menu", function () {
+        $(this).parent().find('.dropdown-menu:first').slideToggle();
+    });
+    // Offcanvas
+    $('[data-toggle="sidebarCanvas"]').click(function () {
+        $('.row-offcanvas').toggleClass('sidebarOffcanvasActive');
+    });
+
+    $('.ps_popover').popover({
+        trigger: 'hover'
+    });
+    //gototop
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+            $('#to_top').fadeIn();
+        } else {
+            $('#to_top').fadeOut();
+        }
+    });
+    $("#to_top").click(function () {
+        $("body,html").animate({ scrollTop: 0 }, "normal");
+        $("#page").animate({ scrollTop: 0 }, "normal");
+        return !1;
+    });
+
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+        var id = $(e.target).attr('href');
+        console.log(id);
+        $(id).addClass('tab-loading');
+    }).on('shown.bs.tab', function (e) {
+        var id = $(e.target).attr('href');
+        setTimeout(function () {
+            $(id).removeClass('tab-loading');
+        }, 400);
+    });
+    if ($('.owl-carousel-play').length) {
+        $(".owl-carousel").owlCarousel();
+    }
+});
+
+/*function responsiveResize()
+{
+	if ($(document).width() < 768 && responsiveflag == false )
+	{
+		accordionFooter('enable');
+		responsiveflag == true;
+	}
+	else {
+		accordionFooter('disable');
+		responsiveflag == false;
+	}
+
+}
+*/
+function accordionFooter(status) {
+    if (status == 'enable') {
+        $('.footerbuilder .footer-center .block .title_block').on('click', function (e) {
+            $(this).toggleClass('active').parent().find('.block_content').stop().slideToggle('medium');
+            e.preventDefault();
+        });
+        $('.footerbuilder .footer-center .block').addClass('accordion').find('.block_content').slideUp('fast');
+    } else {
+        $('.footerbuilder .footer-center .block .title_block').removeClass('active').off().parent().find('.block_content').removeAttr('style').slideDown('fast');
+        $('.footerbuilder .footer-center .block').removeClass('accordion');
+    }
+}
+
+function floatHeader() {
+    if ($(window).width() >= 1024) {
+        if ($("body").hasClass("keep-header")) {
+            $(window).scroll(function () {
+                var hideheight = $("#header").height() + 120;
+                var pos = $(window).scrollTop();
+                if (pos >= hideheight) {
+                    $(".header-bottom").addClass("headerFixed");
+                    $("#page").css("padding-top", $(".header-bottom").height());
+                } else {
+                    $(".header-bottom").removeClass("headerFixed");
+                    $("#page").css("padding-top", 0);
+                }
+            });
+        }
+    }
+}
+/*! WOW wow.js - v1.3.0 - 2016-10-04
+* https://wowjs.uk
+* Copyright (c) 2016 Thomas Grainger; Licensed MIT */
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1783,7 +2154,7 @@ function setupCustomerScripts() {
 (0, _jquery2['default'])(document).ready(setupCustomerScripts);
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2005,7 +2376,7 @@ function setupCustomerScripts() {
 })(window.jQuery);
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2170,7 +2541,7 @@ function setupCustomerScripts() {
 })(jQuery);
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2351,12 +2722,12 @@ function updateProductListDOM(data) {
 }
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -2375,7 +2746,7 @@ function updateProductListDOM(data) {
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -2445,45 +2816,40 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 
   function createInputFile() {
     (0, _jquery2['default'])('.js-file-input').on('change', function (event) {
-      var target = undefined,
-          file = undefined;
-
-      if ((target = (0, _jquery2['default'])(event.currentTarget)[0]) && (file = target.files[0])) {
-        (0, _jquery2['default'])(target).prev().text(file.name);
-      }
+      (0, _jquery2['default'])('.js-file-name').text((0, _jquery2['default'])(event.currentTarget).val());
     });
   }
 
   function createProductSpin() {
-    var $quantityInput = (0, _jquery2['default'])('#quantity_wanted');
-
-    $quantityInput.TouchSpin({
+    var quantityInput = (0, _jquery2['default'])('#quantity_wanted');
+    quantityInput.TouchSpin({
       verticalbuttons: true,
       verticalupclass: 'material-icons touchspin-up',
       verticaldownclass: 'material-icons touchspin-down',
       buttondown_class: 'btn btn-touchspin js-touchspin',
       buttonup_class: 'btn btn-touchspin js-touchspin',
-      min: parseInt($quantityInput.attr('min'), 10),
+      min: parseInt(quantityInput.attr('min'), 10),
       max: 1000000
     });
 
-    (0, _jquery2['default'])('body').on('change keyup', '#quantity_wanted', function (e) {
-      (0, _jquery2['default'])(e.currentTarget).trigger('touchspin.stopspin');
-      _prestashop2['default'].emit('updateProduct', {
-        eventType: 'updatedProductQuantity',
-        event: e
-      });
+    quantityInput.on('change', function (event) {
+      var $productRefresh = (0, _jquery2['default'])('.product-refresh');
+      (0, _jquery2['default'])(event.currentTarget).trigger('touchspin.stopspin');
+      $productRefresh.trigger('click', { eventType: 'updatedProductQuantity' });
+      event.preventDefault();
+
+      return false;
     });
   }
 });
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -2502,7 +2868,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -2520,7 +2886,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 
 _prestashop2['default'].responsive = _prestashop2['default'].responsive || {};
 
-_prestashop2['default'].responsive.current_width = window.innerWidth;
+_prestashop2['default'].responsive.current_width = (0, _jquery2['default'])(window).width();
 _prestashop2['default'].responsive.min_width = 768;
 _prestashop2['default'].responsive.mobile = _prestashop2['default'].responsive.current_width < _prestashop2['default'].responsive.min_width;
 
@@ -2534,14 +2900,14 @@ function toggleMobileStyles() {
 	if (_prestashop2['default'].responsive.mobile) {
 		(0, _jquery2['default'])("*[id^='_desktop_']").each(function (idx, el) {
 			var target = (0, _jquery2['default'])('#' + el.id.replace('_desktop_', '_mobile_'));
-			if (target.length) {
+			if (target) {
 				swapChildren((0, _jquery2['default'])(el), target);
 			}
 		});
 	} else {
 		(0, _jquery2['default'])("*[id^='_mobile_']").each(function (idx, el) {
 			var target = (0, _jquery2['default'])('#' + el.id.replace('_mobile_', '_desktop_'));
-			if (target.length) {
+			if (target) {
 				swapChildren((0, _jquery2['default'])(el), target);
 			}
 		});
@@ -2554,10 +2920,10 @@ function toggleMobileStyles() {
 (0, _jquery2['default'])(window).on('resize', function () {
 	var _cw = _prestashop2['default'].responsive.current_width;
 	var _mw = _prestashop2['default'].responsive.min_width;
-	var _w = window.innerWidth;
+	var _w = (0, _jquery2['default'])(window).width();
 	var _toggle = _cw >= _mw && _w < _mw || _cw < _mw && _w >= _mw;
+	_prestashop2['default'].responsive.mobile = _cw >= _mw;
 	_prestashop2['default'].responsive.current_width = _w;
-	_prestashop2['default'].responsive.mobile = _prestashop2['default'].responsive.current_width < _prestashop2['default'].responsive.min_width;
 	if (_toggle) {
 		toggleMobileStyles();
 	}
@@ -2570,7 +2936,7 @@ function toggleMobileStyles() {
 });
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3253,7 +3619,7 @@ function toggleMobileStyles() {
 })(jQuery);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4050,7 +4416,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 })();
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4464,7 +4830,7 @@ function unwrapListeners(arr) {
 }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4647,7 +5013,7 @@ var require;var require;
 });
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6587,7 +6953,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4
 });
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6615,14 +6981,14 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Tether"] = __webpack_require__(23);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Tether"] = __webpack_require__(24);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(5);

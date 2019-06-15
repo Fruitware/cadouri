@@ -1,5 +1,5 @@
 {**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,27 +18,47 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+{*
+   Custom by Prestabrain
+*}
+{if !isset($product_style)}
+    {$product_style = Configuration::get('PTS_CP_PRODUCT_STYLE')}
+{/if}
+{if Configuration::get('PTS_CP_PRODUCTS_ITEMROW')}
+    {assign var='nbItemsPerLine' value=Configuration::get('PTS_CP_PRODUCTS_ITEMROW')}
+{else}
+    {assign var='nbItemsPerLine' value=4}
+{/if}
 <div id="js-product-list">
-  <div class="products row">
-    {foreach from=$listing.products item="product"}
-      {block name='product_miniature'}
-        {include file='catalog/_partials/miniatures/product.tpl' product=$product}
-      {/block}
-    {/foreach}
-  </div>
+    <div class="clearfix flexRow products products-block grid {if isset($product_style) && !empty($product_style)}{$product_style}{else} style1{/if}">
+        {foreach from=$listing.products item=product name=products}
+            <div class="col-xs-cus-12 col-xs-6 col-sm-6 col-md-4 col-xl-{12/$nbItemsPerLine}">
+                <div class="item">
+                    {block name='product_miniature'}
+                        {if isset($product_style) && !empty($product_style)}
+                            {include file="sub/product/style1.tpl" product=$product }
+                        {else}
+                            {include file="sub/product/style1.tpl" product=$product}
+                        {/if}
+                    {/block}
 
-  {block name='pagination'}
-    {include file='_partials/pagination.tpl' pagination=$listing.pagination}
-  {/block}
-
-  <div class="hidden-md-up text-xs-right up">
+                </div>
+            </div>
+        {/foreach}
+    </div>
+    <div class="ps_sortPagiBar bottom-line clearfix">
+        {block name='pagination'}
+            {include file='_partials/pagination.tpl' pagination=$listing.pagination}
+        {/block}
+    </div>
+    <!-- <div class="hidden-md-up text-xs-right up">
     <a href="#header" class="btn btn-secondary">
       {l s='Back to top' d='Shop.Theme.Actions'}
-      <i class="icon icon-schevron-up"></i>
+      <i class="icon-schevron-up"></i>
     </a>
-  </div>
+  </div> -->
 </div>

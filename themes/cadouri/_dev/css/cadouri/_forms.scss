@@ -1,0 +1,72 @@
+.btn {
+    font-size: rem(14px);
+}
+
+.btn-default {
+    border: 2px solid $base-border-color;
+    background: #fff;
+    color: #222222;
+    padding: 0.65rem 1.3rem;
+    &:hover {
+        background-color: $theme-color-primary;
+        border-color: $theme-color-primary;
+        color: #fff;
+    }
+}
+
+.btn-primary {
+    border: 0;
+    &:hover {
+        border-color: $theme-color-secondary;
+        background-color: $theme-color-secondary;
+    }
+}
+
+.btn-black {
+    background-color: $text-color-secondary;
+    color: #fff;
+    &:hover {
+        background-color: $theme-color-primary;
+        color: #fff;
+    }
+}
+
+.btn-outline-pink {
+    background: transparent;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: $font-family-primary;
+    padding: 4px 8px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    min-width: 80px;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 0;
+        border-bottom: 2px dashed $theme-color-tertiary;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    &:hover {
+        color: $theme-color-primary;
+    }
+}
+
+.rtl .material-icons.icon-right,
+.rtl .fa.icon-right,
+.rtl .fa.icon-left,
+.rtl .material-icons.icon-left {
+    @include rotate(180deg);
+}
+
+sup {
+    color: red;
+}
+

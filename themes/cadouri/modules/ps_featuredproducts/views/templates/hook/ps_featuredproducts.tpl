@@ -1,5 +1,5 @@
 {**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,20 +18,34 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<section class="featured-products clearfix">
-  <h2 class="h2 products-section-title text-uppercase">
+<section class="featured-products clearfix block card card-block">
+  <h4 class="h1 products-section-title title_homepage clearfix">
     {l s='Popular Products' d='Shop.Theme.Catalog'}
-  </h2>
-  <div class="products">
-    {foreach from=$products item="product"}
-      {include file="catalog/_partials/miniatures/product.tpl" product=$product}
-    {/foreach}
+  </h4>
+  <div class="block_content">
+    <div class="products flexRow owl-wrapper grid products-block ps_products borderBottom {if isset($product_style) && !empty($product_style)}{$product_style}{else} style1{/if}">
+      {foreach from=$products item="product"}
+        <div class="owl-item col-xs-12 col-sm-6 col-md-3">
+          <div class="item">
+            {block name='product_miniature'}
+              {if isset($product_style) && !empty($product_style)}
+                {include file="sub/product/style1.tpl" product=$product}
+              {else}
+                {include file="sub/product/style1.tpl" product=$product}
+              {/if}
+            {/block}
+          </div>
+        </div>
+      {/foreach}
+    </div>
   </div>
-  <a class="all-product-link float-xs-left float-md-right h4" href="{$allProductsLink}">
-    {l s='All products' d='Shop.Theme.Catalog'} <i class="icon icon-arrowright"></i>
-  </a>
+  <p class="clearfix text-xs-center">
+    <a class="all-product-link  btn btn-outline-pink" href="{$allProductsLink}">
+      {l s='All products' d='Shop.Theme.Catalog'}
+    </a>
+  </p>
 </section>

@@ -1017,13 +1017,13 @@ $baseline: $font-size-primary;
         }
     }
 }
-//
-//@mixin box-shadow($shadow) {
-//    @if ($shadow =='') {
-//        box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.1);
-//    } @else {
-//
-//        -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
-//        box-shadow: $shadow;
-//    }
-//}
+
+@mixin box-shadow($shadow) {
+    @if ($shadow =='') {
+        box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.1);
+    } @else {
+
+        -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+        box-shadow: $shadow;
+    }
+}

@@ -1,34 +1,33 @@
-@import "~bourbon/app/assets/stylesheets/bourbon";
+//@import "~bourbon/app/assets/stylesheets/bourbon";
 @import "partials/_variables";
 @import "~bootstrap/scss/bootstrap";
-@import "~bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css";
+@import "cadouri/vars";
 @import "partials/_mixins";
-@import "partials/_fonts";
 @import "partials/_commons";
 @import "components/alert";
 @import "components/drop-down";
-@import "components/search-widget";
-@import "components/mainmenu";
 @import "components/checkout";
-@import "components/customer";
-@import "components/forgotten-password";
-@import "components/renew-password";
 @import "components/imageslider";
-@import "components/featuredproducts";
-@import "components/custom-text";
-@import "components/categories";
+@import "cadouri/categories";
+@import "components/megamenu";
 @import "components/products";
 @import "components/cart";
-@import "components/block-reassurance";
+//@import "components/block-reassurance";
 @import "components/quickview";
-@import "components/stores";
+//@import "components/stores";
 @import "components/contact";
 @import "components/errors";
 @import "components/customization-modal";
-@import "components/sitemap";
+//@import "components/sitemap";
+//
+///**
+// * Main styles
+// */
 
-/**
- * Main styles
- */
-@import "partials/cadouri";
-
+@import "cadouri/forms";
+@import "cadouri/filters";
+@import "cadouri/breadcrumb";
+@import "cadouri/custom";
+@import "cadouri/ui";
+@import "cadouri/responsive";
+@import "cadouri/main";

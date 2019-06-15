@@ -1,5 +1,5 @@
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,7 +18,7 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -83,35 +83,31 @@ $(document).ready(function () {
 
   function createInputFile()
   {
-    $('.js-file-input').on('change', (event) => {
-      let target, file;
-
-      if ((target = $(event.currentTarget)[0]) && (file = target.files[0])) {
-        $(target).prev().text(file.name);
-      }
+    $('.js-file-input').on('change',(event)=>{
+      $('.js-file-name').text($(event.currentTarget).val());
     });
   }
 
   function createProductSpin()
   {
-    const $quantityInput = $('#quantity_wanted');
-
-    $quantityInput.TouchSpin({
+    let quantityInput = $('#quantity_wanted');
+    quantityInput.TouchSpin({
       verticalbuttons: true,
       verticalupclass: 'material-icons touchspin-up',
       verticaldownclass: 'material-icons touchspin-down',
       buttondown_class: 'btn btn-touchspin js-touchspin',
       buttonup_class: 'btn btn-touchspin js-touchspin',
-      min: parseInt($quantityInput.attr('min'), 10),
+      min: parseInt(quantityInput.attr('min'), 10),
       max: 1000000
     });
 
-    $('body').on('change keyup', '#quantity_wanted', (e) => {
-      $(e.currentTarget).trigger('touchspin.stopspin');
-      prestashop.emit('updateProduct', {
-          eventType: 'updatedProductQuantity',
-          event: e
-      });
+    quantityInput.on('change', function (event) {
+      let $productRefresh = $('.product-refresh');
+      $(event.currentTarget).trigger('touchspin.stopspin');
+      $productRefresh.trigger('click', {eventType: 'updatedProductQuantity'});
+      event.preventDefault();
+
+      return false;
     });
   }
 });

@@ -1,5 +1,5 @@
 {**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,12 +18,26 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {extends file='catalog/listing/product-list.tpl'}
 
 {block name='product_list_header'}
-    {include file='catalog/_partials/category-header.tpl' listing=$listing category=$category}
+    <div class="blockCategory">
+        <h1 class="page_title catalog_title">{$category.name}</h1>
+        {if $category.image.large.url}
+            <div class="block-category">
+                {if $category.image.large.url}
+                    <div class="category-cover">
+                        <img class="img-fluid" src="{$category.image.large.url}" alt="{$category.image.legend}">
+                    </div>
+                {/if}
+            </div>
+        {/if}
+        {if $category.description}
+            <div id="category-description" class="text-muted">{$category.description nofilter}</div>
+        {/if}
+    </div>
 {/block}

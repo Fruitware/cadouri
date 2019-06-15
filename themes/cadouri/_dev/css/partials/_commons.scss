@@ -115,7 +115,7 @@ p {
 }
 
 .card {
-    @include box-shadow;
+    @include box-shadow('2px 2px 8px 0px rgba(0, 0, 0, 0.2)');
 }
 
 label, .label {
@@ -250,64 +250,6 @@ input, textarea {
     }
 }
 
-.bootstrap-touchspin {
-    width: auto;
-    float: left;
-    display: inline-block;
-    @include box-shadow-light;
-    input {
-        &:focus {
-            outline: none;
-        }
-        &.form-control,
-        &.input-group {
-            color: $gray-darker;
-            background-color: white;
-            height: $input-height;
-            padding: 0.175rem 0.5rem;
-            width: 3rem;
-            border: $input-btn-border-width solid $input-border-color;
-            float: left;
-        }
-    }
-    .btn-touchspin {
-        @extend .btn-default;
-        background-color: white;
-        border: $input-btn-border-width solid $input-border-color;
-        height: $input-height / 2 + 0.0625rem;
-        &:hover {
-            background-color: $gray-light;
-        }
-    }
-    .input-group-btn-vertical {
-        color: $gray-darker;
-        width: auto;
-        float: left;
-        .bootstrap-touchspin-up {
-            border-radius: 0;
-        }
-        .bootstrap-touchspin-down {
-            border-radius: 0;
-        }
-        .touchspin-up {
-            &:after {
-                font-family: 'fontello' !important;
-                content: "\f005";
-            }
-        }
-        .touchspin-down {
-            &:after {
-                font-family: 'fontello' !important;
-                content: "\f004";
-            }
-        }
-        i {
-            top: 0.0625rem;
-            left: 0.1875rem;
-            font-size: 0.9375rem;
-        }
-    }
-}
 
 .custom-radio {
     display: inline-block;
@@ -495,4 +437,50 @@ input, textarea {
 .separator {
     margin: 0;
     border-color: rgba(0, 0, 0, 0.25);
+}
+
+
+.bootstrap-touchspin {
+    border: 1px solid $base-border-color;
+    input {
+        &:focus {
+            outline: none;
+        }
+        &.form-control {
+            border: 0;
+        }
+    }
+    .btn-touchspin {
+        position: absolute;
+        top: 0;
+        background-color: transparent;
+        text-align: center;
+        padding: 0;
+        color: #a9b1c0;
+        &:hover {
+            color: $theme-color-primary;
+        }
+        &.bootstrap-touchspin-up {
+            @include rtl-right(5px);
+        }
+        &.bootstrap-touchspin-down {
+            @include rtl-left(5px);
+        }
+        .touchspin-up {
+            font-style: normal;
+            &:after {
+                content: "+";
+                font-size: 20px !important;
+                font-weight: 600 !important;
+
+            }
+        }
+        .touchspin-down::after {
+            font-style: normal;
+            font-size: 20px !important;
+            content: "-";
+            font-weight: 600 !important;
+
+        }
+    }
 }
