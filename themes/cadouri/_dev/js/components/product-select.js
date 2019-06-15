@@ -1,5 +1,5 @@
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,7 +18,7 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -33,7 +33,7 @@ export default class ProductSelect {
     let $thumbnails = $('.js-modal-product-images');
     let $onsale =  $('.on-sale');
 
-    $('body').on('click','.js-modal-thumb', (event) => {
+    $('.js-modal-thumb').on('click', (event) => {
       if($('.js-modal-thumb').hasClass('selected')){
         $('.js-modal-thumb').removeClass('selected');
       }
@@ -41,13 +41,7 @@ export default class ProductSelect {
       $('.js-modal-product-cover').attr('src', $(event.target).data('image-large-src'));
       $('.js-modal-product-cover').attr('title', $(event.target).attr('title'));
       $('.js-modal-product-cover').attr('alt', $(event.target).attr('alt'));
-    })
-    .on('click', 'aside#thumbnails', (event) => {
-      if (event.target.id == 'thumbnails'){
-        $('#product-modal').modal('hide');
-      }
     });
-
     if($onsale.length && $('#product').length){
       $('.new').css('top',$onsale.height() + FLAG_MARGIN);
     }
