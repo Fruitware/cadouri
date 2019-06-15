@@ -64,3 +64,7 @@
     Copyright© {date('Y')} cadouri.md.
     <span class="grey-note">All Rights Reserved.</span>
 </div>
+
+{block name='stylesheets'}
+    {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}
+{/block}
