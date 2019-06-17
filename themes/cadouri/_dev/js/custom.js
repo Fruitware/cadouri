@@ -361,6 +361,10 @@ $(document).ready(function () {
     if ($('.owl-carousel-play').length) {
         $(".owl-carousel").owlCarousel();
     }
+
+    $(window).load(function() {
+        $('#loader').fadeOut();
+    });
 });
 
 /*function responsiveResize()
