@@ -133,6 +133,7 @@
       line-height: inherit;
       text-align: left;
       white-space: inherit;
+      color: #BE7374;
     }
     > .out-of-stock {
       color: red;
@@ -151,7 +152,9 @@
 .product-line-grid-right {
   .cart-line-product-actions,
   .product-price {
-    color: $gray-darker;
+    color: #a9b1c0;
+    font-weight: 700;
+    letter-spacing: 1px;
     line-height: 36px;
     .remove-from-cart {
       color: $gray-darker;

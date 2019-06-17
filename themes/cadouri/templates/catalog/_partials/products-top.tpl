@@ -26,7 +26,7 @@
 <div id="js-product-list-top" class="ps_sortPagiBar products-selection">
     <div class="row">
         <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="nopadding clearfix">
+            <div class="nopadding clearfix gridcolumn2">
                 {block name='sort_by'}
                     {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
                 {/block}

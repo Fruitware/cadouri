@@ -187,6 +187,19 @@ a {
         padding: 10px 20px;
         width: 100%;
     }
+    ul {
+        .current {
+            a {
+                font-weight: 700;
+                color: #292b32;
+            }
+        }
+    }
+}
+#_mobile_menu {
+    input.ps_search {
+        max-width: 95%;
+    }
 }
 
 .language-selector {
@@ -1544,5 +1557,24 @@ button {
     i {
         display: inline-block;
         width: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gridcolumn2 {
+        display: grid;
+        grid-template-columns: repeat(2,max-content);
+    }
+}
+.left-column {
+    padding-left: 0;
+}
+.right-column {
+    padding-left: 0;
+}
+.sidebar-canvas {
+    i {
+        position: relative;
+        left: -1px;
     }
 }

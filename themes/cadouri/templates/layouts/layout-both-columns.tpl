@@ -43,7 +43,7 @@
     <div class="sidebarOffcanvas ps-mobile-account hidden-lg-up clearfix">
         <div class="offcanvas-heading hidden-lg-up">
             <button class="btn-mobile" type="button" data-toggle="sidebarCanvas">
-                <i class="icon-shortarrowright"></i>
+                <i class="icon icon-arrowright"></i>
             </button>
         </div>
         <div id="_mobile_cart" class="clearfix"></div>
@@ -84,7 +84,7 @@
                 {/block}
 
                 {block name="content_wrapper"}
-                    <div id="content-wrapper" class="left-column right-column col-sm-4 col-md-6">
+                    <div id="content-wrapper" class="left-column col-sm-4 col-md-6">
                         {hook h="displayContentWrapperTop"}
                         {block name="content"}
                             <p>Hello world! This is HTML5 Boilerplate.</p>
@@ -94,7 +94,7 @@
                 {/block}
 
                 {block name="right_column"}
-                    <div id="right-column" class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="right-column col-xs-12 col-sm-4 col-md-3">
                         {if $page.page_name == 'product'}
                             {hook h='displayRightColumnProduct'}
                         {else}

@@ -934,7 +934,7 @@
         > .form-control,
         > .input-group {
             color: $gray-darker;
-            background-color: white;
+            background-color: #f6f3f3;
             height: rem(36px);
             padding: 0.175rem 0.5rem;
             text-align: center;
@@ -945,7 +945,7 @@
             width: auto;
         }
         .btn-touchspin {
-            top: 8px;
+            top: 2.5px;
             z-index: 9;
         }
     }
@@ -955,7 +955,7 @@
         .remove-from-cart {
             color: $gray-darker;
             display: inline-block;
-            margin-top: rem(5px);
+            margin-top: -0.02rem;
         }
     }
 }
