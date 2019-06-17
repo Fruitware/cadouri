@@ -477,6 +477,7 @@
     font-size: rem(36px);
     margin: 0 0 rem(20px);
     font-family: $font-family-primary;
+    text-transform: none;
 }
 
 .product-price {
@@ -484,8 +485,14 @@
 }
 
 .proShortDesc {
-    padding: rem(20px) 0;
+    padding-top: rem(20px);
+    //padding: rem(20px) 0;
     border-top: 1px solid $base-border-color;
+    p {
+        span {
+            font-family: "Josefin Slab", serif;
+        }
+    }
     ul {
         list-style: inherit;
         @include rtl-padding-left(20px);
@@ -620,7 +627,7 @@
     }
     #quantity_wanted {
         border: 0;
-        background-color: white;
+        background-color: transparent;
         height: rem(46px);
         padding: 0;
         font-weight: 600;
@@ -1010,8 +1017,8 @@
 }
 
 .product-variants {
-    border-top: $main_border;
-    padding-top: 30px;
+    //border-top: 2px dashed #b7c1d4;
+    //padding-top: 30px;
     > .product-variants-item {
         margin: 0 0 rem(20px);
         select {
@@ -1086,6 +1093,9 @@
         white-space: nowrap;
         letter-spacing: 4px;
         color: #b7c1d4;
+    }
+    #product-availability {
+        display: none;
     }
 }
 
