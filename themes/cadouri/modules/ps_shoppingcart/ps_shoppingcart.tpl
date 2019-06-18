@@ -49,7 +49,7 @@
                             <h6 class="cart-name"><a href="{$product.url}" title="{$product.name}">{$product.name}</a>
                             </h6>
                             <span class="cart-quantity"><label>{l s='Qty:' d='Shop.Theme.Global'}</label>{$product.quantity_wanted}</span>
-                            <span class="cart-price price">{$product.price_tax_exc}</span>
+                            <span class="cart-price price">{$product.price}</span>
                             <a href="{$product.remove_from_cart_url}" data-link-action="delete-from-cart"
                                title="{l s='remove from cart' d='Shop.Theme.Actions'}" class="remove-from-cart"
                                rel="nofollow"><i class="icon-close"></i></a>

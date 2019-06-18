@@ -51,6 +51,10 @@
                         <i class="icon icon-shopping-basket shopping-cart"></i>
                         {l s='Add to cart' d='Shop.Theme.Actions'}
                     </button>
+                    {if $product.add_to_cart_url }
+                        <a href="{$product.add_to_cart_url}"
+                           class="btn btn-primary buy-now">{l s='Buy' d='Shop.Theme.Actions'}</a>
+                    {/if}
                 </div>
             </div>
         {/block}
@@ -62,13 +66,17 @@
                 <i class="icon icon-ok rtl-no-flip product-available"></i>
 
 
+
 {elseif $product.availability == 'last_remaining_items'}
+
 
 
                 <i class="icon icon-warning product-last-items"></i>
 
 
+
 {else}
+
 
 
                 <i class="icon icon-block product-unavailable"></i>
