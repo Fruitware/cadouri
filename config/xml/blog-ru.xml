@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/en/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/en/blog/feed.xml</link>
+    <description></description>
+    <language>en</language>
+     <atom:link href="https://www.prestashop.com/en/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>New! Manage all your payment options securely from a single interface with PrestaShop Checkout</title>
+    <link>https://www.prestashop.com/en/blog/prestashop-checkout</link>
+    <description>Don’t wait to try out PrestaShop Checkout Built with PayPal, the innovative payment solution launched by PrestaShop to boost your e-commerce activity!</description>
+     <pubDate>Mon, 03 Jun 2019 20:54:20 +0200</pubDate>
+ <dc:creator>MLNielsen</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/prestashop-checkout</guid>
+  </item>
+  <item>
+    <title>Everyday AI</title>
+    <link>https://www.prestashop.com/en/blog/everyday-artificial-intelligence</link>
+    <description>The way most people picture artificial intelligence are futuristic robots with human-like features that exist alongside us.</description>
+     <pubDate>Wed, 29 May 2019 15:27:55 +0200</pubDate>
+ <dc:creator>JackieLong</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/everyday-artificial-intelligence</guid>
+  </item>
+  <item>
+    <title>E-Commerce SEO: How to Optimize Product Pages</title>
+    <link>https://www.prestashop.com/en/blog/e-commerce-optimize-product-pages</link>
+    <description>Did you know that 39% of all global e-commerce traffic comes from search?</description>
+     <pubDate>Tue, 28 May 2019 10:52:41 +0200</pubDate>
+ <dc:creator>WebDesk</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/e-commerce-optimize-product-pages</guid>
+  </item>
+  <item>
+    <title>International Shipping</title>
+    <link>https://www.prestashop.com/en/blog/international-shipping</link>
+    <description>International shipping takes planning, patience, and going through a bit of red tape.</description>
+     <pubDate>Mon, 27 May 2019 10:33:12 +0200</pubDate>
+ <dc:creator>shipstation</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/international-shipping</guid>
+  </item>
+  <item>
+    <title>Simplify cross-border selling with multi-currency</title>
+    <link>https://www.prestashop.com/en/blog/business-international-sell-multicurrency</link>
+    <description>Digital cross-border buying continues to grow in popularity. Based on a survey of consumers in 12 countries, 70% of online buyers made a purchase from a foreign site in 2017.</description>
+     <pubDate>Fri, 24 May 2019 12:05:12 +0200</pubDate>
+ <dc:creator>Amazon Pay</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/business-international-sell-multicurrency</guid>
+  </item>
+  <item>
+    <title>What is CPA and how can it improve my eCommerce’s online ads strategy</title>
+    <link>https://www.prestashop.com/en/blog/cpa-ecommerces-online-ads-strategy</link>
+    <description>For your campaigns to be effective, and to make sure your hard work promoting your products pays off, it is essential to define the structure your campaigns are going to take.</description>
+     <pubDate>Mon, 20 May 2019 11:07:51 +0200</pubDate>
+ <dc:creator>SpaceBoost EN</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/cpa-ecommerces-online-ads-strategy</guid>
+  </item>
+  <item>
+    <title>7 Necessary Steps To Launch Your eCommerce Shop</title>
+    <link>https://www.prestashop.com/en/blog/7-necessary-steps-to-launch-your-ecommerce-shop</link>
+    <description>There are so many details to think about when setting up an eCommerce shop, and dropping the ball in one small area can mean a far slower pace towards the global triumph you are aiming for!</description>
+     <pubDate>Thu, 16 May 2019 17:33:36 +0200</pubDate>
+ <dc:creator>Teapot</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/7-necessary-steps-to-launch-your-ecommerce-shop</guid>
+  </item>
+  <item>
+    <title>Recovery of abandoned carts: The 4 best practices in 2019</title>
+    <link>https://www.prestashop.com/en/blog/recovery-of-abandoned-carts-tips-advices</link>
+    <description>More than 68% of visitors leave their carts before finalizing a purchase. They visited your website, placed an item in the cart, and then left your site without buying!</description>
+     <pubDate>Fri, 10 May 2019 17:18:27 +0200</pubDate>
+ <dc:creator>Carts Guru EN</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/recovery-of-abandoned-carts-tips-advices</guid>
+  </item>
+  <item>
+    <title>Going global</title>
+    <link>https://www.prestashop.com/en/blog/international-going-global-NS8</link>
+    <description>Expanding into new markets can be confusing and difficult. Here are some areas to research before deciding the next steps for your business.</description>
+     <pubDate>Thu, 09 May 2019 10:31:55 +0200</pubDate>
+ <dc:creator>JackieLong</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/international-going-global-NS8</guid>
+  </item>
+  <item>
+    <title>Interview of Nathan, user of a 2019 PrestaShop Addons Awards winning module</title>
+    <link>https://www.prestashop.com/en/blog/interview-immersivedisplay-prestashop-protectmyshop-productivity</link>
+    <description>Following the 2019 PrestaShop Addons Awards, </description>
+     <pubDate>Mon, 06 May 2019 16:01:10 +0200</pubDate>
+ <dc:creator>priberolle</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/interview-immersivedisplay-prestashop-protectmyshop-productivity</guid>
+  </item>
+  </channel>
+</rss>

@@ -1315,9 +1315,10 @@ h5 {
     display: inline-block;
 
     > a {
-        display: inline-grid;
+        display: inline-block;
         width: 38px;
         height: 38px;
+        line-height: 38px;
         background: $lightcoral_d07676;
         border-radius: 50%;
         margin: 5px;
@@ -1327,14 +1328,27 @@ h5 {
         grid-template-columns: 100%;
 
         i {
+            position: relative;
+            left: 1.5px;
             color: $white_fff;
             font-size: 16px;
-            line-height: 30px;
             text-align: center;
             vertical-align: middle;
         }
+        .icon-facebook {
+            top: -1px;
+        }
         .icon-instagram, .icon-viber, .icon-youtube-play {
+            left: 1px;
+            top: -1px;
             font-size: 19px;
+        }
+        .con-viber {
+            left: 1.5px;
+        }
+        .icon-telegram {
+            top: -2px;
+            left: 2.5px;
         }
     }
 }
