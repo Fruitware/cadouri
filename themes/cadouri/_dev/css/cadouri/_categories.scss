@@ -70,6 +70,7 @@
         border: 0;
         color: $text-color-tertiary;
         padding: 0;
+        white-space: nowrap;
         font-size: rem(18px);
         @include rtl-text-align-left;
         font-weight: 500;
