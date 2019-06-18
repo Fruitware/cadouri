@@ -42,15 +42,15 @@
                 <h4 class="title_block">{l s='Follow us' d='Shop.Theme.Global'}</h4>
                 <div class="social-block-inline footer-block"><a
                             href="https://www.facebook.com/CadouriMdDelivery" target="_blank"><i
-                                class="icon-facebook"></i>&nbsp;</a> <a
+                                class="icon-facebook"></i></a> <a
                             href="https://www.youtube.com/channel/UCc9oSNa43GXpECCFdqa3QPg"
-                            target="_blank"><i class="icon icon-youtube-play"></i>&nbsp;</a> <a
+                            target="_blank"><i class="icon icon-youtube-play"></i></a> <a
                             href="https://www.instagram.com/cadouri_md/" target="_blank"><i
                                 class="icon-instagram"></i></a> <a href="#"
                                                                    target="_blank"><i
-                                class="icon-telegram"></i>&nbsp;</a> <a
+                                class="icon-telegram"></i></a> <a
                             href="viber://chat?number=+37379646609" target="_blank"><i
-                                class="icon-viber"></i>&nbsp;</a></div>
+                                class="icon-viber"></i></a></div>
             </div>
             <div class="banner-item text-left col-md-3 col-xs-12">
                 <h4 class="title_block">{l s='Payment methods' d='Shop.Theme.Global'}</h4>
