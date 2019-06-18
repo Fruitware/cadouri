@@ -953,6 +953,9 @@ _prestashop2['default'].cart = _prestashop2['default'].cart || {};
 _prestashop2['default'].cart.active_inputs = null;
 
 var spinnerSelector = 'input[name="product-quantity-spin"]';
+var hasError = false;
+var isUpdateOperation = false;
+var errorMsg = '';
 
 /**
  * Attach Bootstrap TouchSpin event handlers
@@ -969,6 +972,8 @@ function createSpin() {
       max: 1000000
     });
   });
+
+  CheckUpdateQuantityOperations.switchErrorStat();
 }
 
 (0, _jquery2['default'])(document).ready(function () {
@@ -977,6 +982,10 @@ function createSpin() {
 
   _prestashop2['default'].on('updateCart', function () {
     (0, _jquery2['default'])('.quickview').modal('hide');
+  });
+
+  _prestashop2['default'].on('updatedCart', function () {
+    createSpin();
   });
 
   createSpin();
@@ -996,9 +1005,9 @@ function createSpin() {
 
     if ($input.is(':focus')) {
       return null;
-    } else {
-      return $input;
     }
+
+    return $input;
   }
 
   function camelize(subject) {
@@ -1063,8 +1072,10 @@ function createSpin() {
 
   var handleCartAction = function handleCartAction(event) {
     event.preventDefault();
+    console.log(event);
 
     var $target = (0, _jquery2['default'])(event.currentTarget);
+    var dataset = event.currentTarget.dataset;
 
     var cartAction = parseCartAction($target, event.namespace);
     var requestData = {
@@ -1086,12 +1097,13 @@ function createSpin() {
         promises.push(jqXHR);
       }
     }).then(function (resp) {
+      CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
       var $quantityInput = getTouchSpinInput($target);
       $quantityInput.val(resp.quantity);
 
       // Refresh cart preview
       _prestashop2['default'].emit('updateCart', {
-        reason: $target.dataset
+        reason: dataset
       });
     }).fail(function (resp) {
       _prestashop2['default'].emit('handleError', {
@@ -1104,8 +1116,8 @@ function createSpin() {
 
   $body.on('click', '[data-link-action="delete-from-cart"], [data-link-action="remove-voucher"]', handleCartAction);
 
-  (0, _jquery2['default'])(spinnerSelector).on('touchspin.on.startdownspin', handleCartAction);
-  (0, _jquery2['default'])(spinnerSelector).on('touchspin.on.startupspin', handleCartAction);
+  $body.on('touchspin.on.startdownspin', spinnerSelector, handleCartAction);
+  $body.on('touchspin.on.startupspin', spinnerSelector, handleCartAction);
 
   function sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, requestData, $target) {
     abortPreviousRequests();
@@ -1119,13 +1131,14 @@ function createSpin() {
         promises.push(jqXHR);
       }
     }).then(function (resp) {
+      CheckUpdateQuantityOperations.checkUpdateOpertation(resp);
       $target.val(resp.quantity);
 
       var dataset;
-      if ($target) {
+      if ($target && $target.dataset) {
         dataset = $target.dataset;
       } else {
-        dataset = null;
+        dataset = resp;
       }
 
       // Refresh cart preview
@@ -1165,23 +1178,23 @@ function createSpin() {
 
     // There should be a new product quantity in cart
     var qty = targetValue - baseValue;
-    if (qty == 0) {
+    if (qty === 0) {
       return;
     }
 
-    var requestData = getRequestData(qty);
-
-    sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, requestData, $target);
+    $target.attr('value', targetValue);
+    sendUpdateQuantityInCartRequest(updateQuantityInCartUrl, getRequestData(qty), $target);
   }
 
-  $body.on('focusout', productLineInCartSelector, function (event) {
-    updateProductQuantityInCart(event);
-  });
-
-  $body.on('keyup', productLineInCartSelector, function (event) {
-    if (event.keyCode == 13) {
-      updateProductQuantityInCart(event);
+  $body.on('focusout keyup', productLineInCartSelector, function (event) {
+    if (event.type === 'keyup') {
+      if (event.keyCode === 13) {
+        updateProductQuantityInCart(event);
+      }
+      return false;
     }
+
+    updateProductQuantityInCart(event);
   });
 
   $body.on('click', '.js-discount .code', function (event) {
@@ -1195,6 +1208,51 @@ function createSpin() {
     return false;
   });
 });
+
+var CheckUpdateQuantityOperations = {
+  'switchErrorStat': function switchErrorStat() {
+    /**
+     * if errorMsg is not empty or if notifications are shown, we have error to display
+     * if hasError is true, quantity was not updated : we don't disable checkout button
+     */
+    var $checkoutBtn = (0, _jquery2['default'])('.checkout a');
+    if ((0, _jquery2['default'])("#notifications article.alert-danger").length || '' !== errorMsg && !hasError) {
+      $checkoutBtn.addClass('disabled');
+    }
+
+    if ('' !== errorMsg) {
+      var strError = ' <article class="alert alert-danger" role="alert" data-alert="danger"><ul><li>' + errorMsg + '</li></ul></article>';
+      (0, _jquery2['default'])('#notifications .container').html(strError);
+      errorMsg = '';
+      isUpdateOperation = false;
+      if (hasError) {
+        // if hasError is true, quantity was not updated : allow checkout
+        $checkoutBtn.removeClass('disabled');
+      }
+    } else if (!hasError && isUpdateOperation) {
+      hasError = false;
+      isUpdateOperation = false;
+      (0, _jquery2['default'])('#notifications .container').html('');
+      $checkoutBtn.removeClass('disabled');
+    }
+  },
+  'checkUpdateOpertation': function checkUpdateOpertation(resp) {
+    /**
+     * resp.hasError can be not defined but resp.errors not empty: quantity is updated but order cannot be placed
+     * when resp.hasError=true, quantity is not updated
+     */
+    hasError = resp.hasOwnProperty('hasError');
+    var errors = resp.errors || "";
+    // 1.7.2.x returns errors as string, 1.7.3.x returns array
+    if (errors instanceof Array) {
+      errorMsg = errors.join(" ");
+    } else {
+      errorMsg = errors;
+    }
+
+    isUpdateOperation = true;
+  }
+};
 
 /***/ }),
 /* 8 */
@@ -2049,6 +2107,10 @@ $(document).ready(function () {
     if ($('.owl-carousel-play').length) {
         $(".owl-carousel").owlCarousel();
     }
+
+    $(window).load(function () {
+        $('#loader').fadeOut();
+    });
 });
 
 /*function responsiveResize()

@@ -1333,11 +1333,12 @@ h5 {
             text-align: center;
             vertical-align: middle;
         }
-        .icon-instagram,.icon-viber,.icon-youtube-play {
+        .icon-instagram, .icon-viber, .icon-youtube-play {
             font-size: 19px;
         }
     }
 }
+
 #_mobile_nav {
     .social-block-inline {
         a {
@@ -1377,6 +1378,12 @@ h5 {
 #_desktop_menu {
     .ps-megamenu {
         display: inline-block;
+    }
+}
+
+#_desktop_nav {
+    button:active {
+        color: initial;
     }
 }
 
