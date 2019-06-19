@@ -574,7 +574,7 @@ a {
             }
 
             a {
-                padding: 15px 15px 0 0;
+                padding: 22px 15px 0 0;
                 font-weight: 300;
 
                 &.active {
@@ -1583,4 +1583,8 @@ button {
         position: relative;
         left: -1px;
     }
+}
+
+.nav-item .dropdown-menu.level2 {
+    left: 0 !important;
 }
