@@ -574,6 +574,11 @@
         position: relative;
         @include display(flex);
         @include rtl-margin-right(rem(10px));
+
+        @media (max-width: 508px) {
+            margin-right: 30%;
+        }
+
         border: 2px solid #d5dbe6;
         > * {
             display: inline-block;

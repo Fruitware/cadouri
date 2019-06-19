@@ -36,7 +36,7 @@
 <div id="js-product-list">
     <div class="clearfix flexRow products products-block grid {if isset($product_style) && !empty($product_style)}{$product_style}{else} style1{/if}">
         {foreach from=$listing.products item=product name=products}
-            <div class="col-xs-cus-12 col-xs-6 col-sm-6 col-md-4 col-xl-{12/$nbItemsPerLine}">
+            <div class="col-xs-cus-12 col-xs-12 col-sm-6 col-md-4 col-xl-{12/$nbItemsPerLine}">
                 <div class="item">
                     {block name='product_miniature'}
                         {if isset($product_style) && !empty($product_style)}
