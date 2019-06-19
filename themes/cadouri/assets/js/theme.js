@@ -1072,7 +1072,6 @@ function createSpin() {
 
   var handleCartAction = function handleCartAction(event) {
     event.preventDefault();
-    console.log(event);
 
     var $target = (0, _jquery2['default'])(event.currentTarget);
     var dataset = event.currentTarget.dataset;

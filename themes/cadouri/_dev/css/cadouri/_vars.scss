@@ -1,9 +1,11 @@
 @font-face {
     font-family: 'Nickainley Normal';
+    font-display: swap;
     src: url(/themes/cadouri/assets/fonts/nickainley-normal.otf);
 }
 @font-face {
     font-family: 'Basil Regular';
+    font-display: swap;
     src: url(/themes/cadouri/assets/fonts/basil-regular.ttf);
 }
 
@@ -38,8 +40,8 @@ $white_fff: #ffffff;
 $whitesmoke_ebebeb: #ebebeb;
 $whitesmoke_eee: #eeeeee;
 
-$font-family-primary: 'Basil Regular';
-$font-family-secondary: 'Nickainley Normal';
+$font-family-primary: 'Basil Regular' sans-serif;
+$font-family-secondary: 'Nickainley Normal' ;
 $font-icon-secondary: 'fontello';
 
 // Mega Menu Module

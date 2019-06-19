@@ -1325,31 +1325,45 @@ h5 {
         align-items: center;
         grid-template-rows: 100%;
         grid-template-columns: 100%;
-
+        &:hover {
+            box-shadow: 1px 0 2px rgba(0, 0, 0, .36);
+        }
         i {
             position: relative;
-            //left: 1.5px;
             color: $white_fff;
             font-size: 16px;
             text-align: center;
             vertical-align: middle;
+            padding: 0 0 0 1px !important;
+            &::before {
+                margin: 0 !important;
+                width: auto !important;
+            }
         }
-        /* .icon-facebook {
-            top: -1px;
-        } */
         .icon-instagram, .icon-viber, .icon-youtube-play {
-            //left: 1px;
-            //top: -1px;
             line-height: 30px;
             font-size: 19px;
         }
         .icon-viber {
             top: 1px;
         }
-        /* .icon-telegram {
-            top: -2px;
-            left: 2.5px;
-        } */
+    }
+}
+
+#header {
+    .social-block-inline > a .icon-instagram {
+        padding-left: 3px !important;
+    }
+}
+
+#footer {
+    .social-block-inline > a .icon-youtube-play {
+        padding-left: 3px !important;
+
+    }
+    .social-block-inline>a .icon-viber
+    {
+        left: 1px;
     }
 }
 
