@@ -1,36 +1,45 @@
 // Cadouri Main Colors
 // ========================================================================
-$white: #fff;
-$antiquewhite: #f8e7d1;
-$tanHide: rgba(255, 154, 82, 0.3);
-$slateGray: #6C868E;
-$lobLolly: #BBCDD2;
 
+//Simple colors
+$white: #fff;
 $black: #000000;
 $black2: #232323;
 
+//Brand-colors
+$antiquewhite: #f8e7d1;
+$lightcoral: #d07676;
+$mistyrose: #f8d4ce;
+
+//buttons
+$slateGray: #6C868E;
+$lobLolly: #BBCDD2;
+
+//Shades of gray
 $gray: #999999;
 $darkgray: #333333;
 $semidarkgray: #414141;
 $gray2: #777777;
 $lightgray: #dfe1e6;
 
-$transGray: rgba(0, 0, 0, 0.25);
-$transLightGray: rgba(0, 0, 0, 0.35);
-
+//rating
 $gold: #ffcc00;
 
-$lightcoral: #d07676;
-$mistyrose: #f8d4ce;
-
+//bootstrap
 $brand-primary: $lightcoral;
 $brand-secondary: #f39d72;
 $brand-success: #4cbb6c;
 $brand-warning: #ff9a52;
 $brand-danger: #ff4c4c;
-$brand-info: #ff4c4c;
+
+//colors withs transparency
+$transGray: rgba(0, 0, 0, 0.25);
+$transLightGray: rgba(0, 0, 0, 0.35);
+$tanHide: rgba(255, 154, 82, 0.3);
 
 // ========================================================================
+
+$brand-info: $brand-danger;
 
 $label-color: $black2;
 $btn-primary-color: $white;
