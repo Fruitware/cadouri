@@ -1597,13 +1597,21 @@ button {
 }
 
 @media (max-width: 990px){
-    #cavas_menu .nav-item .dropdown-menu.level2 {
-        left: 0 !important;
-        border: none !important;
+    #cavas_menu  {
+        .nav-item .dropdown-menu.level2 {
+            left: 0 !important;
+            border: none !important;
+        }
+        .dropdown-submenu {
+            & > .click-canavs-menu {
+                top: 6px;
+            }
+        }
     }
 }
 
 .nav-tabs .nav-link {
+    border: none !important;
     &:hover, &:active, &:focus {
         border: none !important;
     }

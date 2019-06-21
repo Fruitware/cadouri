@@ -467,7 +467,7 @@
         .click-canavs-menu {
             position: absolute;
             @include rtl-right(rem(10px));
-            top: rem(15px);
+            top: rem(11px);
             z-index: 10;
             cursor: pointer;
             background-color: $theme-color-primary;
