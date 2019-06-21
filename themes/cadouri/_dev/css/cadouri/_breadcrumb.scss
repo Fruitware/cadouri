@@ -411,14 +411,14 @@
         @include rtl-background-position-left(0);
     }
     .shopping-cart-group {
-        border: 1px solid $whitesmoke_ebebeb;
+        border: 1px solid $lightgray;
         position: relative;
         padding: rem(8px) rem(12px);
         display: inline-block;
         span {
             display: block;
             border-radius: 10px;
-            background-color: $rosybrown_be7374;
+            background-color: $lightcoral;
             color: #fff;
             position: absolute;
             @include rtl-right(rem(-6px));
@@ -434,7 +434,7 @@
     }
     .cart-title {
         font-family: $font-family-primary;
-        color: $rosybrown_be7374;
+        color: $lightcoral;
         line-height: 20px;
         display: block;
     }
@@ -449,7 +449,7 @@
         font-size: 12px;
         text-align: center;
         color: #fff;
-        background: $rosybrown_be7374;
+        background: $lightcoral;
 
     }
     .space-line {
@@ -459,7 +459,7 @@
         font-size: rem(20px);
         display: block;
         line-height: rem(24px);
-        color: $black_000;
+        color: $black;
     }
     .ps_cartcontent {
         position: absolute;
@@ -467,7 +467,7 @@
         visibility: hidden;
         @include opacity(0);
         background: #fff;
-        border: 1px solid $whitesmoke_ebebeb;
+        border: 1px solid $lightgray;
         padding: rem(20px);
         width: rem(300px);
         top: rem(100px);
@@ -482,7 +482,7 @@
                 color: #aaa;
                 font-weight: 400;
                 &:hover {
-                    color: $rosybrown_be7374;
+                    color: $lightcoral;
                 }
             }
         }
@@ -514,8 +514,8 @@
             }
         }
         .cart-group {
-            border-top: 1px solid $whitesmoke_ebebeb;
-            border-bottom: 1px solid $whitesmoke_ebebeb;
+            border-top: 1px solid $lightgray;
+            border-bottom: 1px solid $lightgray;
             padding: rem(10px) 0;
             margin-bottom: rem(15px);
         }
@@ -841,7 +841,7 @@
 .block-promo {
     .promo-code {
         padding: 1.60rem;
-        background: $gray-light;
+        background: $lightgray;
         .alert-danger {
             position: relative;
             margin-top: rem(20px);
@@ -864,7 +864,7 @@
         }
     }
     .promo-input {
-        color: $gray-darker;
+        color: $black2;
         border: $gray 1px solid;
         height: rem(40px);
         text-indent: rem(10px);
@@ -880,7 +880,7 @@
         font-weight: 600;
         a {
             font-weight: normal;
-            color: $gray-darker;
+            color: $black2;
             display: inline-block;
         }
     }
@@ -933,7 +933,7 @@
         overflow: hidden;
         > .form-control,
         > .input-group {
-            color: $gray-darker;
+            color: $black2;
             background-color: #f6f3f3;
             height: rem(36px);
             padding: 0.175rem 0.5rem;
@@ -953,7 +953,7 @@
     .product-price {
         line-height: 36px;
         .remove-from-cart {
-            color: $gray-darker;
+            color: $black2;
             display: inline-block;
             margin-top: -0.02rem;
         }
@@ -972,7 +972,7 @@
         padding: rem(16px) 0;
     }
     .cart-item {
-        border-bottom: 1px solid $gray-light;
+        border-bottom: 1px solid $lightgray;
         &:last-child {
             border-bottom: 0;
         }

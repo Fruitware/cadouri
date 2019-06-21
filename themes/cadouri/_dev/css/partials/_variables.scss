@@ -1,19 +1,37 @@
-$gray-darker: #232323;
-$gray: #7A7A7A;
-$gray-light: #F1F1F1;
-$gray-lighter: #f6f6f6;
-$brand-primary: #be7374;
+// Colors
+// ========================================================================
+$white: #fff;
+$antiquewhite: #f8e7d1;
+
+$black: #000000;
+$black2: #232323;
+
+$gray: #999999;
+$darkgray: #333333;
+$semidarkgray: #414141;
+$gray2: #777777;
+$lightgray: #dfe1e6;
+
+$gold: #ffcc00;
+
+$lightcoral: #d07676;
+$mistyrose: #f8d4ce;
+
+//$gray-darker: #232323;
+//$gray-light: #F1F1F1;
+//$gray-lighter: #f6f6f6;
+$brand-primary: $lightcoral;
 $brand-secondary: #f39d72;
 $brand-success: #4cbb6c;
 $brand-warning: #ff9a52;
 $brand-danger: #ff4c4c;
 $brand-info: #ff4c4c;
-$label-color: $gray-darker;
-$btn-primary-color: #fff;
+$label-color: $black2;
+$btn-primary-color: $white;
 $btn-primary-bg: $brand-primary;
 $btn-primary-border: transparent;
-$btn-secondary-color: $gray-darker;
-$btn-secondary-bg: $gray-lighter;
+$btn-secondary-color: $black2;
+$btn-secondary-bg: $lightgray;
 $btn-secondary-border: transparent;
 $btn-border-radius: 0;
 $input-border-color: rgba(0, 0, 0, 0.25);
@@ -29,7 +47,7 @@ $warning: #FF9A52;
 $warning-hover: #FDE7BB;
 $alert-warning-bg: rgba(255, 154, 82, 0.3);
 $alert-warning-border: $warning;
-$alert-warning-text: $gray-darker;
+$alert-warning-text: $black2;
 $btn-warning-bg: $warning;
 $btn-warning-color: white;
 $btn-tertiary-color: #6C868E;
@@ -65,30 +83,14 @@ $md: 760px;
 $lg: 990px;
 $xl: 1440px;
 
-$black_0b0b0b: #0b0b0b;
-$black_111: #111111;
-$darkgray_a9b1c0: #a9b1c0;
-$darkslategray_333: #333333;
-$darkslategray_404040: #404040;
-$darkslategray_4a4a4a: #4a4a4a;
-$gray_797C85: #797c85;
-$lightcoral_D07676: #d07676;
-$lightgray_CCC: #cccccc;
-$lightgray_ccc: #cccccc;
-$lightsteelblue_b7C1D4: #b7c1d4;
-$rosybrown: #be7374;
-$white_FFF: #ffffff;
-$white_fff: #ffffff;
-$whitesmoke_EEE: #eeeeee;
-$whitesmoke_f2f2f2: #f2f2f2;
 
-$theme-color-primary: #be7374 !default;
-$theme-color-secondary: #b9c2d3 !default;
-$theme-color-tertiary: #fed2cc !default;
+$theme-color-primary: $lightcoral !default;
+$theme-color-secondary: $lightgray !default;
+$theme-color-tertiary: $mistyrose !default;
 
-$text-color-primary: #000000 !default;
-$text-color-secondary: #000000 !default;
-$text-color-tertiary: #a9b1c0 !default;
+$text-color-primary: $black !default;
+$text-color-secondary: $black !default;
+$text-color-tertiary: $gray !default;
 
 $rtl-left: left !default;
 $rtl-right: right !default;

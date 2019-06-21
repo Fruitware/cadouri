@@ -1,5 +1,5 @@
 $black_0b0b0b: #0b0b0b;
-$black_111: #111111;
+$black1: #111111;
 $darkgray_a9b1c0: #a9b1c0;
 $darkslategray_333: #333333;
 $darkslategray_404040: #404040;
@@ -106,7 +106,7 @@ h6 {
 }
 
 a {
-    color: $rosybrown_BE7374;
+    color: $lightcoral;
 }
 
 .headerCenter {
@@ -127,7 +127,7 @@ a {
 }
 
 .headerRight {
-    background: $white_FFF;
+    background: $white;
     margin-top: 40px;
 }
 
@@ -150,7 +150,7 @@ a {
         display: inline-grid;
         width: 38px;
         height: 37px;
-        background: $lightcoral_D07676;
+        background: $lightcoral;
         border-radius: 50%;
         margin: 5px;
         justify-items: center;
@@ -159,7 +159,7 @@ a {
         grid-template-columns: 100%;
 
         i {
-            color: $white_FFF;
+            color: $white;
             line-height: 30px;
             text-align: center;
             vertical-align: middle;
@@ -176,13 +176,13 @@ a {
     font-size: 18px;
 
     i {
-        color: $lightgray_CCC;
+        color: $lightgray;
     }
 }
 
 #_mobile_nav {
     .contact-phone-block {
-        color: $whitesmoke_EEE;
+        color: $lightgray;
         float: left;
         padding: 10px 20px;
         width: 100%;
@@ -218,7 +218,7 @@ a {
     }
 
     .material-icons {
-        color: $lightgray_CCC;
+        color: $lightgray;
     }
 }
 
@@ -234,7 +234,7 @@ a {
     }
 
     .material-icons {
-        color: $lightgray_CCC;
+        color: $lightgray;
     }
 }
 
@@ -246,7 +246,7 @@ a {
         &:before {
             -moz-osx-font-smoothing: grayscale;
             -webkit-font-smoothing: antialiased;
-            color: $lightcoral_D07676;
+            color: $lightcoral;
             content: '\ea1a';
             font-family: 'fontello';
             font-size: 32px;
@@ -388,7 +388,7 @@ a {
 
     &:after {
         bottom: -8px;
-        color: $lightsteelblue_b7C1D4;
+        color: $gray;
         content: '...............................................................................................';
         font-family: monospace;
         font-size: 18px;
@@ -405,7 +405,7 @@ a {
 .carousel_title {
     &:after {
         bottom: 0;
-        color: $lightsteelblue_b7C1D4;
+        color: $gray;
         content: '...............................................................................................';
         font-family: monospace;
         font-size: 18px;
@@ -454,7 +454,7 @@ a {
     h2 {
         &:after {
             bottom: -8px;
-            color: $lightsteelblue_b7C1D4;
+            color: $gray;
             content: '...............................................................................................';
             font-family: monospace;
             font-size: 18px;
@@ -478,15 +478,15 @@ a {
 }
 
 .footer-bottom {
-    border-top: 1px solid $whitesmoke_EEE;
-    color: $black_111;
+    border-top: 1px solid $lightgray;
+    color: $black;
     font-size: 1.1em;
     margin-top: 10px;
     padding-top: 30px;
 }
 
 .grey-note {
-    color: $darkgray_a9b1c0;
+    color: $gray;
 }
 
 .prodetail-tile {
@@ -527,16 +527,27 @@ a {
             margin: 0 10px 0 0;
             padding: 0 20px;
             text-transform: uppercase;
+
+            i {
+                display: none;
+            }
         }
     }
 
     .buy-now {
         height: 44px;
-        line-height: 44px;
+        line-height: 42px;
         margin: 0 10px 0 0;
         padding: 0 20px;
-        font-size: 21px;
         text-transform: uppercase;
+    }
+
+    .add-to-cart, .buy-now {
+        font-size: 16px !important;
+
+        @media (max-width: 402px) {
+            font-size: 15px !important;
+        }
     }
 
     .qty {
@@ -596,7 +607,7 @@ a {
 }
 
 .product-reference {
-    color: $darkgray_a9b1c0;
+    color: $gray;
     font-size: 1.1em;
     margin-top: 7px;
 
@@ -616,7 +627,7 @@ a {
 }
 
 .btn-primary {
-    border: 2px solid $rosybrown_BE7374;
+    border: 2px solid $lightcoral;
     padding: .65rem 1.3rem;
 }
 
@@ -663,10 +674,10 @@ a {
         height: 2px;
         position: relative;
         width: 100%;
-        background-color: $gray_797C85;
+        background-color: $gray2;
 
         .text_separ {
-            background-color: $white_fff;
+            background-color: $white;
             font-family: monospace;
             font-size: 15px;
             margin: 0 auto;
@@ -698,7 +709,7 @@ a {
 }
 
 .mfp-bg {
-    background: $black_0b0b0b;
+    background: $black2;
     filter: alpha(opacity=80);
     height: 100%;
     left: 0;
@@ -918,7 +929,7 @@ a {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    color: $lightgray_ccc;
+    color: $lightgray;
     position: absolute;
     top: 50%;
     width: auto;
@@ -929,7 +940,7 @@ a {
     z-index: 1044;
 
     a {
-        color: $lightgray_ccc;
+        color: $lightgray;
 
         &:hover {
             color: white;
@@ -940,7 +951,7 @@ a {
 .mfp-counter {
     -moz-user-select: none;
     -webkit-user-select: none;
-    color: $lightgray_ccc;
+    color: $lightgray;
     font-size: 12px;
     line-height: 18px;
     position: absolute;
@@ -1004,7 +1015,7 @@ button {
 
 .mfp-close-btn-in {
     .mfp-close {
-        color: $darkslategray_333;
+        color: $darkgray;
     }
 }
 
@@ -1076,8 +1087,8 @@ button {
                 margin-top: 0;
                 top: 0;
                 font-size: .77778rem;
-                color: $darkslategray_4a4a4a;
-                background-color: $whitesmoke_f2f2f2;
+                color: $semidarkgray;
+                background-color: $lightgray;
                 border: 1px solid rgba(242, 242, 242, .4);
                 border-radius: 50%;
 
@@ -1090,8 +1101,8 @@ button {
                 }
 
                 &:hover {
-                    background-color: $rosybrown_be7374;
-                    color: $white_fff;
+                    background-color: $lightcoral;
+                    color: $white;
                 }
             }
         }
@@ -1172,7 +1183,7 @@ button {
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 2px;
-        font-family: "Josefin Slab", serif;
+        font-family: $font-family-primary;
         padding: 4px 8px;
         position: relative;
         margin: auto;
@@ -1223,7 +1234,7 @@ button {
             }
             h4 {
                 margin: 5px 0 0;
-                font: 100 9px/20px "Josefin Slab", serif;
+                font: 100 9px/20px $font-family-primary;
                 text-transform: uppercase;
                 letter-spacing: 2.5px;
                 color: #777;
@@ -1272,7 +1283,7 @@ button {
             }
             h4 {
                 margin: 5px 0 0;
-                font: 100 9px/10px "Josefin Slab", serif;
+                font: 100 9px/10px $font-family-primary;
                 text-transform: uppercase;
                 letter-spacing: 2.5px;
                 color: #232323;
@@ -1321,7 +1332,7 @@ button {
             }
             h4 {
                 margin: 5px 0 0;
-                font: 100 9px/10px "Josefin Slab", serif;
+                font: 100 9px/10px $font-family-primary;
                 text-transform: uppercase;
                 letter-spacing: 2.5px;
                 color: #232323;
@@ -1376,7 +1387,7 @@ button {
                 justify-content: center;
                 align-items: center;
                 font-size: 28px;
-                font-family: "Josefin Slab", serif;
+                font-family: $font-family-primary;
                 line-height: 40px;
                 text-transform: none;
             }
@@ -1391,7 +1402,7 @@ button {
                 height: 50%;
                 line-height: 30px;
                 /* text-transform: none; */
-                font: 100 18px/25px "Josefin Slab", serif;
+                font: 100 18px/25px $font-family-primary;
             }
         }
         &:hover {
@@ -1499,7 +1510,7 @@ button {
                 }
                 h4 {
                     margin: 5px 0 0;
-                    font: 100 9px/10px "Josefin Slab", serif;
+                    font: 100 9px/10px $font-family-primary;
                     text-transform: uppercase;
                     letter-spacing: 2.5px;
                     color: #232323;
@@ -1585,6 +1596,27 @@ button {
     }
 }
 
-.nav-item .dropdown-menu.level2 {
-    left: 0 !important;
+@media (max-width: 990px){
+    #cavas_menu .nav-item .dropdown-menu.level2 {
+        left: 0 !important;
+        border: none !important;
+    }
+}
+
+.nav-tabs .nav-link {
+    &:hover, &:active, &:focus {
+        border: none !important;
+    }
+    &.active {
+        color: #232323;
+        &:active, &:focus {
+            color: #232323;
+        }
+    }
+}
+
+.modal-body {
+    p {
+        color: $black2;
+    }
 }

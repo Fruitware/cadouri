@@ -16,7 +16,7 @@
     white-space: inherit;
   }
   .value {
-    color: $gray-darker;
+    color: $black2;
     float: right;
   }
   &.cart-summary-subtotals {
@@ -62,7 +62,7 @@
 .block-promo {
   .promo-code {
     padding: 1.60rem;
-    background: $gray-light;
+    background: $lightgray;
     .alert-danger {
       position: relative;
       margin-top: 1.25rem;
@@ -88,7 +88,7 @@
     }
   }
   .promo-input {
-    color: $gray-darker;
+    color: $black2;
     border: $gray 1px solid;
     height: 2.5rem;
     text-indent: 0.625rem;
@@ -104,7 +104,7 @@
     font-weight: 600;
     a {
       font-weight: normal;
-      color: $gray-darker;
+      color: $black2;
       display: inline-block;
     }
   }
@@ -157,7 +157,7 @@
     letter-spacing: 1px;
     line-height: 36px;
     .remove-from-cart {
-      color: $gray-darker;
+      color: $black2;
       display: inline-block;
       margin-top: 0.3125rem;
     }
@@ -176,7 +176,7 @@
     padding: 1rem 0;
   }
   .cart-item {
-    border-bottom: 1px solid $gray-light;
+    border-bottom: 1px solid $lightgray;
     &:last-child {
       border-bottom: 0;
     }

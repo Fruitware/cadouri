@@ -11,34 +11,7 @@
 
 @import "/themes/cadouri/assets/fonts/fontello/css/fontello.css";
 @import "/themes/cadouri/assets/fonts/iconmoon/style.css";
-$antiquewhite_f8e7d1: #f8e7d1;
-$black_000: #000000;
-$black_111: #111111;
-$black_232323: #232323;
-$black_292b32: #292b32;
-$darkgray_999: #999999;
-$darkgray_a9b1c0: #a9b1c0;
-$darkgray_acaaa6: #acaaa6;
-$darkslategray_333: #333333;
-$darkslategray_414141: #414141;
-$gainsboro_ddd: #dddddd;
-$gainsboro_dfe1e6: #dfe1e6;
-$gold_fc0: #ffcc00;
-$gray_777: #777777;
-$gray_888: #888888;
-$lightcoral_d07676: #d07676;
-$lightgray_ccc: #cccccc;
-$lightsteelblue_b7c1d4: #b7c1d4;
-$mistyrose_f8d4ce: #f8d4ce;
-$mistyrose_fed2cc: #fed2cc;
-$rosybrown_be7374: #be7374;
-$silver_b8becb: #b8becb;
-$silver_bbb: #bbbbbb;
-$silver_c5c5c5: #c5c5c5;
-$white_fafafa: #fafafa;
-$white_fff: #ffffff;
-$whitesmoke_ebebeb: #ebebeb;
-$whitesmoke_eee: #eeeeee;
+//@import "/themes/cadouri/assets/fonts/newfont/style.css";
 
 $font-family-primary: 'Basil Regular' sans-serif;
 $font-family-secondary: 'Nickainley Normal' ;
@@ -46,31 +19,8 @@ $font-icon-secondary: 'fontello';
 
 // Mega Menu Module
 // ========================================================================
-$megamenu-outside-bg: transparent !default;
-$megamenu-bg: #333 !default;
-$megamenu-color: #000000 !default;
-$megamenu-font-family: $font-family-primary !default;
-$megamenu-link-color: #000000 !default;
-$megamenu-link-hover-color: $theme-color-primary !default;
-$megamenu-link-font-size: 18px !default;
-$megamenu-font-weight: 700 !default;
-
-$megamenu-parent-padding: 2px 15px !default;
-$megamenu-parent-text-transform: uppercase !default;
-
-$megamenu-sub-bg-color: #fff !default;
-$megamenu-sub-font-family: $font-family-primary !default;
-$megamenu-sub-text-color: $text-color-tertiary !default;
-$megamenu-sub-link-color: $text-color-tertiary !default;
-$megamenu-sub-link-hover-color: $theme-color-primary !default;
-$megamenu-sub-font-size: 18px !default;
-
-$megamenu-heading-font-family: $font-family-primary !default;
-$megamenu-heading-font-size: 20px !default;
-$megamenu-heading-color: $text-color-secondary !default;
 
 // product label
-$product-label-border-color: #000 !default;
 $product-label-color: #fff !default;
 $product-label-font-size: 14px !default;
 $product-label-font-family: $font-family-primary !default;

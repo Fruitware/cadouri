@@ -9,7 +9,7 @@
     font-weight: 400;
   }
   a.dropdown-submenu {
-    color: $gray-darker;
+    color: $black2;
     text-transform: uppercase;
     font-weight: 600;
   }
@@ -79,7 +79,7 @@
     margin-bottom: 0.625rem;
   }
   .top-menu {
-    color: $gray-darker;
+    color: $black2;
     .collapse-icons[aria-expanded="true"] {
       .add {
         display: none;
@@ -97,7 +97,7 @@
     }
     a[data-depth="0"] {
       padding: 0.625rem;
-      border-bottom: 1px solid $gray-lighter;
+      border-bottom: 1px solid $lightgray;
     }
     .collapse {
       display: none;
