@@ -96,7 +96,9 @@ h6 {
 
         &:hover {
             .ps_group {
-              bottom: 20px !important;
+              @media (max-width: 990px){
+                bottom: 20px !important;
+              }
             }
             figure {
                 img {
