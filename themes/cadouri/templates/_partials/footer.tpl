@@ -55,10 +55,10 @@
             <div class="banner-item text-left col-md-3 col-xs-12">
                 <h4 class="title_block">{l s='Payment methods' d='Shop.Theme.Global'}</h4>
                 <a href="#" class="paytypes">
-                    <i class="iconm-MasterCard"></i>
-                    <i class="iconm-PayNet"></i>
-                    <i class="iconm-Visa"></i>
-                    <i class="iconm-PayPal"></i>
+                    <i class="icon-mastercard"></i>
+                    <i class="icon-paynet"></i>
+                    <i class="icon-visa"></i>
+                    <i class="icon-paypal"></i>
                 </a>
             </div>
         </div>

@@ -1478,7 +1478,16 @@ h5 {
     }
 
     .paytypes {
-        font-size: 30px;
+        font-size: 35px;
+        color: $lightcoral;
+
+        i {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 
     .block-contactinfo {
