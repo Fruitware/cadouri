@@ -1,7 +1,10 @@
-// Colors
+// Cadouri Main Colors
 // ========================================================================
 $white: #fff;
 $antiquewhite: #f8e7d1;
+$tanHide: rgba(255, 154, 82, 0.3);
+$slateGray: #6C868E;
+$lobLolly: #BBCDD2;
 
 $black: #000000;
 $black2: #232323;
@@ -12,20 +15,23 @@ $semidarkgray: #414141;
 $gray2: #777777;
 $lightgray: #dfe1e6;
 
+$transGray: rgba(0, 0, 0, 0.25);
+$transLightGray: rgba(0, 0, 0, 0.35);
+
 $gold: #ffcc00;
 
 $lightcoral: #d07676;
 $mistyrose: #f8d4ce;
 
-//$gray-darker: #232323;
-//$gray-light: #F1F1F1;
-//$gray-lighter: #f6f6f6;
 $brand-primary: $lightcoral;
 $brand-secondary: #f39d72;
 $brand-success: #4cbb6c;
 $brand-warning: #ff9a52;
 $brand-danger: #ff4c4c;
 $brand-info: #ff4c4c;
+
+// ========================================================================
+
 $label-color: $black2;
 $btn-primary-color: $white;
 $btn-primary-bg: $brand-primary;
@@ -34,7 +40,7 @@ $btn-secondary-color: $black2;
 $btn-secondary-bg: $lightgray;
 $btn-secondary-border: transparent;
 $btn-border-radius: 0;
-$input-border-color: rgba(0, 0, 0, 0.25);
+$input-border-color: $transGray;
 $headings-font-weight: 700;
 $tooltip-bg: $brand-danger;
 $border-radius: 0;
@@ -43,15 +49,15 @@ $small-space: 0.625rem;
 $medium-space: 1.25rem;
 $large-space: 1.875rem;
 $extra-large-space: 2.5rem;
-$warning: #FF9A52;
-$warning-hover: #FDE7BB;
-$alert-warning-bg: rgba(255, 154, 82, 0.3);
+$warning: $brand-warning;
+$warning-hover: $mistyrose;
+$alert-warning-bg: $tanHide;
 $alert-warning-border: $warning;
 $alert-warning-text: $black2;
 $btn-warning-bg: $warning;
-$btn-warning-color: white;
-$btn-tertiary-color: #6C868E;
-$btn-tertiary-hover: #BBCDD2;
+$btn-warning-color: $white;
+$btn-tertiary-color: $slateGray;
+$btn-tertiary-hover: $lobLolly;
 $base-font-size: 1rem;
 $font-size-lg: 0.9375rem;
 $font-size-sm: 0.875rem;
@@ -83,7 +89,6 @@ $md: 760px;
 $lg: 990px;
 $xl: 1440px;
 
-
 $theme-color-primary: $lightcoral !default;
 $theme-color-secondary: $lightgray !default;
 $theme-color-tertiary: $mistyrose !default;
@@ -100,7 +105,7 @@ $font-size-primary: 18px;
 // Footer
 // ========================================================================
 
-$footer-bg: #fff !default;
+$footer-bg: $white !default;
 $footer-color: $text-color-tertiary !default;
 
 $footer-heading-font-family: 'Nickainley Normal' !default;
@@ -120,17 +125,17 @@ $footer-margin: 20px !default;
 
 /////// footer top
 $footer-top-outside-border: 0 !default;
-$footer-top-outside-bg: #f3f3f3 !default;
+$footer-top-outside-bg: $lightgray !default;
 $footer-top-bg: transparent !default;
 $footer-top-padding: rem(60px) 0 rem(30px) !default;
-$footer-top-color: #666 !default;
+$footer-top-color: $semidarkgray !default;
 $footer-top-content-padding: rem(70px) 0 0px !default;
 $footer-top-content-margin: 0 !default;
 $footer-top-color-hover: $theme-color-primary !default;
 $footer-top-border: transparent !default;
 
 /////// footer center
-$footer-center-outside-bg: #fff !default;
+$footer-center-outside-bg: $white !default;
 $footer-center-bg: transparent !default;
 $footer-center-content-padding: 0 !default;
 $footer-center-content-margin: 0 !default;
@@ -148,15 +153,15 @@ $footer-bottom-color-hover: $footer-link-hover-color !default;
 
 // Powered By / Copyright
 // ========================================================================
-$power-outside-bg: #fff !default;
+$power-outside-bg: $white !default;
 $power-bg: transparent !default;
 $power-color: $text-color-primary !default;
-$power-link-color: #333743 !default;
+$power-link-color: $darkgray !default;
 $power-link-hover-color: $theme-color-primary !default;
 $power-padding: 0 !default;
 $power-font-family: 'Basil Regular' !default;
-$power-border-color: #ebebeb !default;
+$power-border-color: $lightgray !default;
 
 /////// Border
-$base-border-color: #ebebeb !default;
+$base-border-color: $lightgray !default;
 $main_border: 1px solid $base-border-color !default;
