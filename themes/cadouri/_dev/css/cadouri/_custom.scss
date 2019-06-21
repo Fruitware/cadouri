@@ -1633,3 +1633,8 @@ button {
         color: $black2;
     }
 }
+
+.icon-phone {
+    display: inline-block;
+    transform: rotate(90deg) translateX(3px) translateY(2px);
+}

@@ -15,6 +15,10 @@
 .icon-exclamation:before { content: '\e80f'; } /* '' */
 .icon-menu:before { content: '\e810'; } /* '' */
 .icon-viber:before { content: '\e81b'; } /* '' */
+.icon-visa:before { content: '\e835'; } /* '' */
+.icon-paynet:before { content: '\e836'; } /* '' */
+.icon-paypal:before { content: '\e837'; } /* '' */
+.icon-mastercard:before { content: '\e838'; } /* '' */
 .icon-arrowleft:before { content: '\ea01'; } /* '' */
 .icon-arrowright:before { content: '\ea02'; } /* '' */
 .icon-close:before { content: '\ea03'; } /* '' */
