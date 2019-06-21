@@ -81,7 +81,6 @@
                             <input type="hidden" value="{$product.id_product}" name="id_product">
                             <input type="number" class="input-group form-control" name="qty" min="1" value="1">
                             <button data-button-action="add-to-cart" class="btn btn-outline-pink">
-                                <span class="leo-loading cssload-speeding-wheel" style="display: none;"></span>
                                 {l s='Add to cart' d='Shop.Theme.Global'}
                             </button>
                         </form>

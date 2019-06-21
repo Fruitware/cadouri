@@ -4,7 +4,7 @@
   word-wrap: break-word;
   h4 {
     text-transform: uppercase;
-    color: $gray-darker;
+    color: $black2;
     margin-bottom: 2rem;
   }
   .block {
@@ -18,7 +18,7 @@
       }
     }
     .data {
-      color: $gray-darker;
+      color: $black2;
       font-size: $font-size-sm;
       width: auto;
       overflow: hidden;
@@ -35,6 +35,6 @@
   width: 100%;
   h3 {
     text-transform: uppercase;
-    color: $gray-darker;
+    color: $black2;
   }
 }

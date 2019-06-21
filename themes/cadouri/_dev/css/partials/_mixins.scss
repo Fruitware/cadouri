@@ -4,7 +4,7 @@
         input[type=text] {
             &:focus {
                 outline: 3px $brand-primary solid;
-                color: $gray-darker;
+                color: $black2;
                 background: white;
                 + button .search {
                     color: $brand-primary;
@@ -903,9 +903,9 @@ $baseline: $font-size-primary;
 
 //pres 1.7
 @mixin display($string) {
-    display: -webkit-box;
+    /* display: -webkit-box;
     display: -moz-box;
-    display: box;
+    display: box; */
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -988,7 +988,7 @@ $baseline: $font-size-primary;
         input[type=text] {
             &:focus {
                 outline: 3px $brand-primary solid;
-                color: $gray-darker;
+                color: $black2;
                 background: white;
                 + button .search {
                     color: $brand-primary;
@@ -997,7 +997,7 @@ $baseline: $font-size-primary;
             border: none;
             padding: 10px;
             min-width: 255px;
-            background: $gray-light;
+            background: $lightgray;
             color: $gray;
             /* @include placeholder {
               color: rgba($gray, 0.5);

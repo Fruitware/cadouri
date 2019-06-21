@@ -396,7 +396,7 @@
             -moz-opacity: 0;
             -o-transition: all .3s ease-in-out 0s;
             -webkit-transition: all .3s ease-in-out 0s;
-            background-color: $white_fff;
+            background-color: $white;
             bottom: -80px;
             left: 0;
             opacity: 0;
@@ -423,7 +423,7 @@
         }
 
         .btn-product {
-            color: $gainsboro_dfe1e6;
+            color: $lightgray;
             display: block;
             background: 0 0;
             line-height: 38px;
@@ -435,7 +435,7 @@
             font-size: 16px;
 
             &:hover {
-                color: $rosybrown_be7374;
+                color: $lightcoral;
             }
         }
 
@@ -490,7 +490,7 @@
     border-top: 1px solid $base-border-color;
     p {
         span {
-            font-family: "Josefin Slab", serif;
+            font-family: $font-family-primary;
         }
     }
     ul {
@@ -610,6 +610,7 @@
         }
         .add-to-cart {
             font-size: 21px;
+            font-family: "Basil Regular", serif;
             margin: 0;
         }
         .btn-product {
@@ -663,18 +664,18 @@
             width: 33%;
             padding: $small-space $medium-space;
             background: white;
-            border: rem(5px) $gray-light solid;
+            border: rem(5px) $lightgray solid;
             text-align: center;
         }
         tbody tr {
-            background: $gray-lighter;
+            background: $lightgray;
             &:nth-of-type(even) {
                 background: white;
             }
             td {
                 padding: $small-space $medium-space;
                 text-align: center;
-                border: rem(5px) $gray-light solid;
+                border: rem(5px) $lightgray solid;
             }
         }
     }
@@ -828,12 +829,12 @@
 }
 
 #blockcart-modal {
-    color: $gray-darker;
+    color: $black2;
     .modal-header {
         background: $brand-success;
     }
     .modal-body {
-        background: $gray-light;
+        background: $lightgray;
         padding: rem(50px) rem(30px);
         .divide-right span {
             display: inline-block;
@@ -987,7 +988,7 @@
 #product-details {
     .label {
         font-size: $font-size-base;
-        color: $gray-darker;
+        color: $black2;
         font-weight: bold;
     }
     > div {
@@ -1006,13 +1007,13 @@
         dt.name {
             @include flex(1 0 40%);
             font-weight: normal;
-            background: $gray-light;
+            background: $lightgray;
             padding: $small-space;
             margin-right: $small-space;
             min-height: rem(40px);
             word-break: break-all;
             &:nth-of-type(even) {
-                background: $gray-lighter;
+                background: $lightgray;
             }
         }
         dt.name {
@@ -1027,7 +1028,7 @@
     > .product-variants-item {
         margin: 0 0 rem(20px);
         select {
-            border: 1px solid $gray-light;
+            border: 1px solid $lightgray;
             height: rem(40px);
             width: 100%;
             display: inline-block;
@@ -1111,7 +1112,7 @@
         margin: $medium-space 0;
     }
     .product-message {
-        background: $gray-light;
+        background: $lightgray;
         border: none;
         width: 100%;
         height: rem(50px);
@@ -1132,7 +1133,7 @@
     }
     .custom-file {
         position: relative;
-        background: $gray-light;
+        background: $lightgray;
         width: 100%;
         text-indent: rem(10px);
         display: block;
@@ -1167,7 +1168,7 @@
             color: $gray;
         }
         .pack-product-quantity {
-            border-left: $gray-light 2px solid;
+            border-left: $lightgray 2px solid;
             padding-left: $small-space;
         }
         .pack-product-name,

@@ -81,7 +81,7 @@
     }
     .select-list {
         display: block;
-        color: $gray-darker;
+        color: $black2;
         padding: $small-space $medium-space;
         &:hover {
             background: $brand-primary;
@@ -91,7 +91,7 @@
     }
     .dropdown-menu {
         margin: 0 10px;
-        background: $gray-lighter;
+        background: $lightgray;
         border: none;
         border-radius: 0;
         font-size: $font-size-primary;
@@ -259,10 +259,15 @@
     &.products-selection {
         .nopadding
         {
+            @media (min-width: 766px){
+                width: max-content;
+            }
+            white-space: nowrap !important;
             display: flex;
             line-height: 2.22222rem;
         }
         .sort-by {
+            white-space: nowrap !important;
             flex: 33%;
         }
         .row {
@@ -300,7 +305,7 @@
     }
     .filter-block {
         //@include box-shadow;
-        color: $gray-darker;
+        color: $black2;
         @include rtl-margin-right($small-space);
         margin-bottom: $small-space;
         background: white;
@@ -308,10 +313,10 @@
         display: inline-block;
         font-size: $font-size-xs;
         .close {
-            color: $gray-darker;
+            color: $black2;
             font-size: $font-size-lg;
             opacity: 1;
-            margin-top: rem(3px);
+            margin-top: rem(6px);
             @include rtl-margin-left(rem(5px));
         }
     }
@@ -391,7 +396,7 @@
 }
 
 .facets-title {
-    color: $gray-darker;
+    color: $black2;
 }
 
 .products-selection {
@@ -427,7 +432,7 @@
                 margin-bottom: 0;
                 box-shadow: none;
                 padding: 0;
-                border-top: 1px solid $gray-lighter;
+                border-top: 1px solid $lightgray;
                 .facet {
                     .title {
                         cursor: pointer;
@@ -446,9 +451,9 @@
                         }
                     }
                     padding-top: 0;
-                    border-bottom: 1px solid $gray-lighter;
+                    border-bottom: 1px solid $lightgray;
                     .facet-title {
-                        color: $gray-darker;
+                        color: $black2;
                         text-transform: uppercase;
                     }
                     .h6 {
@@ -474,7 +479,7 @@
                     ul {
                         margin-bottom: 0;
                         li {
-                            border-top: 1px solid $gray-lighter;
+                            border-top: 1px solid $lightgray;
                             padding: rem(10px);
                         }
                     }
