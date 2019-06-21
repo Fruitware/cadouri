@@ -95,6 +95,9 @@ h6 {
         }
 
         &:hover {
+            .ps_group {
+              bottom: 20px !important;
+            }
             figure {
                 img {
                     -webkit-filter: none;
