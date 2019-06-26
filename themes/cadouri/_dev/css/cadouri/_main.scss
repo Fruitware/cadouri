@@ -1312,44 +1312,44 @@ h5 {
 }
 
 .social-block-inline {
-    display: inline-block;
+    display: inline-flex;
 
     > a {
-        display: inline-block;
+        display: flex;
         width: 38px;
         height: 38px;
-        line-height: 38px;
         background: $lightcoral_d07676;
         border-radius: 50%;
         margin: 5px;
-        justify-items: center;
+        justify-content: center;
         align-items: center;
         grid-template-rows: 100%;
         grid-template-columns: 100%;
 
         i {
             position: relative;
-            left: 1.5px;
+            //left: 1.5px;
             color: $white_fff;
             font-size: 16px;
             text-align: center;
             vertical-align: middle;
         }
-        .icon-facebook {
+        /* .icon-facebook {
             top: -1px;
-        }
+        } */
         .icon-instagram, .icon-viber, .icon-youtube-play {
-            left: 1px;
-            top: -1px;
+            //left: 1px;
+            //top: -1px;
+            line-height: 30px;
             font-size: 19px;
         }
-        .con-viber {
-            left: 1.5px;
+        .icon-viber {
+            top: 1px;
         }
-        .icon-telegram {
+        /* .icon-telegram {
             top: -2px;
             left: 2.5px;
-        }
+        } */
     }
 }
 

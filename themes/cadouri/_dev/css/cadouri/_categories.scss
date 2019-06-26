@@ -259,7 +259,11 @@
     &.products-selection {
         .nopadding
         {
+            display: flex;
             line-height: 2.22222rem;
+        }
+        .sort-by {
+            flex: 33%;
         }
         .row {
             border-top: $main_border;

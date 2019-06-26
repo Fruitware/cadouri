@@ -1572,13 +1572,6 @@ button {
         width: 30px;
     }
 }
-
-@media (min-width: 768px) {
-    .gridcolumn2 {
-        display: grid;
-        grid-template-columns: repeat(2,max-content);
-    }
-}
 .left-column {
     padding-left: 0;
 }
