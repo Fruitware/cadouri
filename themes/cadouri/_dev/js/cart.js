@@ -127,7 +127,6 @@ $(document).ready(() => {
 
   var handleCartAction = (event) => {
     event.preventDefault();
-    console.log(event);
 
     let $target = $(event.currentTarget);
     let dataset = event.currentTarget.dataset;
