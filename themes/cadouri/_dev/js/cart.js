@@ -16,7 +16,7 @@ let errorMsg = '';
 function createSpin()
 {
   $.each($(spinnerSelector), function (index, spinner) {
-    $(spinner).TouchSpin({
+     $(spinner).TouchSpin({
       verticalbuttons: true,
       verticalupclass: 'material-icons touchspin-up',
       verticaldownclass: 'material-icons touchspin-down',
@@ -62,8 +62,8 @@ $(document).ready(() => {
       return null;
     }
 
-    return $input;
-  }
+      return $input;
+    }
 
   function camelize(subject) {
     let actionTypeParts = subject.split('-');
@@ -199,7 +199,6 @@ $(document).ready(() => {
         dataset = resp;
       }
 
-
       // Refresh cart preview
       prestashop.emit('updateCart', {
         reason: dataset
@@ -232,6 +231,7 @@ $(document).ready(() => {
     const targetValue = $target.val();
     if (targetValue != parseInt(targetValue) || targetValue < 0 || isNaN(targetValue)) {
       $target.val(baseValue);
+
       return;
     }
 
@@ -251,13 +251,13 @@ $(document).ready(() => {
     (event) => {
       if (event.type === 'keyup') {
         if (event.keyCode === 13) {
-          updateProductQuantityInCart(event);
-        }
+      updateProductQuantityInCart(event);
+    }
         return false;
       }
 
-      updateProductQuantityInCart(event);
-    }
+        updateProductQuantityInCart(event);
+      }
   );
 
   $body.on(

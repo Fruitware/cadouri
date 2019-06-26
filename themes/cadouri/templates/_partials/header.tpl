@@ -1,101 +1,51 @@
 {**
- * 2007-2018 PrestaShop
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
- *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
- * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- * International Registered Trademark & Property of PrestaShop SA
- *}
-{block name='header_banner'}
-    <div class="header-banner">
-        {hook h='displayBanner'}
-    </div>
-{/block}
+* customized header
+**}
 
-<div class="cadouri_header container">
-    <div class="cadouri_header_left_container" id="_desktop_logo">
-        {if $page.page_name == 'index'}
-            <h1>
-                <a href="{$urls.base_url}">
-                    <img class="img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                </a>
-            </h1>
-        {else}
-            <a href="{$urls.base_url}">
-                <img class="img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-            </a>
-        {/if}
-    </div>
-    <div class="cadouri_header_middle_container">
-        {block name='header_nav'}
-            <nav class="header-nav">
-                <div class="container">
-                    <div class="row">
-                        <div class="hidden-sm-down cadouri_flex_row c-fl-full cadouri_header_middle_container_block border-bottom">
-                            <div class="cadouri_flex_row">{hook h='displayNav2'}</div>
-                            <div class="social-block-inline">
-                                <a href="https://www.facebook.com/CadouriMdDelivery" target="_blank"><i class="icon-facebook"></i>&nbsp;</a>
-                                <a href="https://plus.google.com/b/114994901007250595971" target="_blank"><i class="icon-gplus"></i>&nbsp;</a>
-                                <a href="https://www.instagram.com/cadouri_md/" target="_blank"><i class="icon-instagram"></i>&nbsp;</a>
-                                <a href="#" target="_blank"><i class="icon-telegram"></i>&nbsp;</a>
-                                <a href="viber://chat?number=+37379646609" target="_blank"><i class="icon-viber"></i>&nbsp;</a>
-                            </div>
-                            <div class="contact-phone-block float-xs-right"><i class="icon-phone"></i> +373 79 64 66 09</div>
-                        </div>
-                        <div class="hidden-md-up text-sm-center mobile">
-                            <div class="float-xs-left" id="menu-icon">
-                                <i class="material-icons d-inline">&#xE5D2;</i>
-                            </div>
-                            <div class="float-xs-right" id="_mobile_cart"></div>
-                            <div class="float-xs-right" id="_mobile_user_info"></div>
-                            <div class="top-logo" id="_mobile_logo"></div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
+<div class="header-default text-center">
+    <div class="headerMobile hidden-lg-up">
+        <div class="container">
+            <div class="flexRow">
+                <div class="col-xs-2">
+                    <button class="btn canvas-menu float-xs-left" data-toggle="offcanvas" type="button"><i class="icon-menu"></i>
+                    </button>
                 </div>
-            </nav>
-        {/block}
-
-        {block name='header_top'}
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-12 position-static">
-                            {hook h='displayTop'}
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display: none">
-                        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-                        <div class="js-top-menu-bottom">
-                            <div id="_mobile_currency_selector"></div>
-                            <div id="_mobile_language_selector"></div>
-                            <div id="_mobile_contact_link"></div>
-                        </div>
-                    </div>
+                <div id="_mobile_logo" class="col-xs-8 text-xs-center">
+                </div>
+                <div class="col-xs-2">
+                    <button class="sidebar-canvas btn canvas-menu float-xs-right" data-toggle="sidebarCanvas" type="button"><i class="icon-shopping-basket"></i>
+                    </button>
                 </div>
             </div>
-            {hook h='displayNavFullWidth'}
-        {/block}
+        </div>
     </div>
-    <div class="cadouri_header_right_container">
-        {hook h='displayNav1'}
+    <div class="container hidden-md-down">
+        <div id="_desktop_logo" class="headerLeft float-xs-left">
+            <div class="{if Configuration::get('PTS_CP_LOGOTYPE') == 'logo-theme'}logo-theme{else}logo-store{/if}">
+                <a href="{$urls.base_url}" title="{$shop.name}">
+                    <img class="logo img-responsive" src="{$shop.logo}" {if Configuration::get('PTS_CP_LOGOTYPE') == 'logo-theme'}hidden{/if} alt="{$shop.name}">
+                </a>
+            </div>
+        </div>
+        <div class="headerCenter inline-block">
+            <div id="_desktop_nav" class="nav-top text-center border-bottom">
+                {hook h='displayNav2'}
+                <div class="social-block-inline">
+                    <a href="https://www.facebook.com/CadouriMdDelivery" target="_blank"><i class="icon-facebook"></i></a>
+                    <a href="https://www.youtube.com/channel/UCc9oSNa43GXpECCFdqa3QPg" target="_blank"><i class="icon icon-youtube-play"></i></a>
+                    <a href="https://www.instagram.com/cadouri_md/" target="_blank"><i class="icon-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="icon-telegram"></i></a>
+                    <a href="viber://chat?number=+37379646609" target="_blank"><i class="icon-viber"></i></a>
+                </div>
+                <div class="contact-phone-block float-xs-right"><i class="icon-phone"></i> +373 79 64 66 09</div>
+            </div>
+            <div id="_desktop_menu" class="ps_megamenu ps-desktop-megamenu text-md-center">
+                {hook h="displayMainmenu"}
+                <div class="float-xs-right">{widget name="ps_searchbar"}</div>
+            </div>
+        </div>
+        <div class="headerRight float-xs-right">
+            {widget name="ps_shoppingcart"}
+        </div>
     </div>
-</div>
 </div>

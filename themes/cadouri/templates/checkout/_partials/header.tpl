@@ -38,7 +38,7 @@
           <div class="hidden-md-up text-sm-center mobile">
             {hook h='displayNav2'}
             <div class="float-xs-left" id="menu-icon">
-              <i class="material-icons">&#xE5D2;</i>
+              <i class="icon icon-menu"></i>
             </div>
             <div class="float-xs-right" id="_mobile_cart"></div>
             <div class="float-xs-right" id="_mobile_user_info"></div>

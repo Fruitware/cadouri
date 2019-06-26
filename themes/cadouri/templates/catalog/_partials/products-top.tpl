@@ -1,5 +1,5 @@
 {**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,39 +18,42 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-top" class="row products-selection">
-  <div class="col-md-6 hidden-sm-down total-products">
-    {if $listing.pagination.total_items > 1}
-      <p>{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
-    {else if $listing.pagination.total_items > 0}
-      <p>{l s='There is 1 product.' d='Shop.Theme.Catalog'}</p>
-    {/if}
-  </div>
-  <div class="col-md-6">
-    <div class="row sort-by-row">
 
-      {block name='sort_by'}
-        {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
-      {/block}
+<div id="js-product-list-top" class="ps_sortPagiBar products-selection">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="nopadding clearfix">
+                {block name='sort_by'}
+                    {include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
+                {/block}
 
-      {if !empty($listing.rendered_facets)}
-        <div class="col-sm-3 col-xs-4 hidden-md-up filter-button">
-          <button id="search_filter_toggler" class="btn btn-secondary">
-            {l s='Filter' d='Shop.Theme.Actions'}
-          </button>
+                {if !empty($listing.rendered_facets)}
+                    <div class="col-sm-3 col-xs-4 hidden-md-up filter-button">
+                        <button id="search_filter_toggler" class="btn btn-secondary">
+                            {l s='Filter' d='Shop.Theme.Actions'}
+                        </button>
+                    </div>
+                {/if}
+            </div>
+
         </div>
-      {/if}
+        <div class="col-md-6 col-lg-8 col-xl-9 hidden-sm-down total-products text-xs-right">
+            {if $listing.pagination.total_items > 1}
+                <p>{l s='There are %product_count% products.' d='Shop.Theme.Catalog' sprintf=['%product_count%' => $listing.pagination.total_items]}</p>
+            {else if $listing.pagination.total_items > 0}
+                <p>{l s='There is 1 product.' d='Shop.Theme.Catalog'}</p>
+            {/if}
+        </div>
+        <div class="col-sm-12 hidden-md-up showing">
+            {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
+            '%from%' => $listing.pagination.items_shown_from ,
+            '%to%' => $listing.pagination.items_shown_to,
+            '%total%' => $listing.pagination.total_items
+            ]}
+        </div>
     </div>
-  </div>
-  <div class="col-sm-12 hidden-md-up text-sm-center showing">
-    {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=[
-    '%from%' => $listing.pagination.items_shown_from ,
-    '%to%' => $listing.pagination.items_shown_to,
-    '%total%' => $listing.pagination.total_items
-    ]}
-  </div>
 </div>

@@ -31,7 +31,7 @@
     {block name='facets_clearall_button'}
       <div id="_desktop_search_filters_clear_all" class="hidden-sm-down clear-all-wrapper">
         <button data-search-url="{$clear_all_link}" class="btn btn-tertiary js-search-filters-clear-all">
-          <i class="material-icons">&#xE14C;</i>
+          <i class="icon icon-close"></i>
           {l s='Clear all' d='Shop.Theme.Actions'}
         </button>
       </div>
@@ -50,8 +50,8 @@
             <p class="h6 facet-title">{$facet.label}</p>
             <span class="float-xs-right">
               <span class="navbar-toggler collapse-icons">
-                <i class="material-icons add">&#xE313;</i>
-                <i class="material-icons remove">&#xE316;</i>
+                <i class="icon icon-schevron-down add"></i>
+                <i class="icon icon-schevron-up remove"></i>
               </span>
             </span>
           </div>
@@ -77,7 +77,7 @@
                               {elseif isset($filter.properties.texture)}
                                 <span class="color texture" style="background-image:url({$filter.properties.texture})"></span>
                               {else}
-                              <span {if !$js_enabled} class="ps-shown-by-js" {/if}><i class="material-icons rtl-no-flip checkbox-checked">&#xE5CA;</i></span>
+                              <span {if !$js_enabled} class="ps-shown-by-js" {/if}><i class="icon icon-ok rtl-no-flip checkbox-checked"></i></span>
                             {/if}
                           </span>
                         {else}
@@ -132,7 +132,7 @@
                           {l s='(no filter)' d='Shop.Theme.Global'}
                         {/if}
                       </span>
-                      <i class="material-icons float-xs-right">&#xE5C5;</i>
+                      <i class="icon icon-schevron-down float-xs-right"></i>
                     </a>
                     <div class="dropdown-menu">
                       {foreach from=$facet.filters item="filter"}

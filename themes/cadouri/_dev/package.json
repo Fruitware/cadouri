@@ -33,5 +33,9 @@
     "velocity-animate": "^1.2.3",
     "webpack": "^2.2.1",
     "webpack-sources": "^0.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "simple-slider": "^1.0.0"
   }
 }

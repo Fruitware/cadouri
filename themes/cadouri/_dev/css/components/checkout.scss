@@ -1,11 +1,11 @@
 body#checkout {
-  color: $gray-darker;
+  color: $black2;
   #header .header-nav {
     max-height: none;
     padding: 5rem 0 0.9375rem;
     border: none;
     margin-bottom: 0;
-    @include box-shadow;
+    @include box-shadow('2px 2px 8px 0px rgba(0, 0, 0, 0.2)');
     .logo {
       max-height: 4.375rem;
       width: auto;
@@ -28,7 +28,7 @@ body#checkout {
     min-height: 100%;
   }
   section.checkout-step {
-    @include box-shadow;
+    @include box-shadow('2px 2px 8px 0px rgba(0, 0, 0, 0.2)');
     background-color: white;
     border-bottom: 1px rgba(0, 0, 0, 0.25) solid;
     padding: 0.9375rem;
@@ -119,7 +119,7 @@ body#checkout {
       margin-top: 0;
     }
     .select-field div {
-      background: $gray-lighter;
+      background: $lightgray;
       padding: 0.625rem 3.125rem;
     }
     .form-footer {
@@ -150,7 +150,7 @@ body#checkout {
       flex-wrap: wrap;
     }
     .address-item {
-      background: $gray-lighter;
+      background: $lightgray;
       flex: 0 0 49%;
       margin-bottom: $small-space;
       border: 3px solid transparent;
@@ -204,14 +204,14 @@ body#checkout {
     .add-address {
       margin-top: 1.25rem;
       a {
-        color: $gray-darker;
+        color: $black2;
         i {
           font-size: $font-size-lg;
         }
       }
     }
     .delivery-option {
-      background: $gray-lighter;
+      background: $lightgray;
       padding: 0.9375rem 0;
       margin-bottom: 0.9375rem;
       label {
@@ -264,12 +264,12 @@ body#checkout {
   }
   .modal-content {
     padding: $medium-space;
-    background-color: $gray-light;
+    background-color: $lightgray;
   }
   #cart-summary-product-list {
     font-size: $font-size-sm;
     img {
-      border: $gray-light 1px solid;
+      border: $lightgray 1px solid;
       width: 3.125rem;
     }
     .media-body {
@@ -281,7 +281,7 @@ body#checkout {
     h4.h4 {
       margin-top: 0.625rem;
       margin-bottom: 1.25rem;
-      color: $gray-darker;
+      color: $black2;
     }
     h4.black {
       color: #000000;
@@ -295,7 +295,7 @@ body#checkout {
     #order-items {
       border-right: 0;
       h3.h3 {
-        color: $gray-darker;
+        color: $black2;
         margin-top: 1.25rem;
       }
       table {
@@ -337,14 +337,14 @@ body#checkout {
   }
   #gift_message, #delivery{
     max-width: 100%;
-    border-color: $gray-darker;
+    border-color: $black2;
     textarea {
       max-width: 100%;
       margin-bottom: 10px;
     }
   }
   #footer {
-    @include box-shadow;
+    @include box-shadow('2px 2px 8px 0px rgba(0, 0, 0, 0.2)');
     padding: 0.9375rem;
     background: white;
     color: $gray;
@@ -364,9 +364,9 @@ body#checkout {
   }
 }
 #order-items {
-  border-right: $gray-light 1px solid;
+  border-right: $lightgray 1px solid;
   hr {
-    border-top-color: $gray-darker;
+    border-top-color: $black2;
   }
   table {
     width: 100%;
@@ -459,12 +459,12 @@ body#checkout {
     border-right: 0;
     margin-bottom: 2.5rem;
     .card-title {
-      border-bottom: 1px solid $gray-light;
+      border-bottom: 1px solid $lightgray;
       margin-bottom: 1rem;
       padding-bottom: 1rem;
     }
     hr {
-      border-top-color: $gray-light;
+      border-top-color: $lightgray;
     }
   }
   .bold {
@@ -473,7 +473,7 @@ body#checkout {
   #order-details {
     padding-left: 0.9375rem;
     .card-title {
-      border-bottom: 1px solid $gray-light;
+      border-bottom: 1px solid $lightgray;
       margin-bottom: 1rem;
       padding-bottom: 1rem;
     }

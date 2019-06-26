@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Nickainley Normal';
+    font-display: swap;
+    src: url(/themes/cadouri/assets/fonts/nickainley-normal.otf);
+}
+
+@font-face {
+    font-family: 'Basil Regular';
+    font-display: swap;
+    src: url(/themes/cadouri/assets/fonts/basil-regular.ttf);
+}
+
+@import "/themes/cadouri/assets/fonts/fontello/css/fontello.css";
+
+$font-family-primary: 'Basil Regular' serif;
+$font-family-secondary: 'Nickainley Normal';
+$font-icon-secondary: 'fontello';
+
+// product label
+$product-label-color: $white !default;
+$product-label-font-size: 14px !default;
+$product-label-font-family: $font-family-primary !default;
+$product-label-font-weight: 500 !default;
+
+$product-label-new-bg: $theme-color-secondary !default;
+$product-label-new-border-color: $theme-color-secondary !default;
+
+$product-label-sale-bg: $theme-color-primary !default;
+$product-label-sale-border-color: $theme-color-primary !default;
+$product-label-sale-text-color: $white !default;
+
+//---------- Product Elements
+
+$product-price-color: $text-color-tertiary !default;
+$product-reduced-price: $text-color-tertiary !default;
+
+$product-price-font-family: $font-family-primary !default;
+$product-price-font-size: 16px !default;
+$product-price-font-weight: 600 !default;
+
+$product-new-price-color: $text-color-tertiary !default;
+$product-new-price-bg-color: $lightcoral !default;
+$product-new-price-font-size: 16px !default;
+$product-new-price-weight: 600 !default;
+
+$product-special-price-bg-color: $lightcoral !default;
+$product-special-price-color: $white !default;
+$product-special-price-size: $product-price-font-size !default;
+
+$product-old-price-color: $text-color-tertiary !default;
+$product-old-price-bg-color: $semidarkgray !default;
+$product-old-price-size: 16px !default;
+$product-old-price-font-weight: 600 !default;
+
+// Product Block
+// ========================================================================
+$product-size: $font-size-base !default;
+$product-bg-color: $white !default;
+$product-margin: 35px;
+$product-border-color: 1px solid $lightgray !default;
+$product-content-bg: transparent !default;
+$product-content-padding: 30px !default;
+$product-container-border: 1px solid $lightgray !default;
+$product-container-bg: $white !default;
+
+$product-link-color: $black !default;
+$product-link-hover-color: $theme-color-primary !default;
+$product-name-color: $black !default;
+$product-name-hover-color: $theme-color-primary !default;
+$product-name-line-height: 18px !default;
+$product-name-font-family: $font-family-primary !default;
+$product-name-font-size: 18px !default;
+$product-name-font-weight: 600 !default;
+$product-name-text-decoration: none;
+$product-padding: 0 !default;
+
+// Box Modules
+// ========================================================================
+$block-module-margin-bottom: $grid-gutter-width-base !default;
+$block-module-padding: rem(10px) 0 !default;
+$block-module-border-color: 0 !default;
+
+$block-module-heading-border: 0 !default;
+$block-module-heading-transform: uppercase !default;
+$block-module-heading-line-height: rem(24px) !default;
+$block-module-heading-font-family: $font-family-primary !default;
+$block-module-heading-bg: transparent !default;
+$block-module-heading-padding: rem(12px) rem(0) !default;
+$block-module-heading-font-size: rem(18px) !default;
+$block-module-heading-font-weight: 700 !default;
+$block-module-heading-color: $text-color-secondary !default;
+
+/*blockprimary*/
+$default-bg-color: $white !default;
+$default-border-color: $lightgray !default;
+$default-text-color: $black !default;
+$default-text-link-color: $black !default;
+$default-text-link-color-hover: $brand-success !default;
+$default-heading-text-color: $white !default;
+$default-heading-bg-color: $darkgray !default;
+$default-heading-border-color: $darkgray !default;
+
+/*blockprimary*/
+$primary-bg-color: $white !default;
+$primary-border-color: lighten($brand-primary, 30%) !default;
+$primary-text-color: $black !default;
+$primary-text-link-color: $black !default;
+$primary-text-link-color-hover: $brand-success !default;
+$primary-heading-text-color: $white !default;
+$primary-heading-bg-color: $brand-primary !default;
+$primary-heading-border-color: $brand-primary !default;
+
+/*block success*/
+$success-bg-color: $white !default;
+$success-border-color: lighten($brand-success, 30%) !default;
+$success-text-color: $black !default;
+$success-text-link-color: $black !default;
+$success-text-link-color-hover: $brand-success !default;
+$success-heading-text-color: $white !default;
+$success-heading-bg-color: $brand-success !default;
+$success-heading-border-color: $brand-success !default;
+
+/*block info*/
+$info-bg-color: $white !default;
+$info-border-color: lighten($brand-info, 30%) !default;
+$info-text-color: $black !default;
+$info-text-link-color: $black !default;
+$info-text-link-color-hover: $brand-success !default;
+$info-heading-text-color: $white !default;
+$info-heading-bg-color: $brand-info !default;
+$info-heading-border-color: $brand-info !default;
+
+/*block warning*/
+$warning-bg-color: $white !default;
+$warning-border-color: lighten($brand-warning, 30%) !default;
+$warning-text-color: $black !default;
+$warning-text-link-color: $black !default;
+$warning-text-link-color-hover: $brand-success !default;
+$warning-heading-text-color: $white !default;
+$warning-heading-bg-color: $brand-warning !default;
+$warning-heading-border-color: $brand-warning !default;
+
+/*block danger*/
+$danger-bg-color: $white !default;
+$danger-border-color: lighten($brand-danger, 30%) !default;
+$danger-text-color: $black !default;
+$danger-text-link-color: $black !default;
+$danger-text-link-color-hover: $brand-danger !default;
+$danger-heading-text-color: $white !default;
+$danger-heading-bg-color: $brand-danger !default;
+$danger-heading-border-color: $brand-danger !default;
+
+/*block highlighted*/
+$highlighted-bg-color: $white !default;
+$highlighted-border-color: lighten($theme-color-primary, 30%) !default;
+$highlighted-text-color: $gray !default;
+$highlighted-text-link-color: $gray !default;
+$highlighted-text-link-color-hover: $theme-color-primary !default;
+$highlighted-heading-text-color: $white !default;
+$highlighted-heading-bg-color: $theme-color-primary !default;
+$highlighted-heading-border-color: $theme-color-primary !default;
+
+// Mega Menu Module
+// ========================================================================
+$megamenu-outside-bg: transparent !default;
+$megamenu-bg: $darkgray !default;
+$megamenu-color: $black !default;
+$megamenu-font-family: $font-family-primary !default;
+$megamenu-link-color: $black !default;
+$megamenu-link-hover-color: $theme-color-primary !default;
+$megamenu-link-font-size: 18px !default;
+$megamenu-font-weight: 700 !default;
+
+$megamenu-parent-padding: 2px 15px !default;
+$megamenu-parent-text-transform: uppercase !default;
+
+$megamenu-sub-bg-color: $white !default;
+$megamenu-sub-font-family: $font-family-primary !default;
+$megamenu-sub-text-color: $text-color-tertiary !default;
+$megamenu-sub-link-color: $text-color-tertiary !default;
+$megamenu-sub-link-hover-color: $theme-color-primary !default;
+$megamenu-sub-font-size: 18px !default;
+
+$megamenu-heading-font-family: $font-family-primary !default;
+$megamenu-heading-font-size: 20px !default;
+$megamenu-heading-color: $text-color-secondary !default;
+
+/*
+ * LAYOUT VARIABLES
+ */
+$header-logo-margin: 0 !default;
+$header-logo-width: rem(275px) !default;
+$header-logo-height: rem(100px) !default;
+
+$topbar-link-hover-color: $theme-color-primary !default;
+
+// Footer
+// ========================================================================
+
+$footer-heading-font-family: $font-family-secondary !default;
+$power-font-family: $font-family-primary !default;

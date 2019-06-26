@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 26);
+/******/ 	return __webpack_require__(__webpack_require__.s = 27);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -169,7 +169,7 @@ module.exports = exports['default'];
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -188,7 +188,7 @@ module.exports = exports['default'];
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -218,35 +218,26 @@ var ProductMinitature = (function () {
     value: function init() {
       (0, _jquery2['default'])('.js-product-miniature').each(function (index, element) {
         var FLAG_MARGIN = 10;
-        var discountElems = (0, _jquery2['default'])(element).find('.discount-product');
-        var onSaleElems = (0, _jquery2['default'])(element).find('.on-sale');
-        var newElems = (0, _jquery2['default'])(element).find('.new');
-
-        if (discountElems.length) {
-          newElems.css('top', discountElems.height() * 2 + FLAG_MARGIN);
-          discountElems.css('top', -(0, _jquery2['default'])(element).find('.thumbnail-container').height() + (0, _jquery2['default'])(element).find('.product-description').height() + FLAG_MARGIN);
-
-          if ((0, _jquery2['default'])(element).find('.pack').length) {
-            (0, _jquery2['default'])(element).find('.pack').css('top', discountElems.height() * 2 + FLAG_MARGIN);
-          }
+        var $percent = (0, _jquery2['default'])(element).find('.discount-percentage');
+        var $onsale = (0, _jquery2['default'])(element).find('.on-sale');
+        var $new = (0, _jquery2['default'])(element).find('.new');
+        if ($percent.length) {
+          $new.css('top', $percent.height() * 2 + FLAG_MARGIN);
+          $percent.css('top', -(0, _jquery2['default'])(element).find('.thumbnail-container').height() + (0, _jquery2['default'])(element).find('.product-description').height() + FLAG_MARGIN);
         }
-
-        if (onSaleElems.length) {
-          discountElems.css('top', parseFloat(discountElems.css('top')) + onSaleElems.height() + FLAG_MARGIN);
-          newElems.css('top', discountElems.height() * 2 + onSaleElems.height() + FLAG_MARGIN * 2);
+        if ($onsale.length) {
+          $percent.css('top', parseFloat($percent.css('top')) + $onsale.height() + FLAG_MARGIN);
+          $new.css('top', $percent.height() * 2 + $onsale.height() + FLAG_MARGIN * 2);
         }
-
         if ((0, _jquery2['default'])(element).find('.color').length > 5) {
           (function () {
             var count = 0;
-
             (0, _jquery2['default'])(element).find('.color').each(function (index, element) {
               if (index > 4) {
                 (0, _jquery2['default'])(element).hide();
                 count++;
               }
             });
-
             (0, _jquery2['default'])(element).find('.js-count').append('+' + count);
           })();
         }
@@ -822,7 +813,7 @@ break;}}if(iStart !== startValue.length || iEnd !== endValue.length){if(Velocity
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -841,7 +832,7 @@ break;}}if(iStart !== startValue.length || iEnd !== endValue.length){if(Velocity
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -849,23 +840,23 @@ break;}}if(iStart !== startValue.length || iEnd !== endValue.length){if(Velocity
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-__webpack_require__(25);
+__webpack_require__(26);
+
+__webpack_require__(21);
+
+__webpack_require__(23);
 
 __webpack_require__(20);
 
-__webpack_require__(22);
-
 __webpack_require__(19);
-
-__webpack_require__(18);
 
 __webpack_require__(8);
 
-__webpack_require__(13);
-
-__webpack_require__(16);
+__webpack_require__(14);
 
 __webpack_require__(17);
+
+__webpack_require__(18);
 
 __webpack_require__(7);
 
@@ -893,34 +884,45 @@ var _prestashop = __webpack_require__(1);
 
 var _prestashop2 = _interopRequireDefault(_prestashop);
 
-var _events = __webpack_require__(21);
+var _events = __webpack_require__(22);
 
 var _events2 = _interopRequireDefault(_events);
 
-__webpack_require__(14);
-
 __webpack_require__(15);
+
+__webpack_require__(16);
 
 __webpack_require__(9);
 
 // "inherit" EventEmitter
+
+/**
+ * Fruitware custom script
+ */
+
+__webpack_require__(13);
+
 for (var i in _events2['default'].prototype) {
-  _prestashop2['default'][i] = _events2['default'].prototype[i];
+    _prestashop2['default'][i] = _events2['default'].prototype[i];
 }
 
 $(document).ready(function () {
-  var dropDownEl = $('.js-dropdown');
-  var form = new _componentsForm2['default']();
-  var topMenuEl = $('.js-top-menu ul[data-depth="0"]');
-  var dropDown = new _componentsDropDown2['default'](dropDownEl);
-  var topMenu = new _componentsTopMenu2['default'](topMenuEl);
-  var productMinitature = new _componentsProductMiniature2['default']();
-  var productSelect = new _componentsProductSelect2['default']();
-  dropDown.init();
-  form.init();
-  topMenu.init();
-  productMinitature.init();
-  productSelect.init();
+    var dropDownEl = $('.js-dropdown');
+    var form = new _componentsForm2['default']();
+    var topMenuEl = $('.js-top-menu ul[data-depth="0"]');
+    var dropDown = new _componentsDropDown2['default'](dropDownEl);
+    var topMenu = new _componentsTopMenu2['default'](topMenuEl);
+    var productMinitature = new _componentsProductMiniature2['default']();
+    var productSelect = new _componentsProductSelect2['default']();
+    dropDown.init();
+    dropDown.init();
+    form.init();
+    topMenu.init();
+    productMinitature.init();
+    productSelect.init();
+    $("#products").bind("DOMSubtreeModified", function () {
+        productMinitature.init();
+    });
 });
 
 /***/ }),
@@ -1169,6 +1171,7 @@ function createSpin() {
     var targetValue = $target.val();
     if (targetValue != parseInt(targetValue) || targetValue < 0 || isNaN(targetValue)) {
       $target.val(baseValue);
+
       return;
     }
 
@@ -1491,7 +1494,7 @@ module.exports = exports['default'];
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -1510,7 +1513,7 @@ module.exports = exports['default'];
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -1548,7 +1551,7 @@ var ProductSelect = (function () {
       var $thumbnails = (0, _jquery2['default'])('.js-modal-product-images');
       var $onsale = (0, _jquery2['default'])('.on-sale');
 
-      (0, _jquery2['default'])('body').on('click', '.js-modal-thumb', function (event) {
+      (0, _jquery2['default'])('.js-modal-thumb').on('click', function (event) {
         if ((0, _jquery2['default'])('.js-modal-thumb').hasClass('selected')) {
           (0, _jquery2['default'])('.js-modal-thumb').removeClass('selected');
         }
@@ -1556,12 +1559,7 @@ var ProductSelect = (function () {
         (0, _jquery2['default'])('.js-modal-product-cover').attr('src', (0, _jquery2['default'])(event.target).data('image-large-src'));
         (0, _jquery2['default'])('.js-modal-product-cover').attr('title', (0, _jquery2['default'])(event.target).attr('title'));
         (0, _jquery2['default'])('.js-modal-product-cover').attr('alt', (0, _jquery2['default'])(event.target).attr('alt'));
-      }).on('click', 'aside#thumbnails', function (event) {
-        if (event.target.id == 'thumbnails') {
-          (0, _jquery2['default'])('#product-modal').modal('hide');
-        }
       });
-
       if ($onsale.length && (0, _jquery2['default'])('#product').length) {
         (0, _jquery2['default'])('.new').css('top', $onsale.height() + FLAG_MARGIN);
       }
@@ -1610,7 +1608,7 @@ module.exports = exports['default'];
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -1629,7 +1627,7 @@ module.exports = exports['default'];
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -1684,7 +1682,7 @@ var TopMenu = (function (_DropDown) {
           elmId = (0, _jquery2['default'])(e.currentTarget).attr('id');
         }
         if (elmId && (0, _jquery2['default'])(e.target).data('depth') === 0) {
-          (0, _jquery2['default'])('#' + elmId + ' .js-sub-menu').css({
+          (0, _jquery2['default'])('#' + elmId + ' .js-sub-menu').show().css({
             top: (0, _jquery2['default'])('#' + elmId).height() + (0, _jquery2['default'])('#' + elmId).position().top
           });
         }
@@ -1693,10 +1691,11 @@ var TopMenu = (function (_DropDown) {
         (0, _jquery2['default'])('#mobile_top_menu_wrapper').toggle();
         self.toggleMobileMenu();
       });
-      (0, _jquery2['default'])('.js-top-menu .category').mouseleave(function () {
+      (0, _jquery2['default'])('.js-top-menu').mouseleave(function () {
         if (_this.el.parent().hasClass('mobile')) {
           return;
         }
+        (0, _jquery2['default'])('#' + elmId + ' .js-sub-menu').hide();
       });
       this.el.on('click', function (e) {
         if (_this.el.parent().hasClass('mobile')) {
@@ -1713,11 +1712,14 @@ var TopMenu = (function (_DropDown) {
   }, {
     key: 'toggleMobileMenu',
     value: function toggleMobileMenu() {
-      (0, _jquery2['default'])('#header').toggleClass('is-open');
       if ((0, _jquery2['default'])('#mobile_top_menu_wrapper').is(":visible")) {
-        (0, _jquery2['default'])('#notifications, #wrapper, #footer').hide();
+        (0, _jquery2['default'])('#notifications').hide();
+        (0, _jquery2['default'])('#wrapper').hide();
+        (0, _jquery2['default'])('#footer').hide();
       } else {
-        (0, _jquery2['default'])('#notifications, #wrapper, #footer').show();
+        (0, _jquery2['default'])('#notifications').show();
+        (0, _jquery2['default'])('#wrapper').show();
+        (0, _jquery2['default'])('#footer').show();
       }
     }
   }]);
@@ -1730,6 +1732,436 @@ module.exports = exports['default'];
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * Cadouri.md theme-specific scripts
+ * Copyright 2019 Fruitware
+ */
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.js
+ */
+
+//wowjs
+
+
+!(function (a, b) {
+    if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (b),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ("undefined" != typeof exports) b(module, exports);else {
+        var c = { exports: {} };
+        b(c, c.exports), a.WOW = c.exports;
+    }
+})(undefined, function (a, b) {
+    "use strict";
+
+    function c(a, b) {
+        if (!(a instanceof b)) throw new TypeError("Cannot call a class as a function");
+    }
+
+    function d(a, b) {
+        return b.indexOf(a) >= 0;
+    }
+
+    function e(a, b) {
+        for (var c in b) if (null == a[c]) {
+            var d = b[c];
+            a[c] = d;
+        }
+        return a;
+    }
+
+    function f(a) {
+        return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(a)
+        );
+    }
+
+    function g(a) {
+        var b = arguments.length <= 1 || void 0 === arguments[1] ? !1 : arguments[1],
+            c = arguments.length <= 2 || void 0 === arguments[2] ? !1 : arguments[2],
+            d = arguments.length <= 3 || void 0 === arguments[3] ? null : arguments[3],
+            e = void 0;
+        return null != document.createEvent ? (e = document.createEvent("CustomEvent"), e.initCustomEvent(a, b, c, d)) : null != document.createEventObject ? (e = document.createEventObject(), e.eventType = a) : e.eventName = a, e;
+    }
+
+    function h(a, b) {
+        null != a.dispatchEvent ? a.dispatchEvent(b) : b in (null != a) ? a[b]() : "on" + b in (null != a) && a["on" + b]();
+    }
+
+    function i(a, b, c) {
+        null != a.addEventListener ? a.addEventListener(b, c, !1) : null != a.attachEvent ? a.attachEvent("on" + b, c) : a[b] = c;
+    }
+
+    function j(a, b, c) {
+        null != a.removeEventListener ? a.removeEventListener(b, c, !1) : null != a.detachEvent ? a.detachEvent("on" + b, c) : delete a[b];
+    }
+
+    function k() {
+        return "innerHeight" in window ? window.innerHeight : document.documentElement.clientHeight;
+    }
+
+    Object.defineProperty(b, "__esModule", { value: !0 });
+    var l,
+        m,
+        n = (function () {
+        function a(a, b) {
+            for (var c = 0; c < b.length; c++) {
+                var d = b[c];
+                d.enumerable = d.enumerable || !1, d.configurable = !0, "value" in d && (d.writable = !0), Object.defineProperty(a, d.key, d);
+            }
+        }
+
+        return function (b, c, d) {
+            return c && a(b.prototype, c), d && a(b, d), b;
+        };
+    })(),
+        o = window.WeakMap || window.MozWeakMap || (function () {
+        function a() {
+            c(this, a), this.keys = [], this.values = [];
+        }
+
+        return n(a, [{
+            key: "get", value: function value(a) {
+                for (var b = 0; b < this.keys.length; b++) {
+                    var c = this.keys[b];
+                    if (c === a) return this.values[b];
+                }
+            }
+        }, {
+            key: "set", value: function value(a, b) {
+                for (var c = 0; c < this.keys.length; c++) {
+                    var d = this.keys[c];
+                    if (d === a) return this.values[c] = b, this;
+                }
+                return this.keys.push(a), this.values.push(b), this;
+            }
+        }]), a;
+    })(),
+        p = window.MutationObserver || window.WebkitMutationObserver || window.MozMutationObserver || (m = l = (function () {
+        function a() {
+            c(this, a), "undefined" != typeof console && null !== console && (console.warn("MutationObserver is not supported by your browser."), console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content."));
+        }
+
+        return n(a, [{
+            key: "observe", value: function value() {}
+        }]), a;
+    })(), l.notSupported = !0, m),
+        q = window.getComputedStyle || function (a) {
+        var b = /(\-([a-z]){1})/g;
+        return {
+            getPropertyValue: function getPropertyValue(c) {
+                "float" === c && (c = "styleFloat"), b.test(c) && c.replace(b, function (a, b) {
+                    return b.toUpperCase();
+                });
+                var d = a.currentStyle;
+                return (null != d ? d[c] : void 0) || null;
+            }
+        };
+    },
+        r = (function () {
+        function a() {
+            var b = arguments.length <= 0 || void 0 === arguments[0] ? {} : arguments[0];
+            c(this, a), this.defaults = {
+                boxClass: "wow",
+                animateClass: "animated",
+                offset: 0,
+                mobile: !0,
+                live: !0,
+                callback: null,
+                scrollContainer: null,
+                resetAnimation: !0
+            }, this.animate = (function () {
+                return "requestAnimationFrame" in window ? function (a) {
+                    return window.requestAnimationFrame(a);
+                } : function (a) {
+                    return a();
+                };
+            })(), this.vendors = ["moz", "webkit"], this.start = this.start.bind(this), this.resetAnimation = this.resetAnimation.bind(this), this.scrollHandler = this.scrollHandler.bind(this), this.scrollCallback = this.scrollCallback.bind(this), this.scrolled = !0, this.config = e(b, this.defaults), null != b.scrollContainer && (this.config.scrollContainer = document.querySelector(b.scrollContainer)), this.animationNameCache = new o(), this.wowEvent = g(this.config.boxClass);
+        }
+
+        return n(a, [{
+            key: "init", value: function value() {
+                this.element = window.document.documentElement, d(document.readyState, ["interactive", "complete"]) ? this.start() : i(document, "DOMContentLoaded", this.start), this.finished = [];
+            }
+        }, {
+            key: "start", value: function value() {
+                var a = this;
+                if ((this.stopped = !1, this.boxes = [].slice.call(this.element.querySelectorAll("." + this.config.boxClass)), this.all = this.boxes.slice(0), this.boxes.length)) if (this.disabled()) this.resetStyle();else for (var b = 0; b < this.boxes.length; b++) {
+                    var c = this.boxes[b];
+                    this.applyStyle(c, !0);
+                }
+                if ((this.disabled() || (i(this.config.scrollContainer || window, "scroll", this.scrollHandler), i(window, "resize", this.scrollHandler), this.interval = setInterval(this.scrollCallback, 50)), this.config.live)) {
+                    var d = new p(function (b) {
+                        for (var c = 0; c < b.length; c++) for (var d = b[c], e = 0; e < d.addedNodes.length; e++) {
+                            var f = d.addedNodes[e];
+                            a.doSync(f);
+                        }
+                    });
+                    d.observe(document.body, { childList: !0, subtree: !0 });
+                }
+            }
+        }, {
+            key: "stop", value: function value() {
+                this.stopped = !0, j(this.config.scrollContainer || window, "scroll", this.scrollHandler), j(window, "resize", this.scrollHandler), null != this.interval && clearInterval(this.interval);
+            }
+        }, {
+            key: "sync", value: function value() {
+                p.notSupported && this.doSync(this.element);
+            }
+        }, {
+            key: "doSync", value: function value(a) {
+                if (("undefined" != typeof a && null !== a || (a = this.element), 1 === a.nodeType)) {
+                    a = a.parentNode || a;
+                    for (var b = a.querySelectorAll("." + this.config.boxClass), c = 0; c < b.length; c++) {
+                        var e = b[c];
+                        d(e, this.all) || (this.boxes.push(e), this.all.push(e), this.stopped || this.disabled() ? this.resetStyle() : this.applyStyle(e, !0), this.scrolled = !0);
+                    }
+                }
+            }
+        }, {
+            key: "show", value: function value(a) {
+                return this.applyStyle(a), a.className = a.className + " " + this.config.animateClass, null != this.config.callback && this.config.callback(a), h(a, this.wowEvent), this.config.resetAnimation && (i(a, "animationend", this.resetAnimation), i(a, "oanimationend", this.resetAnimation), i(a, "webkitAnimationEnd", this.resetAnimation), i(a, "MSAnimationEnd", this.resetAnimation)), a;
+            }
+        }, {
+            key: "applyStyle", value: function value(a, b) {
+                var c = this,
+                    d = a.getAttribute("data-wow-duration"),
+                    e = a.getAttribute("data-wow-delay"),
+                    f = a.getAttribute("data-wow-iteration");
+                return this.animate(function () {
+                    return c.customStyle(a, b, d, e, f);
+                });
+            }
+        }, {
+            key: "resetStyle", value: function value() {
+                for (var a = 0; a < this.boxes.length; a++) {
+                    var b = this.boxes[a];
+                    b.style.visibility = "visible";
+                }
+            }
+        }, {
+            key: "resetAnimation", value: function value(a) {
+                if (a.type.toLowerCase().indexOf("animationend") >= 0) {
+                    var b = a.target || a.srcElement;
+                    b.className = b.className.replace(this.config.animateClass, "").trim();
+                }
+            }
+        }, {
+            key: "customStyle", value: function value(a, b, c, d, e) {
+                return b && this.cacheAnimationName(a), a.style.visibility = b ? "hidden" : "visible", c && this.vendorSet(a.style, { animationDuration: c }), d && this.vendorSet(a.style, { animationDelay: d }), e && this.vendorSet(a.style, { animationIterationCount: e }), this.vendorSet(a.style, { animationName: b ? "none" : this.cachedAnimationName(a) }), a;
+            }
+        }, {
+            key: "vendorSet", value: function value(a, b) {
+                for (var c in b) if (b.hasOwnProperty(c)) {
+                    var d = b[c];
+                    a["" + c] = d;
+                    for (var e = 0; e < this.vendors.length; e++) {
+                        var f = this.vendors[e];
+                        a["" + f + c.charAt(0).toUpperCase() + c.substr(1)] = d;
+                    }
+                }
+            }
+        }, {
+            key: "vendorCSS", value: function value(a, b) {
+                for (var c = q(a), d = c.getPropertyCSSValue(b), e = 0; e < this.vendors.length; e++) {
+                    var f = this.vendors[e];
+                    d = d || c.getPropertyCSSValue("-" + f + "-" + b);
+                }
+                return d;
+            }
+        }, {
+            key: "animationName", value: function value(a) {
+                var b = void 0;
+                try {
+                    b = this.vendorCSS(a, "animation-name").cssText;
+                } catch (c) {
+                    b = q(a).getPropertyValue("animation-name");
+                }
+                return "none" === b ? "" : b;
+            }
+        }, {
+            key: "cacheAnimationName", value: function value(a) {
+                return this.animationNameCache.set(a, this.animationName(a));
+            }
+        }, {
+            key: "cachedAnimationName", value: function value(a) {
+                return this.animationNameCache.get(a);
+            }
+        }, {
+            key: "scrollHandler", value: function value() {
+                this.scrolled = !0;
+            }
+        }, {
+            key: "scrollCallback", value: function value() {
+                if (this.scrolled) {
+                    this.scrolled = !1;
+                    for (var a = [], b = 0; b < this.boxes.length; b++) {
+                        var c = this.boxes[b];
+                        if (c) {
+                            if (this.isVisible(c)) {
+                                this.show(c);
+                                continue;
+                            }
+                            a.push(c);
+                        }
+                    }
+                    this.boxes = a, this.boxes.length || this.config.live || this.stop();
+                }
+            }
+        }, {
+            key: "offsetTop", value: function value(a) {
+                for (; void 0 === a.offsetTop;) a = a.parentNode;
+                for (var b = a.offsetTop; a.offsetParent;) a = a.offsetParent, b += a.offsetTop;
+                return b;
+            }
+        }, {
+            key: "isVisible", value: function value(a) {
+                var b = a.getAttribute("data-wow-offset") || this.config.offset,
+                    c = this.config.scrollContainer && this.config.scrollContainer.scrollTop || window.pageYOffset,
+                    d = c + Math.min(this.element.clientHeight, k()) - b,
+                    e = this.offsetTop(a),
+                    f = e + a.clientHeight;
+                return d >= e && f >= c;
+            }
+        }, {
+            key: "disabled", value: function value() {
+                return !this.config.mobile && f(navigator.userAgent);
+            }
+        }]), a;
+    })();
+    b["default"] = r, a.exports = b["default"];
+});
+
+//fix padding-right when open popup
+var responsiveflag = false;
+$(document).ready(function () {
+    //responsiveResize();
+    floatHeader();
+    if (typeof $.fn.magnificPopup != 'undefined') {
+        $('.magnific_item').magnificPopup({
+            type: 'image',
+            mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+            zoom: {
+                enabled: true, // By default it's false, so don't forget to enable it
+
+                duration: 300, // duration of the effect, in milliseconds
+                easing: 'ease-in-out', // CSS transition easing function
+
+                // The "opener" function should return the element from which popup will be zoomed in
+                // and to which popup will be scaled down
+                // By defailt it looks for an image tag:
+                opener: function opener(openerElement) {
+                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                    // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                    return openerElement.is('a') ? openerElement : openerElement.find('a');
+                }
+            },
+            fixedContentPos: false
+        });
+    }
+
+    // Offcanvas
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('.row-offcanvas').toggleClass('menuOffcanvasActive');
+    });
+    $(".ps-mobile-megamenu").on("click", "i.click-canavs-menu", function () {
+        $(this).parent().find('.dropdown-menu:first').slideToggle();
+    });
+    // Offcanvas
+    $('[data-toggle="sidebarCanvas"]').click(function () {
+        $('.row-offcanvas').toggleClass('sidebarOffcanvasActive');
+    });
+
+    $('.ps_popover').popover({
+        trigger: 'hover'
+    });
+    //gototop
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+            $('#to_top').fadeIn();
+        } else {
+            $('#to_top').fadeOut();
+        }
+    });
+    $("#to_top").click(function () {
+        $("body,html").animate({ scrollTop: 0 }, "normal");
+        $("#page").animate({ scrollTop: 0 }, "normal");
+        return !1;
+    });
+
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+        var id = $(e.target).attr('href');
+        console.log(id);
+        $(id).addClass('tab-loading');
+    }).on('shown.bs.tab', function (e) {
+        var id = $(e.target).attr('href');
+        setTimeout(function () {
+            $(id).removeClass('tab-loading');
+        }, 400);
+    });
+    if ($('.owl-carousel-play').length) {
+        $(".owl-carousel").owlCarousel();
+    }
+
+    $(window).load(function () {
+        $('#loaderContainer').fadeOut();
+    });
+});
+
+/*function responsiveResize()
+{
+	if ($(document).width() < 768 && responsiveflag == false )
+	{
+		accordionFooter('enable');
+		responsiveflag == true;
+	}
+	else {
+		accordionFooter('disable');
+		responsiveflag == false;
+	}
+
+}
+*/
+function accordionFooter(status) {
+    if (status == 'enable') {
+        $('.footerbuilder .footer-center .block .title_block').on('click', function (e) {
+            $(this).toggleClass('active').parent().find('.block_content').stop().slideToggle('medium');
+            e.preventDefault();
+        });
+        $('.footerbuilder .footer-center .block').addClass('accordion').find('.block_content').slideUp('fast');
+    } else {
+        $('.footerbuilder .footer-center .block .title_block').removeClass('active').off().parent().find('.block_content').removeAttr('style').slideDown('fast');
+        $('.footerbuilder .footer-center .block').removeClass('accordion');
+    }
+}
+
+function floatHeader() {
+    if ($(window).width() >= 1024) {
+        if ($("body").hasClass("keep-header")) {
+            $(window).scroll(function () {
+                var hideheight = $("#header").height() + 120;
+                var pos = $(window).scrollTop();
+                if (pos >= hideheight) {
+                    $(".header-bottom").addClass("headerFixed");
+                    $("#page").css("padding-top", $(".header-bottom").height());
+                } else {
+                    $(".header-bottom").removeClass("headerFixed");
+                    $("#page").css("padding-top", 0);
+                }
+            });
+        }
+    }
+}
+/*! WOW wow.js - v1.3.0 - 2016-10-04
+* https://wowjs.uk
+* Copyright (c) 2016 Thomas Grainger; Licensed MIT */
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1783,7 +2215,7 @@ function setupCustomerScripts() {
 (0, _jquery2['default'])(document).ready(setupCustomerScripts);
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2005,7 +2437,7 @@ function setupCustomerScripts() {
 })(window.jQuery);
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2170,7 +2602,7 @@ function setupCustomerScripts() {
 })(jQuery);
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2351,12 +2783,12 @@ function updateProductListDOM(data) {
 }
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -2375,7 +2807,7 @@ function updateProductListDOM(data) {
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -2445,45 +2877,40 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 
   function createInputFile() {
     (0, _jquery2['default'])('.js-file-input').on('change', function (event) {
-      var target = undefined,
-          file = undefined;
-
-      if ((target = (0, _jquery2['default'])(event.currentTarget)[0]) && (file = target.files[0])) {
-        (0, _jquery2['default'])(target).prev().text(file.name);
-      }
+      (0, _jquery2['default'])('.js-file-name').text((0, _jquery2['default'])(event.currentTarget).val());
     });
   }
 
   function createProductSpin() {
-    var $quantityInput = (0, _jquery2['default'])('#quantity_wanted');
-
-    $quantityInput.TouchSpin({
+    var quantityInput = (0, _jquery2['default'])('#quantity_wanted');
+    quantityInput.TouchSpin({
       verticalbuttons: true,
       verticalupclass: 'material-icons touchspin-up',
       verticaldownclass: 'material-icons touchspin-down',
       buttondown_class: 'btn btn-touchspin js-touchspin',
       buttonup_class: 'btn btn-touchspin js-touchspin',
-      min: parseInt($quantityInput.attr('min'), 10),
+      min: parseInt(quantityInput.attr('min'), 10),
       max: 1000000
     });
 
-    (0, _jquery2['default'])('body').on('change keyup', '#quantity_wanted', function (e) {
-      (0, _jquery2['default'])(e.currentTarget).trigger('touchspin.stopspin');
-      _prestashop2['default'].emit('updateProduct', {
-        eventType: 'updatedProductQuantity',
-        event: e
-      });
+    quantityInput.on('change', function (event) {
+      var $productRefresh = (0, _jquery2['default'])('.product-refresh');
+      (0, _jquery2['default'])(event.currentTarget).trigger('touchspin.stopspin');
+      $productRefresh.trigger('click', { eventType: 'updatedProductQuantity' });
+      event.preventDefault();
+
+      return false;
     });
   }
 });
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -2502,7 +2929,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -2520,7 +2947,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 
 _prestashop2['default'].responsive = _prestashop2['default'].responsive || {};
 
-_prestashop2['default'].responsive.current_width = window.innerWidth;
+_prestashop2['default'].responsive.current_width = (0, _jquery2['default'])(window).width();
 _prestashop2['default'].responsive.min_width = 768;
 _prestashop2['default'].responsive.mobile = _prestashop2['default'].responsive.current_width < _prestashop2['default'].responsive.min_width;
 
@@ -2534,14 +2961,14 @@ function toggleMobileStyles() {
 	if (_prestashop2['default'].responsive.mobile) {
 		(0, _jquery2['default'])("*[id^='_desktop_']").each(function (idx, el) {
 			var target = (0, _jquery2['default'])('#' + el.id.replace('_desktop_', '_mobile_'));
-			if (target.length) {
+			if (target) {
 				swapChildren((0, _jquery2['default'])(el), target);
 			}
 		});
 	} else {
 		(0, _jquery2['default'])("*[id^='_mobile_']").each(function (idx, el) {
 			var target = (0, _jquery2['default'])('#' + el.id.replace('_mobile_', '_desktop_'));
-			if (target.length) {
+			if (target) {
 				swapChildren((0, _jquery2['default'])(el), target);
 			}
 		});
@@ -2554,10 +2981,10 @@ function toggleMobileStyles() {
 (0, _jquery2['default'])(window).on('resize', function () {
 	var _cw = _prestashop2['default'].responsive.current_width;
 	var _mw = _prestashop2['default'].responsive.min_width;
-	var _w = window.innerWidth;
+	var _w = (0, _jquery2['default'])(window).width();
 	var _toggle = _cw >= _mw && _w < _mw || _cw < _mw && _w >= _mw;
+	_prestashop2['default'].responsive.mobile = _cw >= _mw;
 	_prestashop2['default'].responsive.current_width = _w;
-	_prestashop2['default'].responsive.mobile = _prestashop2['default'].responsive.current_width < _prestashop2['default'].responsive.min_width;
 	if (_toggle) {
 		toggleMobileStyles();
 	}
@@ -2570,7 +2997,7 @@ function toggleMobileStyles() {
 });
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3253,7 +3680,7 @@ function toggleMobileStyles() {
 })(jQuery);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4050,7 +4477,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 })();
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4077,9 +4504,34 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 
 
 
+var R = typeof Reflect === 'object' ? Reflect : null;
+var ReflectApply = R && typeof R.apply === 'function' ? R.apply : function ReflectApply(target, receiver, args) {
+  return Function.prototype.apply.call(target, receiver, args);
+};
+
+var ReflectOwnKeys;
+if (R && typeof R.ownKeys === 'function') {
+  ReflectOwnKeys = R.ownKeys;
+} else if (Object.getOwnPropertySymbols) {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target));
+  };
+} else {
+  ReflectOwnKeys = function ReflectOwnKeys(target) {
+    return Object.getOwnPropertyNames(target);
+  };
+}
+
+function ProcessEmitWarning(warning) {
+  if (console && console.warn) console.warn(warning);
+}
+
+var NumberIsNaN = Number.isNaN || function NumberIsNaN(value) {
+  return value !== value;
+};
+
 function EventEmitter() {
-  this._events = this._events || {};
-  this._maxListeners = this._maxListeners || undefined;
+  EventEmitter.init.call(this);
 }
 module.exports = EventEmitter;
 
@@ -4087,151 +4539,221 @@ module.exports = EventEmitter;
 EventEmitter.EventEmitter = EventEmitter;
 
 EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._eventsCount = 0;
 EventEmitter.prototype._maxListeners = undefined;
 
 // By default EventEmitters will print a warning if more than 10 listeners are
 // added to it. This is a useful default which helps finding memory leaks.
-EventEmitter.defaultMaxListeners = 10;
+var defaultMaxListeners = 10;
+
+Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
+  enumerable: true,
+  get: function get() {
+    return defaultMaxListeners;
+  },
+  set: function set(arg) {
+    if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
+      throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
+    }
+    defaultMaxListeners = arg;
+  }
+});
+
+EventEmitter.init = function () {
+
+  if (this._events === undefined || this._events === Object.getPrototypeOf(this)._events) {
+    this._events = Object.create(null);
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+};
 
 // Obviously not all Emitters should be limited to 10. This function allows
 // that to be increased. Set to zero for unlimited.
-EventEmitter.prototype.setMaxListeners = function (n) {
-  if (!isNumber(n) || n < 0 || isNaN(n)) throw TypeError('n must be a positive number');
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
+  if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
+    throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
+  }
   this._maxListeners = n;
   return this;
 };
 
-EventEmitter.prototype.emit = function (type) {
-  var er, handler, len, args, i, listeners;
+function $getMaxListeners(that) {
+  if (that._maxListeners === undefined) return EventEmitter.defaultMaxListeners;
+  return that._maxListeners;
+}
 
-  if (!this._events) this._events = {};
+EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
+  return $getMaxListeners(this);
+};
+
+EventEmitter.prototype.emit = function emit(type) {
+  var args = [];
+  for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
+  var doError = type === 'error';
+
+  var events = this._events;
+  if (events !== undefined) doError = doError && events.error === undefined;else if (!doError) return false;
 
   // If there is no 'error' event listener then throw.
-  if (type === 'error') {
-    if (!this._events.error || isObject(this._events.error) && !this._events.error.length) {
-      er = arguments[1];
-      if (er instanceof Error) {
-        throw er; // Unhandled 'error' event
-      } else {
-          // At least give some kind of context to the user
-          var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
-          err.context = er;
-          throw err;
-        }
+  if (doError) {
+    var er;
+    if (args.length > 0) er = args[0];
+    if (er instanceof Error) {
+      // Note: The comments on the `throw` lines are intentional, they show
+      // up in Node's output if this results in an unhandled exception.
+      throw er; // Unhandled 'error' event
     }
+    // At least give some kind of context to the user
+    var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
+    err.context = er;
+    throw err; // Unhandled 'error' event
   }
 
-  handler = this._events[type];
+  var handler = events[type];
 
-  if (isUndefined(handler)) return false;
+  if (handler === undefined) return false;
 
-  if (isFunction(handler)) {
-    switch (arguments.length) {
-      // fast cases
-      case 1:
-        handler.call(this);
-        break;
-      case 2:
-        handler.call(this, arguments[1]);
-        break;
-      case 3:
-        handler.call(this, arguments[1], arguments[2]);
-        break;
-      // slower
-      default:
-        args = Array.prototype.slice.call(arguments, 1);
-        handler.apply(this, args);
-    }
-  } else if (isObject(handler)) {
-    args = Array.prototype.slice.call(arguments, 1);
-    listeners = handler.slice();
-    len = listeners.length;
-    for (i = 0; i < len; i++) listeners[i].apply(this, args);
+  if (typeof handler === 'function') {
+    ReflectApply(handler, this, args);
+  } else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i) ReflectApply(listeners[i], this, args);
   }
 
   return true;
 };
 
-EventEmitter.prototype.addListener = function (type, listener) {
+function _addListener(target, type, listener, prepend) {
   var m;
+  var events;
+  var existing;
 
-  if (!isFunction(listener)) throw TypeError('listener must be a function');
+  if (typeof listener !== 'function') {
+    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+  }
 
-  if (!this._events) this._events = {};
+  events = target._events;
+  if (events === undefined) {
+    events = target._events = Object.create(null);
+    target._eventsCount = 0;
+  } else {
+    // To avoid recursion in the case that type === "newListener"! Before
+    // adding it to the listeners, first emit "newListener".
+    if (events.newListener !== undefined) {
+      target.emit('newListener', type, listener.listener ? listener.listener : listener);
 
-  // To avoid recursion in the case that type === "newListener"! Before
-  // adding it to the listeners, first emit "newListener".
-  if (this._events.newListener) this.emit('newListener', type, isFunction(listener.listener) ? listener.listener : listener);
-
-  if (!this._events[type])
-    // Optimize the case of one listener. Don't need the extra array object.
-    this._events[type] = listener;else if (isObject(this._events[type]))
-    // If we've already got an array, just append.
-    this._events[type].push(listener);else
-    // Adding the second element, need to change to array.
-    this._events[type] = [this._events[type], listener];
-
-  // Check for listener leak
-  if (isObject(this._events[type]) && !this._events[type].warned) {
-    if (!isUndefined(this._maxListeners)) {
-      m = this._maxListeners;
-    } else {
-      m = EventEmitter.defaultMaxListeners;
+      // Re-assign `events` because a newListener handler could have caused the
+      // this._events to be assigned to a new object
+      events = target._events;
     }
+    existing = events[type];
+  }
 
-    if (m && m > 0 && this._events[type].length > m) {
-      this._events[type].warned = true;
-      console.error('(node) warning: possible EventEmitter memory ' + 'leak detected. %d listeners added. ' + 'Use emitter.setMaxListeners() to increase limit.', this._events[type].length);
-      if (typeof console.trace === 'function') {
-        // not supported in IE 10
-        console.trace();
+  if (existing === undefined) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    existing = events[type] = listener;
+    ++target._eventsCount;
+  } else {
+    if (typeof existing === 'function') {
+      // Adding the second element, need to change to array.
+      existing = events[type] = prepend ? [listener, existing] : [existing, listener];
+      // If we've already got an array, just append.
+    } else if (prepend) {
+        existing.unshift(listener);
+      } else {
+        existing.push(listener);
       }
+
+    // Check for listener leak
+    m = $getMaxListeners(target);
+    if (m > 0 && existing.length > m && !existing.warned) {
+      existing.warned = true;
+      // No error code for this since it is a Warning
+      // eslint-disable-next-line no-restricted-syntax
+      var w = new Error('Possible EventEmitter memory leak detected. ' + existing.length + ' ' + String(type) + ' listeners ' + 'added. Use emitter.setMaxListeners() to ' + 'increase limit');
+      w.name = 'MaxListenersExceededWarning';
+      w.emitter = target;
+      w.type = type;
+      w.count = existing.length;
+      ProcessEmitWarning(w);
     }
   }
 
-  return this;
+  return target;
+}
+
+EventEmitter.prototype.addListener = function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
 };
 
 EventEmitter.prototype.on = EventEmitter.prototype.addListener;
 
-EventEmitter.prototype.once = function (type, listener) {
-  if (!isFunction(listener)) throw TypeError('listener must be a function');
+EventEmitter.prototype.prependListener = function prependListener(type, listener) {
+  return _addListener(this, type, listener, true);
+};
 
-  var fired = false;
-
-  function g() {
-    this.removeListener(type, g);
-
-    if (!fired) {
-      fired = true;
-      listener.apply(this, arguments);
-    }
+function onceWrapper() {
+  var args = [];
+  for (var i = 0; i < arguments.length; i++) args.push(arguments[i]);
+  if (!this.fired) {
+    this.target.removeListener(this.type, this.wrapFn);
+    this.fired = true;
+    ReflectApply(this.listener, this.target, args);
   }
+}
 
-  g.listener = listener;
-  this.on(type, g);
+function _onceWrap(target, type, listener) {
+  var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
+  var wrapped = onceWrapper.bind(state);
+  wrapped.listener = listener;
+  state.wrapFn = wrapped;
+  return wrapped;
+}
 
+EventEmitter.prototype.once = function once(type, listener) {
+  if (typeof listener !== 'function') {
+    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+  }
+  this.on(type, _onceWrap(this, type, listener));
   return this;
 };
 
-// emits a 'removeListener' event iff the listener was removed
-EventEmitter.prototype.removeListener = function (type, listener) {
-  var list, position, length, i;
+EventEmitter.prototype.prependOnceListener = function prependOnceListener(type, listener) {
+  if (typeof listener !== 'function') {
+    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+  }
+  this.prependListener(type, _onceWrap(this, type, listener));
+  return this;
+};
 
-  if (!isFunction(listener)) throw TypeError('listener must be a function');
+// Emits a 'removeListener' event if and only if the listener was removed.
+EventEmitter.prototype.removeListener = function removeListener(type, listener) {
+  var list, events, position, i, originalListener;
 
-  if (!this._events || !this._events[type]) return this;
+  if (typeof listener !== 'function') {
+    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+  }
 
-  list = this._events[type];
-  length = list.length;
-  position = -1;
+  events = this._events;
+  if (events === undefined) return this;
 
-  if (list === listener || isFunction(list.listener) && list.listener === listener) {
-    delete this._events[type];
-    if (this._events.removeListener) this.emit('removeListener', type, listener);
-  } else if (isObject(list)) {
-    for (i = length; i-- > 0;) {
-      if (list[i] === listener || list[i].listener && list[i].listener === listener) {
+  list = events[type];
+  if (list === undefined) return this;
+
+  if (list === listener || list.listener === listener) {
+    if (--this._eventsCount === 0) this._events = Object.create(null);else {
+      delete events[type];
+      if (events.removeListener) this.emit('removeListener', type, list.listener || listener);
+    }
+  } else if (typeof list !== 'function') {
+    position = -1;
+
+    for (i = list.length - 1; i >= 0; i--) {
+      if (list[i] === listener || list[i].listener === listener) {
+        originalListener = list[i].listener;
         position = i;
         break;
       }
@@ -4239,91 +4761,137 @@ EventEmitter.prototype.removeListener = function (type, listener) {
 
     if (position < 0) return this;
 
-    if (list.length === 1) {
-      list.length = 0;
-      delete this._events[type];
-    } else {
-      list.splice(position, 1);
+    if (position === 0) list.shift();else {
+      spliceOne(list, position);
     }
 
-    if (this._events.removeListener) this.emit('removeListener', type, listener);
+    if (list.length === 1) events[type] = list[0];
+
+    if (events.removeListener !== undefined) this.emit('removeListener', type, originalListener || listener);
   }
 
   return this;
 };
 
-EventEmitter.prototype.removeAllListeners = function (type) {
-  var key, listeners;
+EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
 
-  if (!this._events) return this;
+EventEmitter.prototype.removeAllListeners = function removeAllListeners(type) {
+  var listeners, events, i;
+
+  events = this._events;
+  if (events === undefined) return this;
 
   // not listening for removeListener, no need to emit
-  if (!this._events.removeListener) {
-    if (arguments.length === 0) this._events = {};else if (this._events[type]) delete this._events[type];
+  if (events.removeListener === undefined) {
+    if (arguments.length === 0) {
+      this._events = Object.create(null);
+      this._eventsCount = 0;
+    } else if (events[type] !== undefined) {
+      if (--this._eventsCount === 0) this._events = Object.create(null);else delete events[type];
+    }
     return this;
   }
 
   // emit removeListener for all listeners on all events
   if (arguments.length === 0) {
-    for (key in this._events) {
+    var keys = Object.keys(events);
+    var key;
+    for (i = 0; i < keys.length; ++i) {
+      key = keys[i];
       if (key === 'removeListener') continue;
       this.removeAllListeners(key);
     }
     this.removeAllListeners('removeListener');
-    this._events = {};
+    this._events = Object.create(null);
+    this._eventsCount = 0;
     return this;
   }
 
-  listeners = this._events[type];
+  listeners = events[type];
 
-  if (isFunction(listeners)) {
+  if (typeof listeners === 'function') {
     this.removeListener(type, listeners);
-  } else if (listeners) {
+  } else if (listeners !== undefined) {
     // LIFO order
-    while (listeners.length) this.removeListener(type, listeners[listeners.length - 1]);
+    for (i = listeners.length - 1; i >= 0; i--) {
+      this.removeListener(type, listeners[i]);
+    }
   }
-  delete this._events[type];
 
   return this;
 };
 
-EventEmitter.prototype.listeners = function (type) {
-  var ret;
-  if (!this._events || !this._events[type]) ret = [];else if (isFunction(this._events[type])) ret = [this._events[type]];else ret = this._events[type].slice();
-  return ret;
+function _listeners(target, type, unwrap) {
+  var events = target._events;
+
+  if (events === undefined) return [];
+
+  var evlistener = events[type];
+  if (evlistener === undefined) return [];
+
+  if (typeof evlistener === 'function') return unwrap ? [evlistener.listener || evlistener] : [evlistener];
+
+  return unwrap ? unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
+}
+
+EventEmitter.prototype.listeners = function listeners(type) {
+  return _listeners(this, type, true);
 };
 
-EventEmitter.prototype.listenerCount = function (type) {
-  if (this._events) {
-    var evlistener = this._events[type];
-
-    if (isFunction(evlistener)) return 1;else if (evlistener) return evlistener.length;
-  }
-  return 0;
+EventEmitter.prototype.rawListeners = function rawListeners(type) {
+  return _listeners(this, type, false);
 };
 
 EventEmitter.listenerCount = function (emitter, type) {
-  return emitter.listenerCount(type);
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
 };
 
-function isFunction(arg) {
-  return typeof arg === 'function';
+EventEmitter.prototype.listenerCount = listenerCount;
+function listenerCount(type) {
+  var events = this._events;
+
+  if (events !== undefined) {
+    var evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener !== undefined) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
 }
 
-function isNumber(arg) {
-  return typeof arg === 'number';
+EventEmitter.prototype.eventNames = function eventNames() {
+  return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
+};
+
+function arrayClone(arr, n) {
+  var copy = new Array(n);
+  for (var i = 0; i < n; ++i) copy[i] = arr[i];
+  return copy;
 }
 
-function isObject(arg) {
-  return typeof arg === 'object' && arg !== null;
+function spliceOne(list, index) {
+  for (; index + 1 < list.length; index++) list[index] = list[index + 1];
+  list.pop();
 }
 
-function isUndefined(arg) {
-  return arg === void 0;
+function unwrapListeners(arr) {
+  var ret = new Array(arr.length);
+  for (var i = 0; i < ret.length; ++i) {
+    ret[i] = arr[i].listener || arr[i];
+  }
+  return ret;
 }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4506,7 +5074,7 @@ var require;var require;
 });
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6446,7 +7014,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4
 });
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6474,14 +7042,14 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Tether"] = __webpack_require__(23);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Tether"] = __webpack_require__(24);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(5);

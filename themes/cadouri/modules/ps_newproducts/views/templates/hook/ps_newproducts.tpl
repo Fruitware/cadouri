@@ -33,7 +33,7 @@
     {/foreach}
   </div>
   <a class="all-product-link float-xs-left float-md-right h4" href="{$allNewProductsLink}">
-    {l s='All new products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
+    {l s='All new products' d='Shop.Theme.Catalog'}<i class="icon icon-shortarrowright"></i>
   </a>
 </section>
 

@@ -59,8 +59,9 @@ let config = {
                     ]
                 })
             },
+
             {
-                test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
+                test: /.(jpg|png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
                 loader: 'file-loader?name=../css/[hash].[ext]'
             },
             {
@@ -84,10 +85,11 @@ let config = {
     externals: {
         prestashop: 'prestashop',
         $: '$',
-        jquery: 'jQuery'
+        jquery: 'jQuery',
+        jQuery: 'jQuery'
     },
     plugins: [
-        new ExtractTextPlugin(path.join('..', 'css', 'theme.css'))
+        new ExtractTextPlugin(path.join('..', 'css', 'theme.css')),
     ]
 };
 
@@ -106,7 +108,7 @@ if (process.env.NODE_ENV === 'production') {
             output: {
                 comments: false
             },
-            minimize: true
+            minimize: false
         })
     );
 }

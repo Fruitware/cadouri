@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>psmegamenu</name>
+    <displayName><![CDATA[Ps Megamenu]]></displayName>
+    <version><![CDATA[2.5.0]]></version>
+    <description><![CDATA[Ps Megamenu Support Pts Framework Version 2.0]]></description>
+    <author><![CDATA[PrestaBrain]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

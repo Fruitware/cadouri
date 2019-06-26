@@ -1,5 +1,5 @@
 /**
- * 2007-2018 PrestaShop
+ * 2007-2017 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -18,7 +18,7 @@
  * needs please refer to http://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2017 PrestaShop SA
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -40,7 +40,7 @@ export default class TopMenu extends DropDown {
         elmId = $(e.currentTarget).attr('id');
       }
       if (elmId && $(e.target).data('depth') === 0) {
-        $(`#${elmId} .js-sub-menu`).css({
+        $(`#${elmId} .js-sub-menu`).show().css({
           top: $(`#${elmId}`).height() + $(`#${elmId}`).position().top
         });
       }
@@ -49,10 +49,11 @@ export default class TopMenu extends DropDown {
       $('#mobile_top_menu_wrapper').toggle();
       self.toggleMobileMenu();
     });
-    $('.js-top-menu .category').mouseleave(() => {
+    $('.js-top-menu').mouseleave(() => {
       if (this.el.parent().hasClass('mobile')) {
         return;
       }
+      $(`#${elmId} .js-sub-menu`).hide();
     });
     this.el.on('click', (e) => {
       if (this.el.parent().hasClass('mobile')) {
@@ -68,11 +69,14 @@ export default class TopMenu extends DropDown {
   }
 
   toggleMobileMenu() {
-    $('#header').toggleClass('is-open');
-    if ($('#mobile_top_menu_wrapper').is(":visible")) {
-      $('#notifications, #wrapper, #footer').hide();
-    } else {
-      $('#notifications, #wrapper, #footer').show();
-    }
+      if ($('#mobile_top_menu_wrapper').is(":visible")) {
+        $('#notifications').hide();
+        $('#wrapper').hide();
+        $('#footer').hide();
+      } else {
+        $('#notifications').show();
+        $('#wrapper').show();
+        $('#footer').show();
+      }
   }
 }

@@ -9,7 +9,7 @@ body {
     font-size: $base-font-size;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: $gray-darker;
+    color: $black2;
     line-height: 1.25em;
 }
 
@@ -46,7 +46,7 @@ p {
     background-size: contain;
     &.active,
     &:hover {
-        border: 2px solid $gray-darker;
+        border: 2px solid $black2;
     }
 }
 
@@ -54,7 +54,7 @@ p {
     &.active,
     &:hover {
         .custom-checkbox span.color {
-            border: 2px solid $gray-darker;
+            border: 2px solid $black2;
         }
     }
 }
@@ -63,12 +63,12 @@ p {
 .h2,
 .h3 {
     text-transform: uppercase;
-    color: $gray-darker;
+    color: $black2;
 }
 
 .h4 {
     font-weight: $headings-font-weight;
-    color: $gray-darker;
+    color: $black2;
 }
 
 .btn-primary,
@@ -115,11 +115,11 @@ p {
 }
 
 .card {
-    @include box-shadow;
+    @include box-shadow('2px 2px 8px 0px rgba(0, 0, 0, 0.2)');
 }
 
 label, .label {
-    color: $gray-darker;
+    color: $black2;
     text-align: right;
     font-size: 0.875rem;
 }
@@ -133,14 +133,14 @@ small.label, small.value {
 }
 
 .form-control {
-    background: $gray-light;
+    background: $lightgray;
     color: $gray;
     border: $input-btn-border-width solid $input-border-color;
     padding: 0.5rem 1rem;
     &:focus {
         background-color: white;
         outline: 0.1875rem solid $brand-primary;
-        color: $gray-darker;
+        color: $black2;
     }
 }
 
@@ -185,16 +185,16 @@ input, textarea {
     }
     &:active {
         &::-webkit-input-placeholder {
-            color: $gray-darker;
+            color: $black2;
         }
         &::-moz-placeholder {
-            color: $gray-darker;
+            color: $black2;
         }
         &:-ms-input-placeholder {
-            color: $gray-darker;
+            color: $black2;
         }
         &:-moz-placeholder {
-            color: $gray-darker;
+            color: $black2;
         }
     }
 }
@@ -203,8 +203,12 @@ input, textarea {
     height: 2.625rem;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: $gray-light url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAPklEQVR4Ae3TwREAEBQD0V/6do4SXPZg7EsBhsQ8IEmSMOsiuEfg3gL3oXC7wK0bd1G4o8X9F4yIkyQfSrIByQBjp7QuND8AAAAASUVORK5CYII=") no-repeat scroll right 0.5rem center / 1.25rem 1.25rem;
+    background: $lightgray url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAPklEQVR4Ae3TwREAEBQD0V/6do4SXPZg7EsBhsQ8IEmSMOsiuEfg3gL3oXC7wK0bd1G4o8X9F4yIkyQfSrIByQBjp7QuND8AAAAASUVORK5CYII=") no-repeat scroll right 0.5rem center / 1.25rem 1.25rem !important;
     padding: 0 0.5rem;
+    &:focus
+    {
+        outline-color: $lightcoral !important;
+    }
 }
 
 .form-control-valign {
@@ -250,62 +254,6 @@ input, textarea {
     }
 }
 
-.bootstrap-touchspin {
-    width: auto;
-    float: left;
-    display: inline-block;
-    @include box-shadow-light;
-    input {
-        &:focus {
-            outline: none;
-        }
-        &.form-control,
-        &.input-group {
-            color: $gray-darker;
-            background-color: white;
-            height: $input-height;
-            padding: 0.175rem 0.5rem;
-            width: 3rem;
-            border: $input-btn-border-width solid $input-border-color;
-            float: left;
-        }
-    }
-    .btn-touchspin {
-        @extend .btn-default;
-        background-color: white;
-        border: $input-btn-border-width solid $input-border-color;
-        height: $input-height / 2 + 0.0625rem;
-        &:hover {
-            background-color: $gray-light;
-        }
-    }
-    .input-group-btn-vertical {
-        color: $gray-darker;
-        width: auto;
-        float: left;
-        .bootstrap-touchspin-up {
-            border-radius: 0;
-        }
-        .bootstrap-touchspin-down {
-            border-radius: 0;
-        }
-        .touchspin-up {
-            &:after {
-                content: "\E5CE";
-            }
-        }
-        .touchspin-down {
-            &:after {
-                content: "\E5CF";
-            }
-        }
-        i {
-            top: 0.0625rem;
-            left: 0.1875rem;
-            font-size: 0.9375rem;
-        }
-    }
-}
 
 .custom-radio {
     display: inline-block;
@@ -353,12 +301,12 @@ input, textarea {
             height: 0.9375rem;
             vertical-align: middle;
             cursor: pointer;
-            border: 2px $gray-darker solid;
+            border: 2px $black2 solid;
             .checkbox-checked {
                 display: none;
-                margin: -0.25rem -0.125rem;
+                margin: -0.3rem -0.3rem;
                 font-size: 1.1rem;
-                color: $gray-darker;
+                color: $black2;
             }
         }
         &:checked + span {
@@ -392,7 +340,7 @@ input, textarea {
         width: 3.438rem;
         height: 3.438rem;
         overflow: hidden;
-        border: $gray-light 1px solid;
+        border: $lightgray 1px solid;
         margin: $small-space 0;
         img {
             width: 55px;
@@ -411,11 +359,11 @@ input, textarea {
         dd,
         dt {
             flex: 0 0 45%;
-            background: $gray-light;
+            background: $lightgray;
             padding: 0.625rem;
             margin: 0.125rem;
             &:nth-of-type(even) {
-                background: $gray-lighter;
+                background: $lightgray;
             }
         }
     }
@@ -485,7 +433,7 @@ input, textarea {
         color: $gray;
         font-weight: bold;
         &.active {
-            color: $gray-darker;
+            color: $black2;
         }
     }
 }
@@ -493,4 +441,50 @@ input, textarea {
 .separator {
     margin: 0;
     border-color: rgba(0, 0, 0, 0.25);
+}
+
+
+.bootstrap-touchspin {
+    border: 1px solid $base-border-color;
+    input {
+        &:focus {
+            outline: none;
+        }
+        &.form-control {
+            border: 0;
+        }
+    }
+    .btn-touchspin {
+        position: absolute;
+        top: 0;
+        background-color: transparent;
+        text-align: center;
+        padding: 0;
+        color: #a9b1c0;
+        &:hover {
+            color: $theme-color-primary;
+        }
+        &.bootstrap-touchspin-up {
+            @include rtl-right(5px);
+        }
+        &.bootstrap-touchspin-down {
+            @include rtl-left(5px);
+        }
+        .touchspin-up {
+            font-style: normal;
+            &:after {
+                content: "+";
+                font-size: 20px !important;
+                font-weight: 600 !important;
+
+            }
+        }
+        .touchspin-down::after {
+            font-style: normal;
+            font-size: 20px !important;
+            content: "-";
+            font-weight: 600 !important;
+
+        }
+    }
 }
