@@ -257,12 +257,17 @@
         }
     }
     &.products-selection {
+        .nopadding
+        {
+            line-height: 2.22222rem;
+        }
         .row {
             border-top: $main_border;
             border-bottom: $main_border;
             margin: 5px 0;
             padding: 5px 0;
         }
+        margin-bottom: 20px;
     }
     .product-count {
         color: $text-color-primary;
