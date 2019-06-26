@@ -477,6 +477,13 @@ a {
             right: 0;
             transition: all .3s ease-in-out 0s;
             visibility: hidden;
+
+            @media (max-width: 990px) {
+                bottom: 0;
+                opacity: 1;
+                position: relative;
+                visibility: visible;
+            }
         }
 
         .btn-action {
@@ -1310,7 +1317,7 @@ h5 {
     > a {
         display: inline-grid;
         width: 38px;
-        height: 37px;
+        height: 38px;
         background: $lightcoral_d07676;
         border-radius: 50%;
         margin: 5px;
@@ -1325,6 +1332,16 @@ h5 {
             line-height: 30px;
             text-align: center;
             vertical-align: middle;
+        }
+        .icon-instagram,.icon-viber,.icon-youtube-play {
+            font-size: 19px;
+        }
+    }
+}
+#_mobile_nav {
+    .social-block-inline {
+        a {
+            margin: 3px;
         }
     }
 }
@@ -1403,6 +1420,18 @@ h5 {
         font-size: 18px;
         margin: 0 0 10px 0;
         text-transform: uppercase;
+        color: #000;
+    }
+    .banner-item.policies {
+        @media (min-width: 768px) {
+            height: max-content;
+        }
+        @media (min-width: 767px) {
+            height: 220px;
+        }
+        @media (min-width: 992px) {
+            height: 155px;
+        }
     }
 
     .block-contactinfo {

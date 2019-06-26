@@ -12,7 +12,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="offcanvas-heading hidden-lg-up">
         <button class="btn-mobile" type="button" data-toggle="offcanvas">
-            <i class="icon-shortarrowleft icon-left"></i>
+            <i class="icon-arrowleft icon-left"></i>
         </button>
     </div>
     <div id="pts-top-menu">
