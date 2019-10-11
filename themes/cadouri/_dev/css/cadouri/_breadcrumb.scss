@@ -281,9 +281,6 @@
 }
 
 //magic-zoom
-.mfp-figure figure {
-    margin: 0 !important
-}
 
 .block-lastest-cms {
     display: block;
@@ -635,9 +632,9 @@
 .block.block-borderbox {
     @include block-variant(#fff, $base-border-color, $text-color-secondary, transparent, $base-border-color);
 
-    .widget-inner {
+    /*.widget-inner {
         padding: 10px 15px;
-    }
+    }*/
     .title_block {
         padding: 20px 15px;
     }
@@ -649,9 +646,9 @@
 
 .block.block-primary {
     @include block-variant($primary-bg-color, $base-border-color, $primary-heading-text-color, $primary-heading-bg-color, $primary-heading-border-color);
-    .widget-inner {
+    /*.widget-inner {
         padding: 15px;
-    }
+    }*/
     .block_content {
         border-style: solid;
         border-width: 1px;
@@ -661,9 +658,9 @@
 
 .block.block-success {
     @include block-variant($success-bg-color, $base-border-color, $success-heading-text-color, $success-heading-bg-color, $success-heading-border-color);
-    .widget-inner {
+    /*.widget-inner {
         padding: 15px;
-    }
+    }*/
     .block_content {
         border-style: solid;
         border-width: 1px;
@@ -673,9 +670,9 @@
 
 .block.block-info {
     @include block-variant($info-bg-color, $base-border-color, $info-heading-text-color, $info-heading-bg-color, $info-heading-border-color);
-    .widget-inner {
+    /*.widget-inner {
         padding: 15px;
-    }
+    }*/
     .block_content {
         border-style: solid;
         border-width: 1px;
@@ -685,9 +682,9 @@
 
 .block.block-warning {
     @include block-variant($warning-bg-color, $base-border-color, $warning-heading-text-color, $warning-heading-bg-color, $warning-heading-border-color);
-    .widget-inner {
+    /*.widget-inner {
         padding: 15px;
-    }
+    }*/
     .block_content {
         border-style: solid;
         border-width: 1px;
@@ -697,9 +694,9 @@
 
 .block.block-danger {
     @include block-variant($danger-bg-color, $base-border-color, $danger-heading-text-color, $danger-heading-bg-color, $danger-heading-border-color);
-    .widget-inner {
+    /*.widget-inner {
         padding: 15px;
-    }
+    }*/
     .block_content {
         border-style: solid;
         border-width: 1px;
@@ -709,9 +706,9 @@
 
 .block.block-highlighted {
     @include block-variant($highlighted-bg-color, $base-border-color, $highlighted-heading-text-color, $highlighted-heading-bg-color, $highlighted-heading-border-color);
-    .widget-inner {
+    /*.widget-inner {
         padding: 15px;
-    }
+    }*/
     .block_content {
         border-style: solid;
         border-width: 1px;
