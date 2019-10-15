@@ -757,10 +757,10 @@ $baseline: $font-size-primary;
         border: 1px solid $base-border-color;
         padding: 0;
     }
-    .owl-carousel-play.carousel_style1 > .carousel-controls .carousel-control {
+    /*.owl-carousel-play.carousel_style1 > .carousel-controls .carousel-control {
         background-color: transparent;
         color: #fff;
-    }
+    }*/
     .title-sidebar {
         padding: 15px 20px;
         font-size: 20px;
@@ -882,7 +882,7 @@ $baseline: $font-size-primary;
 }
 
 @mixin nopadding() {
-    .owl-carousel-play,
+    /*.owl-carousel-play,*/
     .flexRow,
     .row {
         margin-left: 0;
@@ -893,12 +893,12 @@ $baseline: $font-size-primary;
         padding-left: 0;
         padding-right: 0;
     }
-    .owl-carousel-play {
+    /*.owl-carousel-play {
         .item {
             padding-left: 0;
             padding-right: 0;
         }
-    }
+    }*/
 }
 
 //pres 1.7

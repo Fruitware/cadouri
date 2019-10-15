@@ -2948,7 +2948,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 _prestashop2['default'].responsive = _prestashop2['default'].responsive || {};
 
 _prestashop2['default'].responsive.current_width = (0, _jquery2['default'])(window).width();
-_prestashop2['default'].responsive.min_width = 768;
+_prestashop2['default'].responsive.min_width = 991;
 _prestashop2['default'].responsive.mobile = _prestashop2['default'].responsive.current_width < _prestashop2['default'].responsive.min_width;
 
 function swapChildren(obj1, obj2) {

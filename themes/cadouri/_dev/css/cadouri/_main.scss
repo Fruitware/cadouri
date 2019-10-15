@@ -126,6 +126,7 @@ a {
     &:hover {
         outline: 0;
     }
+
     color: $lightcoral;
 }
 
@@ -447,6 +448,7 @@ a {
 
         figure {
             margin: 0 !important;
+
             img {
                 -webkit-filter: grayscale(0) blur(0);
                 -webkit-transition: .3s ease-in-out;
@@ -878,6 +880,7 @@ a {
                     background-color: transparent;
                     color: $lightcoral;
                 }
+
                 line-height: 1.2;
             }
         }
@@ -1262,7 +1265,7 @@ a {
 .icon-telegram {
     &:before {
         content: '\f1d8';
-        margin-left: -1.5px;
+        margin-left: -0.3px !important;
     }
 }
 
@@ -1330,9 +1333,11 @@ h5 {
         align-items: center;
         grid-template-rows: 100%;
         grid-template-columns: 100%;
+
         &:hover {
             box-shadow: 1px 0 2px rgba(0, 0, 0, .36);
         }
+
         i {
             position: relative;
             color: $white;
@@ -1340,15 +1345,18 @@ h5 {
             text-align: center;
             vertical-align: middle;
             padding: 0 0 0 1px !important;
+
             &::before {
                 margin: 0 !important;
                 width: auto !important;
             }
         }
+
         .icon-instagram, .icon-viber, .icon-youtube-play {
             line-height: 30px;
             font-size: 19px;
         }
+
         .icon-viber {
             top: 1px;
         }
@@ -1359,8 +1367,13 @@ h5 {
     .social-block-inline > a .icon-instagram {
         padding-left: 0px !important;
     }
+
     .social-block-inline > a .icon-telegram {
         padding-left: 0px !important;
+        &:before
+        {
+            margin-left: -.3px!important;
+        }
     }
 }
 
@@ -1369,9 +1382,15 @@ h5 {
         padding-left: 0px !important;
 
     }
-    .social-block-inline>a .icon-viber
-    {
+
+    .social-block-inline > a .icon-viber {
         left: 1px;
+    }
+    .social-block-inline > a .icon-telegram {
+        &:before
+        {
+            margin-left: -.3px!important;
+        }
     }
 }
 
@@ -1465,6 +1484,7 @@ h5 {
         text-transform: uppercase;
         color: #000;
     }
+
     .banner-item.policies {
         @media (min-width: 768px) {
             height: max-content;
@@ -1496,6 +1516,7 @@ h5 {
                 display: inline-block;
                 width: 30px;
             }
+
             border-bottom: 1px solid $lightgray;
 
             &:last-child {
@@ -1567,6 +1588,7 @@ h5 {
             white-space: nowrap;
             width: 100%;
         }
+
         display: inline-block;
         color: $lightcoral;
         padding: 10px 0;
@@ -1586,6 +1608,7 @@ h5 {
             }
         }
     }
+
     background-color: $mistyrose;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -1613,6 +1636,7 @@ h5 {
             white-space: nowrap;
             width: 100%;
         }
+
         font-family: "Nickainley Normal", cursive;
         font-size: 4em;
         text-align: center;
@@ -1622,6 +1646,7 @@ h5 {
         padding: 0 0 20px;
         margin: 0 0 20px;
     }
+
     text-align: center;
     margin: .7em 0 .9em 0;
 }
@@ -1646,7 +1671,7 @@ h5 {
     text-decoration: underline;
 }
 
-.twa_in_hook {
+/*.twa_in_hook {
     &.carousel {
         margin: 15px 0 !important;
 
@@ -1665,7 +1690,7 @@ h5 {
     }
     margin: 15px 0;
     clear: both;
-}
+}*/
 
 button {
     &:-moz-focus-inner {
@@ -1725,6 +1750,7 @@ button {
     }
 }
 
+/*
 .photo-banner-citrine {
     .banner-item-content {
         border-radius: 10px;
@@ -1909,6 +1935,7 @@ button {
         }
     }
 }
+*/
 
 .custombanners {
     &.displayHome {
@@ -1996,7 +2023,7 @@ button {
         }
     }
 
-    .widget-ourservice {
+    /*.widget-ourservice {
         margin: 0 12px 0;
 
         .banner-item-content {
@@ -2004,7 +2031,7 @@ button {
                 width: 35%;
             }
         }
-    }
+    }*/
 
     .custombanners {
         &.displayHome {
@@ -2024,7 +2051,7 @@ button {
         }
     }
 
-    .photo-banner-citrine {
+    /*.photo-banner-citrine {
         .banner-item-content {
             padding: 70px 50px 30px !important;
 
@@ -2054,7 +2081,7 @@ button {
         .banner-item-content {
             padding: 0 0 30px !important;
         }
-    }
+    }*/
 
     .grey-note {
         display: block;
@@ -2307,6 +2334,7 @@ button {
     .first-in-line {
         clear: left;
     }
+
     clear: both;
 }
 
@@ -2534,6 +2562,7 @@ button {
         position: relative;
         margin: auto;
         min-width: 80px;
+
         &:before {
             position: absolute;
             content: "";
@@ -2571,6 +2600,7 @@ button {
             width: 12px;
             height: 12px;
             font-size: 10px;
+
             &::before {
 
             }
@@ -2582,6 +2612,7 @@ button {
     .ps_breadcumb {
         margin-bottom: 40px;
     }
+
     .breadcrumb {
         display: none !important;
     }
