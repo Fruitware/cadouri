@@ -28,7 +28,7 @@ import prestashop from 'prestashop';
 prestashop.responsive = prestashop.responsive || {};
 
 prestashop.responsive.current_width = $(window).width();
-prestashop.responsive.min_width = 768;
+prestashop.responsive.min_width = 991;
 prestashop.responsive.mobile = prestashop.responsive.current_width < prestashop.responsive.min_width;
 
 function swapChildren(obj1, obj2)
