@@ -35,7 +35,7 @@
     "webpack-sources": "^0.1.0"
   },
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "simple-slider": "^1.0.0"
   }
 }
